@@ -2,6 +2,7 @@ package Actividades;
 
 public class Ejer14b {
     public static void main(String[] args) {
+        
         /*
          * Escribe un programa que rellene un array llamado primos con los 100 primeros
          * números

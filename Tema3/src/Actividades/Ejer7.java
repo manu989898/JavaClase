@@ -16,7 +16,7 @@ public class Ejer7 {
 
         double[] notas = new double[10];
         int i = 0;
-        while (i < 10) {
+        while (i < notas.length) {
 
             System.out.println("Ingresa la nota");
             notas[i] = escaner.nextDouble();
