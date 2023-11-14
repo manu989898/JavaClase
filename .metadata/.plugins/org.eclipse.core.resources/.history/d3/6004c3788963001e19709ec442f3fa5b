@@ -1,0 +1,27 @@
+package ejemplos;
+
+import java.util.Scanner;
+
+public class Ejemplo1 {
+
+	public static void main(String[] args) {
+
+		Scanner escaner = new Scanner(System.in);
+
+		System.out.println("***PORTERO DE DISCOTECA***");
+
+		System.out.println("Cuántos años tienes?");
+		int edad = escaner.nextInt();
+
+		if (edad >= 18) {
+			System.out.println("Se te permite entrar");
+		} else {
+			System.out.println("No tienes la edad requerida para acceder");
+		}
+		
+			System.out.println("Fin del programa.");
+		escaner.close();
+
+	}
+
+}
