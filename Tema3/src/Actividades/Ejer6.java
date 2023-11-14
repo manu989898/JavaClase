@@ -29,6 +29,7 @@ public class Ejer6 {
         
 
         escaner.close();
+        
     }
 
 }
