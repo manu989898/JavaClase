@@ -38,6 +38,7 @@ public class Ejer14d {
             }
             // System.out.println(num + " " + esPrrimo);
             
+            //Reinicios y actualizaciones de variables/contadores
             num++;
             esPrrimo = true;
             i = 2;
