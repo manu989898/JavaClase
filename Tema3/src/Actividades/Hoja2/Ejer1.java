@@ -1,8 +1,8 @@
-package Actividades;
+package Actividades.Hoja2;
 
 import java.util.Scanner;
 
-public class H2Ejer1 {
+public class Ejer1 {
     public static void main(String[] args) {
 
         /*
