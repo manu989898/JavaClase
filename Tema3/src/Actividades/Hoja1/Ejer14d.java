@@ -34,7 +34,6 @@ public class Ejer14d {
             if (posicion == 100) {
                 break;
             }
-            // System.out.println(num + " " + esPrrimo);
 
             // Reinicios y actualizaciones de variables/contadores
             num++;

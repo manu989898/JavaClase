@@ -30,7 +30,6 @@ public class Ejer1 {
 
                 edadEncontrada = true;
             }
-
         }
 
         if (edadEncontrada) {

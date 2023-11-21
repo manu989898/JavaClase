@@ -15,7 +15,7 @@ public class Ejer6 {
         Scanner escaner = new Scanner(System.in);
         
         //Creación de variables y arrays
-        String[] partidos = {"PP", "PSOE", "VOX", "UP", "ERC", "SUMAR"};
+        String[] partidos = {"PP", "PSOE", "VOX", "UP", "ERC", "CarlosElMejor"};
         int[] votos = new int[6];
         int max = votos[0];
         int min = votos[0];
