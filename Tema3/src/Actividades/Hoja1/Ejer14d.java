@@ -8,6 +8,8 @@ public class Ejer14d {
          * ninguno que no sea 1 o él mismo.
          * Los primeros números primos son: 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, ...
          */
+
+        //declaramos variables y arrays
         int num = 2;
         boolean esPrrimo = true;
         int[] numeros = new int[100];
@@ -27,7 +29,6 @@ public class Ejer14d {
                     esPrrimo = false;
                 }
             }
-
             //Si el número es primo, lo añadimos al array
             if (esPrrimo) {
 
