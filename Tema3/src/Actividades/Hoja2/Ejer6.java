@@ -6,42 +6,54 @@ public class Ejer6 {
     public static void main(String[] args) {
 
         /*
-         * Escribe un programa que guarde las siguientes temperaturas en un array y
-         * busque su máximo y mínimo. Además deberá indicar en qué posición del array 
-         * están ese máximo y mínimo.
-         * 15 ºC 16'1 ºC 16 ºC 15'4 ºC 15 ºC 14 ºC 10'2 ºC
-         * 11 ºC 11'5 ºC 10 ºC 10'1 ºC 9'8 ºC 9 ºC 6 ºC
+         * Escribe una aplicación que vaya preguntando los votos de seis partidos
+         * políticos en unas
+         * elecciones y guardándolos en un array. Al acabar, dirá cuál ha sido el menor
+         * número de votos y cuál
+         * el mayor, así como las posiciones del array que ocupan estos partidos.
          */
-
         Scanner escaner = new Scanner(System.in);
-      
-        //Inicialización del array y declaración de variables
-        double[] temps = {16,16.1,16,15.4,15,14,10.2,11,11.5,10,10.1,9.8,9,6};
-        double max = temps[0];
-        double min = temps[0];
+        
+        //Creación de variables y arrays
+        String[] partidos = {"PP", "PSOE", "VOX", "UP", "ERC", "SUMAR"};
+        int[] votos = new int[6];
+        int max = votos[0];
+        int min = votos[0];
         int posMax = 0;
         int posMin = 0;
 
+        System.out.println("Introduce los votos de los 6 partidos políticos: ");
+       
         //for para recorrer el array
-        for (int i = 0; i < temps.length; i++) {
+        for (int i = 0; i < votos.length; i++) {
 
-            //Si la temperatura es mayor que la máxima, la temperatura máxima pasa a ser la temperatura actual
-            if (temps[i] > max) {
+            //Se piden los votos de cada partido y se muestra su nombre en la pregunta
+            System.out.println("Introduce los votos del partido " + partidos[i] + ": ");
+            votos[i] = escaner.nextInt();
+        }
 
-                max = temps[i];
+        //for para recorrer el array
+        for (int i = 0; i < votos.length; i++) {
+
+            /*Si los votos del partido actual son mayores que los votos máximos, 
+              los votos máximos pasan a ser los votos del partido actual*/
+            if (votos[i] > max) {
+
+                max = votos[i];
                 posMax = i;
             }
-            
-            //Si la temperatura es menor que la mínima, la temperatura mínima pasa a ser la temperatura actual
-            if (temps[i] < min) {
 
-                min = temps[i];
+            /*Si los votos del partido actual son menores que los votos mínimos, 
+              los votos mínimos pasan a ser los votos del partido actual*/
+            if (votos[i] < min) {
+
+                min = votos[i];
                 posMin = i;
             }
         }
 
-        System.out.println("La temperatura máxima es: " + max + "ºC, en la posición " + posMax);
-        System.out.println("La temperatura mínima es: " + min + "ºC, en la posición " + posMin);
+        System.out.println("El partido con más votos ha obtenido " + max + " votos, en la posición " + posMax);
+        System.out.println("El partido con menos votos obtenidos ha sido: " + partidos[min] + " Con " + votos[min] + " votos, en la posición " + posMin);
         escaner.close();
     }
 }

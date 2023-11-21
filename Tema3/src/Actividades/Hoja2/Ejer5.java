@@ -3,56 +3,45 @@ package Actividades.Hoja2;
 import java.util.Scanner;
 
 public class Ejer5 {
-
     public static void main(String[] args) {
 
         /*
-         * Escribe un programa que pida 10 precios de productos y los guarde en un array
-         * llamado
-         * productos. Después recorrerá el array hasta encontrar un precio menor que 0.
-         * Si lo encuentra
-         * escribirá el mensaje
-         * "Se ha encontrado un valor no válido en la posición x. El programa terminará"
-         * (x es la posición del array donde está ese dato). Si no lo encuentra,
-         * calculará la suma de todos los
-         * precios y la mostrará.
-         * Utiliza una variable semáforo llamada preciosCorrectos, que valdrá true si
-         * todos los precios son
-         * mayores o iguales a cero, y false si se encuentra un número negativo.
+         * Escribe un programa que guarde las siguientes temperaturas en un array y
+         * busque su máximo y mínimo. Además deberá indicar en qué posición del array 
+         * están ese máximo y mínimo.
+         * 15 ºC 16'1 ºC 16 ºC 15'4 ºC 15 ºC 14 ºC 10'2 ºC
+         * 11 ºC 11'5 ºC 10 ºC 10'1 ºC 9'8 ºC 9 ºC 6 ºC
          */
 
-        Scanner scan = new Scanner(System.in);
-        
-        double[] productos = new double[10];
-        boolean preciosCorrectos = true;
-        double suma = 0;
-        int i = 0;
+        Scanner escaner = new Scanner(System.in);
+      
+        //Inicialización del array y declaración de variables
+        double[] temps = {16,16.1,16,15.4,15,14,10.2,11,11.5,10,10.1,9.8,9,6};
+        double max = temps[0];
+        double min = temps[0];
+        int posMax = 0;
+        int posMin = 0;
 
-        for (i = 0; i < productos.length; i++) {
+        //for para recorrer el array
+        for (int i = 0; i < temps.length; i++) {
 
-            System.out.println("Introduce el precio del producto nº" + (i + 1) + ":");
-            productos[i] = scan.nextDouble();
+            //Si la temperatura es mayor que la máxima, la temperatura máxima pasa a ser la temperatura actual
+            if (temps[i] > max) {
 
-            if (productos[i] < 0) {
+                max = temps[i];
+                posMax = i;
+            }
+            
+            //Si la temperatura es menor que la mínima, la temperatura mínima pasa a ser la temperatura actual
+            if (temps[i] < min) {
 
-                preciosCorrectos = false;
-                break;
+                min = temps[i];
+                posMin = i;
             }
         }
 
-        if (preciosCorrectos) {
-
-            for (i = 0; i < productos.length; i++) {
-
-                suma += productos[i];
-            }
-
-            System.out.println("La suma de los precios es: " + suma);
-        } else {
-
-            System.out.println("Se ha encontrado un valor no válido en la posición " + i + ". El programa terminará");
-        }
-        
+        System.out.println("La temperatura máxima es: " + max + "ºC, en la posición " + posMax);
+        System.out.println("La temperatura mínima es: " + min + "ºC, en la posición " + posMin);
+        escaner.close();
     }
-
 }
