@@ -44,7 +44,7 @@ public class Ejer14d {
         }
         System.out.println("\nLos 100 primeros números primos son: ");
         for (int k = 0; k < numeros.length; k++) {
-            System.out.println("Posición --> [" + k + "]" + "  Número primo: " + numeros[k]);
+            System.out.println("Posición --> [" + k + "]" + "  Número primo --> " + numeros[k]);
         }
     }
 }
