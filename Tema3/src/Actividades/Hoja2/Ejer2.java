@@ -22,8 +22,8 @@ public class Ejer2 {
 
             if (alturas[i] > 190) {
 
-                System.out.println("La edad introducida es superior a 190cm");
-
+                System.out.println("La altura introducida es superior a 190cm");
+                break;
             }
 
         }

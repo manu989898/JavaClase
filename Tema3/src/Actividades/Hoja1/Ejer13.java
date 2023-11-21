@@ -8,8 +8,7 @@ public class Ejer13 {
          */
 
         //INICIALIZAMOS ARRAY DE 20 POSICIONES (0 A 19)
-
-        int [] potencias = new int [20];
+        int[] potencias = new int [20];
 
         //BUCLE FOR PARA RECORRER ARRAY Y ASIGNARLE VALOR A CADA POSICIÓN
         for (int i = 0; i < potencias.length; i++) {
@@ -28,13 +27,5 @@ public class Ejer13 {
             i++;
 
         }
-
-
-
-
-        
-
-        
-
     }
 }

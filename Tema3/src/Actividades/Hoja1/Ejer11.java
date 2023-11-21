@@ -50,8 +50,8 @@ public class Ejer11 {
                 }
             }
         }
-
         //CERRAMOS ESCANER AUNQUE A CARLOS NO LE GUSTE
         escaner.close();
     }
 }
+
