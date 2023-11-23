@@ -57,7 +57,7 @@ public class OrdenarMetSeleccion {
                 if (array[posMin] > array[j]) {
                     
                     //Asignamos el valor de la posicion j a la variable min
-                    posMin = j;
+                    posMin = j; 
                 }
             }  
             //Asignamos el valor de la posicion actual a la variable aux
