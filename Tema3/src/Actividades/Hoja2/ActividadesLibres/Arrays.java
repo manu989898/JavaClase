@@ -35,6 +35,8 @@ public class Arrays {
             entrada.nextLine();   
         }
 
+        entrada.close();
+
         //Mostramos el array desordenado     
         System.out.println("Array desordenado: ");
 
@@ -43,10 +45,11 @@ public class Arrays {
             System.out.println(productos[i] + " - " + precios[i]);          
         }
 
-        //Ordenamos el array
+        //Declaramos variables auxiliares
         String auxProducto = "";
         double auxPrecio = 0;
-
+        
+        //Ordenamos el array
         for (int i = 0; i < precios.length - 1; i++) {
             
             for (int j = i + 1; j < precios.length; j++) {
@@ -61,8 +64,7 @@ public class Arrays {
                     //Intercambiamos los valores de productos en funcion de precios
                     auxProducto = productos[i];
                     productos[i] = productos[j];
-                    productos[j] = auxProducto;
-                    
+                    productos[j] = auxProducto;   
                 }               
             }         
         }
@@ -72,8 +74,7 @@ public class Arrays {
 
         for (int i = 0; i < productos.length; i++) {
             
-            System.out.println(productos[i] + " - " + precios[i]);
-            
+            System.out.println(productos[i] + " - " + precios[i]);     
         }
     }
 }
