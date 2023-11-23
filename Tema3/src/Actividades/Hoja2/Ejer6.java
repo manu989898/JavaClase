@@ -15,7 +15,7 @@ public class Ejer6 {
         Scanner escaner = new Scanner(System.in);
 
         // Creación de variables y arrays
-        String[] partidos = { "PP", "PSOE", "VOX", "UP", "ERC", "UPD" };
+        String[] partidos = { "PP", "PSOE", "VOX", "UP", "ERC", "CarlosElMejorProfe" };
         int[] votos = new int[6];
         
         System.out.println("Introduce los votos de los 6 partidos políticos: ");
