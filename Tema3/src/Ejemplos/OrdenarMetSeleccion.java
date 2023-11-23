@@ -71,6 +71,7 @@ public class OrdenarMetSeleccion {
         }
         //Mostramos el array ordenado
         System.out.println(Arrays.toString(array));
+        
         /*  Para mostrar el array sin bucle para recorrerlo
             import java.util.Arrays;
             System.out.println(Arrays.toString(array));

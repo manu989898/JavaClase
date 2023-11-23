@@ -18,12 +18,12 @@ public class Ejer9 {
         //Declaramos el array
         int[] precios = { 43, 58, 44, 62, 80, 15, 15, 10, 90, 56 };
 
-        //Declaramos variables
+        //Inicializamos variables
         int aux = 0;
         int posMin = 0;
 
         //Mostramos el array desordenado
-        System.out.println("Array desordenado: ");
+        System.out.println("\nArray desordenado: ");
         System.out.println(Arrays.toString(precios));
 
         //Recorremos el array menos la posicion final
@@ -48,8 +48,7 @@ public class Ejer9 {
             precios[posMin] = aux;
         }
         //Mostramos el array ordenado
-        System.out.println("Array ordenado: ");
+        System.out.println("\nArray ordenado: ");
         System.out.println(Arrays.toString(precios));
-
     }
 }
