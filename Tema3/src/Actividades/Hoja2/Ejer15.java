@@ -87,8 +87,6 @@ public class Ejer15 {
 
         // Mostramos el precio máximo y el precio mínimo junto al nombre del producto
         System.out.println("El precio máximo es: " + precioMax + " y corresponde al producto: " + precios[contadorMax][0]);
-        System.out.println("El precio mínimo es: " + precioMin + " y corresponde al producto: " + precios[contadorMin][0]);
-
-               
+        System.out.println("El precio mínimo es: " + precioMin + " y corresponde al producto: " + precios[contadorMin][0]);       
     }
 }

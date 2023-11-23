@@ -39,7 +39,7 @@ public class Ejer4 {
                 break;
             }
         }
-
+        
         if (preciosCorrectos) {
 
             for (i = 0; i < productos.length; i++) {
@@ -52,7 +52,7 @@ public class Ejer4 {
 
             System.out.println("Se ha encontrado un valor no válido en la posición " + i + ". El programa terminará");
         }
-        
+   
     }
 
 }
