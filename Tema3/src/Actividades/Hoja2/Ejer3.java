@@ -44,6 +44,7 @@ public class Ejer3 {
             if (nombres[i].equals("Calderon")) {
 
                 nombreEncontrado = true;
+                break;
             }
         }
 
