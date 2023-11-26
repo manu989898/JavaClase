@@ -81,9 +81,7 @@ public class Ejer22 {
 
             System.out.println("Nota trabajo: " + notas[i][2]);
 
-            System.out.println("Nota actitud: " + notas[i][3]);
-
-      
+            System.out.println("Nota actitud: " + notas[i][3]);      
         }
         
         System.out.println("Nota de evaluación");
