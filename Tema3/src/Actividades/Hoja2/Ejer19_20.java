@@ -42,6 +42,8 @@ public class Ejer19_20 {
         float salarioMasBajo = 30000;
         String empleadoSalarioMasBajo = "";
 
+        System.out.println();
+
         // Pedimos los datos de los empleados
         for (int i = 0; i < nominas.length; i++) {
 
