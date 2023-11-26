@@ -19,9 +19,6 @@ public class Ejer19_20 {
          * indique el nombre y
          * apellidos del trabajador al que corresponde, así como la cantidad.
          *
-         * Array de 4 filas(una por cada empleado) y 
-         * 3 columnas(apellidos, nombre y sueldo)
-         * 
          * ------nominas------
          * [0][0] [0][1] [0][2]
          * [1][0] [1][1] [1][2]
@@ -34,6 +31,7 @@ public class Ejer19_20 {
         
         
         // Declaramos el array bidimensional
+        //Array de 4 filas(una por cada empleado) y 3 columnas(apellidos, nombre y sueldo)
         String[][] nominas = new String[4][3];
 
         // Declaramos el scanner
@@ -49,7 +47,7 @@ public class Ejer19_20 {
 
             System.out.println("\nEmpleado " + (i + 1) + ": ");
 
-            //Añadimos +1 en el segundo indice para cambiar de columna y en este caso la fila seria i
+            // Añadimos +1 en el segundo indice para cambiar de columna y en este caso la fila seria i
             System.out.print("Apellidos: ");
             nominas[i][0] = entrada.nextLine();
             
@@ -73,7 +71,6 @@ public class Ejer19_20 {
                 empleadoSalarioMasBajo = nominas[i][0] + " " + nominas[i][1];
             }
         }
-
         // Mostramos el array bidimensional
         System.out.println("\nArray bidimensional: ");
 
@@ -86,7 +83,6 @@ public class Ejer19_20 {
 
             System.out.println();
         }
-
         // Mostramos el sueldo total
         System.out.println("\nEl sueldo total es: " + salarioTotal);
 
