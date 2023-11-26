@@ -37,7 +37,6 @@ public class Ejer15 {
 
             System.out.println();
         }
-
         // Declaramos variables
         float precioTotal = 0;
         float precioMax = 0;

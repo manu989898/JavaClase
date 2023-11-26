@@ -24,9 +24,7 @@ public class BusquedaArrayDesordenado {
 
                 encontrado=true;
                 break;
-
             } 
-
         }
 
         if (encontrado = false){
