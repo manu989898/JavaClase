@@ -11,17 +11,10 @@ public class Ejer24 {
          * • Rellena aleatoriamente cada posición del array con una bola de color rojo o azul.
          * • Recorre todas las posiciones mediante un bucle y cuenta el número de bolas rojas y bolas azules.
          * 
-         * Ayuda: Puedes generar un número aleatorio mayor o igual a 0 y menor que 1 con
-         * la orden
-         * Math.random( ). Si lo multiplicas por 2 y le sumas 1, entonces obtendrás un
-         * número entre 1 y 2,
-         * ambos inclusive. Así puedes usar este número para decidir si se coloca una
-         * bola de un color u otro.
-         * (int) (Math.random()*2 + 1)
          */
 
-        // Declaramos el array tridimensional
-        // Array de 3x3x3
+
+        // Declaramos el array tridimensional de 3x3x3
         String[][][] huecos = new String[3][3][3];
 
         // Declaramos variables

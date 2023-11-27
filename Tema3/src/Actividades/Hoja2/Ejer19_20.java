@@ -8,12 +8,10 @@ public class Ejer19_20 {
 
         /*
          * 19. Crea un programa que vaya pidiendo por la terminal los apellidos, el nombre y
-         * el sueldo de
-         * cuatro empleados de una empresa, y guardándolo como filas en un array
+         * el sueldo de cuatro empleados de una empresa, y guardándolo como filas en un array
          * bidimensional llamado
          * nominas. A continuación muestra los datos por la pantalla en forma de tabla y
-         * calcula el salario total
-         * que paga la empresa cada mes.
+         * calcula el salario total que paga la empresa cada mes.
          * 
          * 20. Añade al programa anterior un bucle que busque el salario más bajo, e
          * indique el nombre y
@@ -81,7 +79,6 @@ public class Ejer19_20 {
 
                 System.out.print(nominas[i][j] + " ");
             }
-
             System.out.println();
         }
         // Mostramos el sueldo total
