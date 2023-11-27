@@ -29,7 +29,6 @@ public class Ejer19_20 {
          */
 
         
-        
         // Declaramos el array bidimensional
         //Array de 4 filas(una por cada empleado) y 3 columnas(apellidos, nombre y sueldo)
         String[][] nominas = new String[4][3];

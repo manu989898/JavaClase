@@ -16,7 +16,7 @@ public class Ejer14d {
         int posicion = 0;
         int i = 2;
 
-        //Entramos en bucle infinito porque no sabemos el numero primo que ocula la cantidad pos. 100
+        //Entramos en bucle infinito porque no sabemos el numero primo que ocupa pos. 100
         while (true) {
 
             /*Comprobamos si el número es primo dividiendolo por todos los números anteriores a él
