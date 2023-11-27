@@ -23,7 +23,7 @@ public class Ejer5 {
         int posMin = 0;
 
         //for para recorrer el array
-        for (int i = 0; i < temps.length; i++) {
+        for (int i = 0; i < temps.length; i++)  {
 
             //Si la temperatura es mayor que la máxima, la temperatura máxima pasa a ser la temperatura actual
             if (temps[i] > max) {
