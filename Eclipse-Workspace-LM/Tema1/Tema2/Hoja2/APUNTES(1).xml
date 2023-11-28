@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 
+    *** CARACTERISTICAS DE LOS LENGUAJES DE MARCA ***
+
+    1. Se basan en texto plano
+    2. Permiten usar metadatos
+    3. Son faciles de leer y escribir
+    4. Son faciles de crear y flexibles
+
+    *** TIPOS DE LENGUAJE DE ***
+
+    html
+    xml
+    json
+    Tex
+    Wiki Markup
+
+    *** CLASIFICACION DE LENGUAJES DE MARCA ***
+
+    1. De presentacion : HTML orientado a describir la estructura de un documento
+    2. Descritivos : XML orientado a describir datos
+
+    *** XML ***
+
+    Extensibilidad : Permite crear etiquetas propias
+    Estrucutra : Permite crear estructuras de datos
+    Transporte : Permite el intercambio de datos entre plataformas
+    Creacion de lenguajes : Permite crear lenguajes con sus etiquetas y atributos
+    Extensible : Permite usar etiquetas propias y de otros vocabularios
+
+    *** DESVENTAJAS DE XML ***
+
+    1. Tienden a ser muy grandes
+    2. Las etiquetas ocupan mucho espacio
+
+    *** ESTRUCTURA DE UN DOCUMENTO XML ***
+
+    1. Declaracion XML : <?xml version="1.0" encoding="UTF-8"?>
+    2. Elementos : <nombre>valor</nombre>
+    3. Atributos : <nombre atributo="valor">valor</nombre>
+    4. Comentarios :
+    5. Contenido : <nombre>contenido</nombre>
+    6. Entidades : <nombre> &nombre; </nombre>
+
+    *** EJEMPLO ENTIDADES ***
+
+    &lt;   = <   EJEMPLO : <nombre> &lt;contenido</nombre>
+    &gt;   = >   EJEMPLO : <nombre> contenido&gt;</nombre>  
+    &amp;  = &   EJEMPLO : <nombre> &amp;contenido</nombre>
+    &apos; = '   EJEMPLO : <nombre> &apos;contenido</nombre>
+    &quot; = "   EJEMPLO : <nombre> &quot;contenido</nombre>
+
+    *** SECCION CDATA ***
+
+    <nombre><![CDATA[contenido]]></nombre>
+
+    *** ERRORES XML ***
+   
+    1. Solo puede haber un elemento raíz.
+    2. Todas las etiquetas que se abren se tienen que cerrar.
+    3. Las etiquetas tienen que estar anidadas correctamente.
+    4. Los nombres de las etiquetas tienen que ser correctos.
+    5. Los valores de los atributos tienen que estar entre comillas.
+
+    *** XMLLINT ***
+   
+    Es una herramienta que permite validar un documento XML
+
+    xmllint archivo.xml __noout
+
+    ********************************************************************************************************************************************************	
+    
+    *** DTD ***
+
+    Es un lenguaje de definicion de tipos de documentos que permite definir la estructura de un documento XML
+
+    *** ETIQUETAS CON CONTENIDO ***
+
+    ANY : Cualquier tipo de contenido
+        ejemplo : <!ELEMENT nombre ANY>
+
+    #PCDATA : Cualquier tipo de contenido
+        ejemplo : <!ELEMENT nombre (#PCDATA)>
+
+    EMPTY : Elemento vacio
+        ejemplo : <!ELEMENT nombre EMPTY>
+
+    #PCDATA : Contenido de tipo texto
+
+    *** ETIQUETAS DE SELECCION ***
+
+    <!ELEMENT optativa (teatro|informatica|cultura_clasica)>
+
+    Si queremos que nombre y apellidos aparezcan en cualquier orden, se puede usar la siguiente definición:
+    <!ELEMENT alumno (((nombre, apellidos)|(apellidos, nombre)), delegado?, optativa)>
+
+    Contenido mixto : <!ELEMENT nombre (#PCDATA|nombre)*>
+    
+    *** MODIFICADORES ***
+
+    ? : Opcional
+        ejemplo : <!ELEMENT nombre (#PCDATA)?>
+
+    * : Cero o mas veces
+
+    + : Una o mas veces
+
+    *** VERIFICACION XMLLINT ***
+
+    xmllint archivo.xml noout valid 
+
+    *** ESTRUCTURA DTD ***
+
+    1. Declaracion DTD : <!DOCTYPE nombre SYSTEM "nombre_archivo.dtd">
+    2. Elementos : <!ELEMENT nombre contenido>
+    3. Atributos : <!ATTLIST nombre atributo tipo valor>
+    4. Entidades : <!ENTITY nombre "valor">
+
+    *** TIPOS DE ELEMENTOS ***
+
+    1. Elementos vacios : <!ELEMENT nombre EMPTY>
+    2. Elementos con contenido : <!ELEMENT nombre (#PCDATA)>
+    3. Elementos con contenido mixto : <!ELEMENT nombre (#PCDATA|nombre)*>
+
+    *** TIPOS DE ATRIBUTOS ***
+
+    1. Atributos obligatorios : <!ATTLIST nombre atributo tipo #REQUIRED>
+    2. Atributos opcionales : <!ATTLIST nombre atributo tipo #IMPLIED>
+    3. Atributos con valor fijo : <!ATTLIST nombre atributo tipo #FIXED valor>
+    4. Atributos con valor por defecto : <!ATTLIST nombre atributo tipo valor>
+    5. Atributos con valores enumerados : <!ATTLIST nombre atributo (valor1|valor2|valor3)>
+    6. Atributos con valores enumerados y por defecto : <!ATTLIST nombre atributo (valor1|valor2|valor3) valor>
+    7. Atributos con valor de cualquier tipo : <!ATTLIST nombre atributo CDATA #IMPLIED>
+
+    *** TIPOS DE DATOS
+
+    CDATA : Cualquier tipo de dato
+        ejemplo : <nombre>Manu Cuesta</nombre>
+
+    ENUMERADOS : El valor puede ser uno de los pertenecientes a una lista de valores escritos entre paréntesis "()" y separados por el carácter "|".
+        ejemplo : (rojo|verde|azul)
+    
+    NMTOKEN : Cadena de caracteres que no puede contener espacios, puede contener numeros y simbolos ( _ - . : )
+        ejemplo : rojo
+
+    NMTOKENS : Cadena de caracteres que no puede contener espacios, puede contener numeros y simbolos ( _ - . : ) separados por espacios
+        ejemplo : rojo verde azul
+    
+    ID : Identificador unico
+        ejemplo : MAT-1234
+    
+    IDREF : Referencia a un identificador
+        ejemplo : MAT-1234
+    
+    IDREFS : Referencia a varios identificadores
+        ejemplo : MAT-1234 MAT-1235 MAT-1236
+    
+    *** TIPOS DE DTD ***
+
+    1. Interno : Se define dentro del documento XML
+    2. Externo : Se define en un documento externo
+    3. Publico : Se define en un documento externo y se referencia a traves de una URL
+
+    *** DTD PUBLICO ***
+
+    El FPI (Formal Public Identifier) es un identificador formal publico que se usa para identificar un DTD publico
+
+    • Símbolo: Puede aparecer "-" si se trata de un propietario no registrado, "+" si se trata de un
+      propietario registrado, o "ISO" si se trata de un identificador asignado por la organización ISO.
+    • Nombre del responsable: Organización o persona responsable.
+    • Identificador único del documento descrito.
+    • Idioma.
+
+    *** EJEMPLO DTD EXTERNO ***
+
+    <!DOCTYPE semaforos SYSTEM "Ejercicio1.dtd">
+
+    *** EJEMPLO DTD INTERNO ***
+
+    <!DOCTYPE semaforos [
+        <!ELEMENT semaforos (semaforo*)>
+        <!ELEMENT semaforo EMPTY>
+        <!ATTLIST semaforo color (rojo|naranja|verde) "verde">
+    ]>
+
+    *** EJEMPLO DTD PUBLICO ***
+
+    <!DOCTYPE semaforos PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+    El FPI de este DOCTYPE es -//W3C//DTD XHTML 1.1//EN y significa:
+
+    • Símbolo: (-) Propietario no registrado (curioso que el W3C no lo esté)
+    • Responsable: W3C
+    • Identificador del documento: DTD XHTML 1.1
+    • Idioma: EN (inglés)
+
+
+    <semaforos>
+
+        <semaforo color="rojo" />
+
+        <semaforo color="naranja" />
+
+        <semaforo />
+
+    </semaforos>
+
+    
+
+    
+
+
+
+-->

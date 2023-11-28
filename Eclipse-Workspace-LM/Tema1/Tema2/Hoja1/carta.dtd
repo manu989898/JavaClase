@@ -1,0 +1,4 @@
+<!-- Usamos * al final para decir que es mixta -->
+<!ELEMENT carta (#PCDATA|empresa|director)*>
+<!ELEMENT empresa (#PCDATA)>
+<!ELEMENT director (#PCDATA)>

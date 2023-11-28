@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--Construye un documento XML que permita modelar 
+la estructura de datos presente en la siguiente factura 
+de una empresa de productos informáticos:(IMG de una factura real)-->
+
+<factura id="999">
+	<infoEsencial>
+		<nombre>Equipos Digitales S.L</nombre>
+		<direccion>Madrid 28015</direccion>
+		<cif>Q-9876543</cif>
+		<tel>917777666</tel>
+		<fecha>15/12/2024</fecha>
+		<numPedido>731</numPedido>
+		<formaPago>Efectivo</formaPago>
+	</infoEsencial>
+	<datosCliente>
+		<num>879</num>
+		<nombre>Pedro Gutierrez</nombre>
+		<direccionEnvio>Av nidea 66 piso 6 puerta D</direccionEnvio>
+		<poblacion>Madrid 28015</poblacion>
+		<provincia>Madrid</provincia>
+	</datosCliente>
+	<datosFactura>
+		<articulo>
+			<referencia>1248</referencia>
+			<descripcion>RTX2060</descripcion>
+			<nombreArticulo>GPU Nvidia 2060</nombreArticulo>
+			<cantidad>1</cantidad>
+			<precio>398 eur</precio>
+			<importe>398 eur</importe>
+		</articulo>
+		<articulo>
+			<referencia>7852</referencia>
+			<descripcion>Procesador tipo AMD Ryzen7 3700x</descripcion>
+			<nombreArticulo>Ryzen7 3700X</nombreArticulo>
+			<cantidad>1</cantidad>
+			<precio>295 eur</precio>
+			<importe>295 eur</importe>
+		</articulo>
+		<articulo>
+			<referencia>9984</referencia>
+			<descripcion>Placa Base ATM Tomahawk B450</descripcion>
+			<nombreArticulo>T B450</nombreArticulo>
+			<cantidad>1</cantidad>
+			<precio>99 eur</precio>
+			<importe>99 eur</importe>
+		</articulo>
+	</datosFactura>
+	<precios>
+		<baseImponible>792,00 eur</baseImponible>
+		<ivaPercent>21,00</ivaPercent>
+		<importeIva>166,32 eur</importeIva>
+		<totalIvaIncl>958,32 eur</totalIvaIncl>
+	</precios>
+</factura>

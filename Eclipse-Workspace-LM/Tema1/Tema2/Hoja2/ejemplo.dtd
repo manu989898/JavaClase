@@ -1,0 +1,7 @@
+<!ELEMENT diario (nombre,entrada+)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT entrada (fecha,festivo?,contenido,lectura*)>
+<!ELEMENT fecha (#PCDATA)>
+<!ELEMENT festivo EMPTY>
+<!ELEMENT contenido (#PCDATA)>
+<!ELEMENT lectura (#PCDATA)>

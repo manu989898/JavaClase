@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Deseamos añadir al XML de los ejemplos anteriores un atributo id que sirva como identificador
+para cada semáforo. Aquí podemos ver un ejemplo:
+
+Añade al DTD del ejercicio anterior una línea para este identificador. Ten en cuenta que este
+atributo será obligatorio y no podrá repetirse en dos semáforos.-->
+
+<!DOCTYPE semaforos SYSTEM "Ejercicio5.dtd">
+
+<semaforos>
+    <semaforo id="sem1" color="verde" />
+    <semaforo id="sem2" color="rojo" />
+    <semaforo id="sem3" color="verde" />
+</semaforos>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 
+Ejemplo
+
+El elemento empresa tiene un atributo obligatorio llamado nombre:
+<empresa nombre="Microsoft Corporation">
+
+Su DTD será:
+<!ATTLIST empresa nombre CDATA #REQUIRED>
+
+Ejemplo
+
+El elemento alumno tiene un atributo opcional llamado clase:
+<alumno clase="2o Bachillerato A">
+
+Su DTD será:
+<!ATTLIST alumno clase CDATA #IMPLIED>
+-->

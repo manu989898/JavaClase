@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE cartelera SYSTEM "ejemplo3.dtd">
+
+<cartelera>
+
+    <actor cod="HF">Harrison Ford</actor>
+    <actor cod="SW">Sigourney Weaver</actor>
+    <actor cod="BP">Bill Paxton</actor>
+    <actor cod="MB">Michael Biehn</actor>
+    <actor cod="AS">Arnold Schwarzenegger</actor>
+
+    <pelicula actores="HF">En busca del arca perdida</pelicula>
+    <pelicula actores="SW BP MB">Aliens, el regreso</pelicula>
+    <pelicula actores="AS MB">Terminator</pelicula>
+
+</cartelera>

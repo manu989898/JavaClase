@@ -1,0 +1,13 @@
+<!-- 
+Usamos + si queremos que aparezca una o mas veces.
+Usamos * si es opcional que aparezca o no.
+Usamos ? si queremos que aparezca (Una vez) o no.
+-->
+<!ELEMENT persona (nombre,apellido+, extra*, ocasion?, combustible?, gasolina*)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT apellido (#PCDATA)>
+<!ELEMENT extra (#PCDATA)>
+<!-- Usamos EMPTY porque no va a tener nada dentro -->
+<!ELEMENT ocasion EMPTY>
+<!ELEMENT combustible (#PCDATA)>
+<!ELEMENT gasolina EMPTY>

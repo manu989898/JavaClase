@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE diario SYSTEM "ejemplo.dtd">
+
+<diario>
+    <nombre>Luis Pérez</nombre>
+    <entrada>
+        <fecha>2023-10-17</fecha>
+        <contenido>Querido diario...</contenido>
+    </entrada>
+    <entrada>
+        <fecha>2023-10-16</fecha>
+        <festivo />
+        <contenido>Querido diario...</contenido>
+        <lectura>El camino (Miguel Delibes)</lectura>
+        <lectura>El nombre del viento (Patrick Rothfuss)</lectura>
+    </entrada>
+    <entrada>
+        <fecha>2023-10-15</fecha>
+        <festivo />
+        <contenido>Querido diario...</contenido>
+        <lectura>El nombre del viento (Patrick Rothfuss)</lectura>
+    </entrada>
+</diario>

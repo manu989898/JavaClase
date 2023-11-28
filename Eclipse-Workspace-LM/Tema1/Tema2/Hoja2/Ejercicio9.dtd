@@ -1,0 +1,5 @@
+<!ELEMENT workers (worker)*>
+<!ELEMENT worker EMPTY>
+<!ATTLIST worker id ID #REQUIRED>
+<!ATTLIST worker isBoss (y|n) #REQUIRED>
+<!ATTLIST worker idBoss IDREFS #IMPLIED>

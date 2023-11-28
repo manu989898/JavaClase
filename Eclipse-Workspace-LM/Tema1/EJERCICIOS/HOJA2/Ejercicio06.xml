@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 
+	Crea un archivo llamado futbol.xml en tu equipo y pega el siguiente código. 
+	A continuación, localiza y corrige los errores de sintaxis.
+-->
+<equipos_de_futbol>
+	<equipo>
+		<nombre>Levante</nombre>
+		<ciudad>Valencia</ciudad>
+		<entrenador> </entrenador>
+		<jugadores>
+			<jugador posicion="portero">
+				<nombre>Javier Jiménez</nombre>
+				<nacionalidad>española</nacionalidad>
+			</jugador>
+			<jugador posicion="lateral">
+				<nombre> Nong </nombre>
+				<nacionalidad>camerunés</nacionalidad>
+			</jugador>
+		</jugadores>
+	</equipo>
+	<equipo2>
+		<nombre>Real Sociedad</nombre>
+		<ciudad>San Sebastián</ciudad>	
+		<jugadores>
+			<jugador posicion="portero">
+				<nombre>Claudio Bravo</nombre>
+				<nacionalidad>chilena</nacionalidad>
+			</jugador>
+			<jugador posicion="defensa">
+				<nombre>Mikel González</nombre>
+				<nacionalidad>española</nacionalidad>	
+			</jugador>
+		</jugadores>
+	</equipo2>
+</equipos_de_futbol>

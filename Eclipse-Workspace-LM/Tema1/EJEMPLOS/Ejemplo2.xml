@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!--                        ***USO DE ETIQUETAS PARA DIFERENCIAR***
+
+
+    un valor id se usa para el tipo de id en este caso dni y mas abajao 
+    se usa como valor 
+    -->
+
+<pedido>
+    <cliente>
+        <id>DNI</id>
+        <id_valor>10200200R</id_valor>
+        <nombre>Lucía Ortiz</nombre>
+    </cliente>
+    <articulo>
+        <id>205</id>
+        <descripcion>Libreta Oxford A4</descripcion>
+        <precio>4.50</precio>
+    </articulo>
+    <articulo>
+        <id>401</id>
+        <descripcion>Bolígrafo Pilot Extra</descripcion>
+        <precio>2.15</precio>
+    </articulo>
+</pedido>
+
+<!-- 
+    En el siguiente ya lo corregimos usando las etiquetas en la que C seria para dni
+    y la T para el id de articulos
+    Se usa la linea xmlns:c para indicar el dominio para que no coincida con otros.
+-->
+<c:pedido xmlns:c="http:www.papeleriaplus.com/clientes" xmlns:t="http:www.papeleriaplus.com/articulos">
+    <c:cliente>
+        <c:id>DNI</c:id>
+        <c:id_valor>10200200R</c:id_valor>
+        <c:nombre>Lucía Ortiz</c:nombre>
+    </c:cliente>
+    <t:articulo>
+        <t:id>205</t:id>
+        <t:descripcion>Libreta Oxford A4</t:descripcion>
+        <t:precio>4.50</t:precio>
+    </t:articulo>
+    <t:articulo>
+        <t:id>401</t:id>
+        <t:descripcion>Bolígrafo Pilot Extra</t:descripcion>
+        <t:precio>2.15</t:precio>
+    </t:articulo>
+</c:pedido>
+
+<!--
+    Tambien se puede dejar uno vacio mientras diferenciemos el otro.
+-->
+<pedido xmlns="http:www.papeleriaplus.com/clientes" xmlns:t="http:www.papeleriaplus.com/articulos">
+    <cliente>
+        <id>DNI</id>
+        <id_valor>10200200R</id_valor>
+        <nombre>Lucía Ortiz</nombre>
+    </cliente>
+    <t:articulo>
+        <t:id>205</t:id>
+        <t:descripcion>Libreta Oxford A4</t:descripcion>
+        <t:precio>4.50</t:precio>
+    </t:articulo>
+    <t:articulo>
+        <t:id>401</t:id>
+        <t:descripcion>Bolígrafo Pilot Extra</t:descripcion>
+        <t:precio>2.15</t:precio>
+    </t:articulo>
+</pedido>

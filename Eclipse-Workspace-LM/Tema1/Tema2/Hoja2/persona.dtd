@@ -1,0 +1,7 @@
+<!ELEMENT persona (edad)>
+<!--Usamos <!ATTLIST para poner norma de tributo-->
+    <!--#REQUIRED es que es obligatorio-->
+    <!ATTLIST persona nombre CDATA #REQUIRED>
+    <!--#IMPLIED es que es opcional-->
+    <!ATTLIST persona apellidos CDATA #IMPLIED>
+<!ELEMENT edad (#PCDATA)>

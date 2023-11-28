@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ejercicio>
+	<biblioteca>
+
+		<libro>
+			<titulo>Nuestro amigo comun</titulo>
+			<autor>Charles Dickens</autor>
+		</libro>
+		<libro>
+			<titulo>El sabueso de los Baskerville</titulo>
+			<autor>Arthur Conan Doyle</autor>
+		</libro>
+
+	</biblioteca>
+
+	<!--Expresa en forma de archivo XML la información
+ contenida en el texto del ejercicio 2, pero usando un 
+ atributo autor en el elemento libro en lugar de una 
+ etiqueta autor.-->
+
+	<biblioteca2>
+
+		<libro autor="Charles Dickens">
+			<titulo>Nuestro amigo comun</titulo>
+		</libro>
+		<libro autor="Arthur Conan Doyle">
+			<titulo>El sabueso de los Baskerville</titulo>
+		</libro>
+
+	</biblioteca2>
+
+	<!--Modifica el XML del ejercicio 3 para eliminar 
+la etiqueta titulo, manteniendo la información intacta.-->
+
+	<libro>
+
+		<libro autor="Charles Dickens" titulo="Nuestro amigo comun"></libro>
+		<libro autor="Arthur Conan Doyle" titulo="El sabueso de los Baskerville"></libro>
+
+	</libro>
+</ejercicio>

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 
+Es de tipo simple cuando el elemento solo tiene texto dentro
+Es de tipo complejo cuando el elemento no es simple
+    elemento que tiene otros elementos dentro
+    elemento que tiene atributos
+
+Tipos de datos XSD
+xs:string Cadena de texto
+xs:decimal Número decimal
+xs:integer Número entero
+xs:positiveInteger Entero mayor que cero
+xs:nonNegativeInteger Entero mayor o igual que cero
+xs:date Fecha (con formato aaaa-mm-dd)
+xs:time Hora (con formato hh:mm)
+xs:minOccurs="0" El elemento es opcional
+xs:maxOccurs="unbounded" El elemento puede aparecer varias veces
+xs:minInclusive="0" / maxInclusive="120" incluye los numeros 0 y 120
+xs:minExclusive="0" / maxExclusive="120" excluye los numeros 0 y 120
+xs:minLength="3" / maxLength="100" longitud minima y maxima de la cadena
+xs:enumeration value="Gratuito" / value="Integro" / value="Copago" opciones
+xs:totalDigits="8" / fractionDigits="2" numero de digitos totales y decimales
+xs:sequence Elementos que aparecen en el orden indicado
+xs:choice Elección entre varias etiquetas (solo puede aparecer una)
+xs:all Todos los elementos que aparecen en cualquier orden
+xs:positiveInteger Entero mayor que cero
+
+-->
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <!--Declaramos el elemento receta-->
+    <xs:element name="receta"> 
+        <!--Declaramos que es de tipo compleja al tener otra etiqueta dentro-->
+        <xs:complexType>
+            <!--Declaramos que es de tipo secuencia al tener varias etiquetas dentro-->
+            <xs:sequence>
+               
+                <xs:element name="medicamento" type="xs:string" minOccurs="0" maxOccurs="unbounded">
+                <!--Declaramos tipo String porque tiene texto dentro-->
+                <!--Declaramos min(o) por si no hay ninguno y max(sin límite)-->
+                <!--Declaramos tipo String porque va texto dentro de receta-->
+                </xs:element>             
+                <xs:element name="farmacia" type="xs:string" default="Juaneda">
+                 <!--Usamos default="Juaneda" para dar valor por defecto y no rellenar la etiqueta-->
+                <!--Usamos fixed="Juaneda" para que obligatoriamente sea juaneda o nada-->
+                </xs:element>
+                <xs:element name="edad" type="TipoEdad"/>                   
+                <xs:element name="nombre" type="TipoNombre"/>
+                <xs:element name="pago" type="TipoPago"/>
+                <xs:element name="dni" type="TipoDNI"/>
+                <xs:element name="medico" type="TipoMedico"/>
+                <xs:element name="posologia" type="TipoPosologia"/>
+
+                <xs:element name="alergias">
+                    <!--Declaramos tipo compleja porque alergias está vacia-->
+                    <xs:complexType/>
+                </xs:element>
+                <xs:element name="grupo_sanguineo">
+                    <!--Es complexType porque tiene atributo la etiqueta-->
+                    <xs:complexType>
+                        <!--Declaramos nombre tipo y obligatoriedad-->
+                        <xs:attribute name="tipo" type="xs:string" use="required"/>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="instrucciones">
+                    <!--Declaramos mixed=true porque tiene contenido mixto en su interior-->
+                    <xs:complexType mixed="true">
+                        <!--Declaramos maxOccurs="unbounded" porque hay varios <b> dentro-->
+                        <xs:choice maxOccurs="unbounded" minOccurs="0">
+                            <xs:element name="b"></xs:element>
+                        </xs:choice>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+    <!--Tipos definidos por nosotros-->
+
+    <!--TIPO EDAD-->
+    <xs:simpleType name="TipoEdad">
+        <!--Declaramos restriction-->
+        <!--Restringimos con tipo int-->
+        <xs:restriction base="xs:integer">
+            <!--Declaramos minimo y maximo-->
+            <xs:minInclusive value="0"/>
+            <xs:maxInclusive value="120"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!--TIPO NOMBRE-->
+    <xs:simpleType name="TipoNombre">
+                        <!--Declaramos restriction-->
+                        <!--Restringimos con tipo String-->
+        <xs:restriction base="xs:string">
+            <!--Declaramos minimo y maximo-->
+            <xs:minLength value="1"/>
+            <xs:maxLength value="100"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!--TIPO PAGO-->
+    <xs:simpleType name="TipoPago">
+        <!--Restringimos con tipo String-->
+        <xs:restriction base="xs:string">
+            <!--Declaramos opciones-->
+            <xs:enumeration value="Gratuito"/>
+            <xs:enumeration value="Integro"/>
+            <xs:enumeration value="Copago"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!--TIPO DNI-->
+    <xs:simpleType name="TipoDNI">
+        <!--Restringimos con tipo String-->
+        <xs:restriction base="xs:string">
+            <!--Declaramos opciones-->
+            <xs:pattern value="\d{8}[A-Z]"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!--TIPO MEDICO-->
+    <xs:complexType name="TipoMedico">
+        <!--Un elemento con contenido String y un atributo se describe como
+        una extensión de String-->
+        <xs:simpleContent>
+            <!--Es un element string con un atributo integrer dentro-->
+            <xs:extension base="xs:string">
+                <!--Declaramos el atributo de tipo int-->
+                <!--Declaramos use="required" para hacerlo obligatorio-->
+                <xs:attribute name="numColegiado" type="xs:integer" use="required"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <!--TIPO POSOLOGIA-->
+    <xs:complexType name="TipoPosologia">
+        <xs:sequence>
+            <xs:element name="tomas" type="xs:positiveInteger"/>
+            <xs:element name="horario" type="xs:string"/>
+        </xs:sequence>
+        <xs:attribute name="duracion" type="xs:string" use="required"/>
+    </xs:complexType>
+
+</xs:schema>

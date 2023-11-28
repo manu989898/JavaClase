@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<familia>Familia <padre>
+		<nombre>Pedro Alvarez</nombre>
+	</padre>
+<madre>
+		<nombre>Luisa Robles</nombre>
+	</madre>
+<hijo>
+		<nombre>Manuel Alvarez</nombre>
+	</hijo>
+<hijo>
+		<nombre>Natalia Alvarez</nombre>
+	</hijo>
+</familia>

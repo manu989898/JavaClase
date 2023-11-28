@@ -1,0 +1,16 @@
+<!ELEMENT alumno (nombre, apellidos)>
+<!ATTLIST alumno nivel CDATA #REQUIRED>
+
+<!--
+Esto solo se ejecutará si no se pone grupo.
+Si nadie pone grupo, el valor por defecto será A
+<!ATTLIST alumno grupo (A|B|C|D|E|F|G|H) "A">
+
+Obligatoriamente solo puede tener el valor A
+Si nadie pone grupo, el valor por defecto será A
+<!ATTLIST alumno grupo (A|B|C|D|E|F|G|H) #FIXED "A">
+-->
+<!ATTLIST alumno grupo (A|B|C|D|E|F|G|H) #REQUIRED>
+
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT apellidos (#PCDATA)>

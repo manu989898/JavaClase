@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<prueba>
+	<!--
+Escribe el siguiente código sustituyendo los caracteres problemáticos por
+entidades:
+<sistema_domotico>
+	<condicion>Temperatura < 17</condicion>
+	<condicion>Humedad > 50</condicion>
+	<condicion>Lámpara apagada & calefacción encendida</condicion>
+</sistema_domotico>
+
+<sistema_domotico>
+	<condicion>Temperatura < 17</condicion>
+	<condicion>Humedad > 50</condicion>
+	<condicion>Lámpara apagada & calefacción encendida</condicion>
+</sistema_domotico>
+-->
+	<sistema_domotico>
+		<condicion>Temperatura &lt; 17</condicion>
+		<condicion>Humedad &gt; 50</condicion>
+		<condicion>Lámpara apagada &amp; calefacción encendida</condicion>
+	</sistema_domotico>
+
+
+	<!--Queremos escribir un archivo xml con esta estructura:
+
+Sustituyendo la frase "Aquí vendría el código del programa..." por el código siguiente:
+	cmbCursos = new JComboBox<String>();
+	cmbCursos.addItem("Selecciona un curso");
+	cmbCursos.addItem("1º ESO");
+
+Para eso usamos la etiqueta <![CDATA]]>
+
+<aplicacion>
+	<creador>Carlos</creador>
+	<fecha>15 de septiembre</fecha>
+	<codigo></codigo>
+</aplicacion>
+-->
+
+	<aplicacion>
+		<creador>Carlos</creador>
+		<fecha>15 de septiembre</fecha>
+		<codigo>
+		<![CDATA[ 
+			cmbCursos = new JComboBox<String>();
+			cmbCursos.addItem("Selecciona un curso");
+			cmbCursos.addItem("1º ESO");
+		]]>
+	</codigo>
+	</aplicacion>
+</prueba>
+

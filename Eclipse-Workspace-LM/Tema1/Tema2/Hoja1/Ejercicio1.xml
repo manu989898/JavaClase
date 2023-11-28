@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE planetas [
+    
+    <!ELEMENT planetas (planeta+)>
+    <!ELEMENT planeta (#PCDATA)>
+]>
+
+
+<planetas>
+    <planeta>Mercurio</planeta>
+    <planeta>Venus</planeta>
+    <planeta>Marte</planeta>
+    <planeta>Saturno</planeta>
+</planetas>

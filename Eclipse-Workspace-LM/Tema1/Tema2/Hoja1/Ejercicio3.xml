@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hilo [
+    <!ELEMENT hilo (mensaje*)>
+    <!ELEMENT mensaje (autor, titulo?, texto)>
+    <!ELEMENT autor (#PCDATA)>
+    <!ELEMENT titulo (#PCDATA)>
+    <!ELEMENT texto (#PCDATA)>
+]>
+
+<hilo>
+    <mensaje>
+        <autor>Carlos</autor>
+        <titulo>Fecha de examen</titulo>
+        <texto>¿Va bien hacer el examen el día 30?</texto>
+    </mensaje>
+    <mensaje>
+        <autor>Francisco</autor>
+        <texto>Demasiado pronto</texto>
+    </mensaje>
+    <mensaje>
+        <autor>María</autor>
+        <texto>¿Tiene que ser tan tarde?</texto>
+    </mensaje>
+</hilo>

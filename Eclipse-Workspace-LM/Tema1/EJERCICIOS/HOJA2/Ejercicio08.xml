@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<clinica>
+	<perros>
+		<perro>
+			<nombre>Pipo</nombre>
+			<fecha_nacimiento>20/10/2012</fecha_nacimiento>
+		</perro>
+		<perro>
+			<nombre>Milu</nombre>
+			<fecha_nacimiento>15/10/2018</fecha_nacimiento>
+		</perro>
+	</perros>
+	<gatos>
+		<gato>
+			<nombre>Mina</nombre>
+			<fecha_nacimiento>1/1/2020</fecha_nacimiento>
+		</gato>
+	</gatos>	
+</clinica>

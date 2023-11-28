@@ -1,0 +1,5 @@
+<!ELEMENT empleados (empleado)*>
+<!ELEMENT empleado (nombre)>
+<!ELEMENT nombre (#PCDATA)>
+<!ATTLIST empleado  codigo ID #REQUIRED>
+<!ATTLIST empleado jefe IDREFS #IMPLIED>

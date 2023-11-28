@@ -1,0 +1,5 @@
+<!ELEMENT hilo (mensaje*)>
+<!ELEMENT mensaje (autor, titulo*, texto*)>
+<!ELEMENT autor (#PCDATA)>
+<!ELEMENT titulo (#PCDATA)>
+<!ELEMENT texto (#PCDATA)>

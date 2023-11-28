@@ -1,0 +1,4 @@
+<!ELEMENT semaforos (semaforo)*>
+<!ELEMENT semaforo EMPTY>
+<!ATTLIST semaforo id ID #REQUIRED>
+<!ATTLIST semaforo color CDATA "verde">

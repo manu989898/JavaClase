@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Tenemos un programa para DJs con el que podemos 
+generar listas de reproducción y añadir efectos entre las canciones. 
+Queremos diseñar el XML donde se guardarán estas listas. 
+Concretamente queremos guardar, para cada canción:-->
+
+<lista>
+	<cancion titulo="Insomniax">
+		<artista>PedroDJ</artista>
+		<duracion>185</duracion>
+		<estilo>Techno</estilo>
+		<puntuacion>4</puntuacion>
+		<instante>
+			<inicio>12</inicio>
+			<final>182</final>
+		</instante>
+		<estiloCorte>fade in</estiloCorte>
+	</cancion>
+	<cancion titulo="Por encima del bien y del mal">
+		<artista>Robe</artista>
+		<duracion>195</duracion>
+		<estilo>Rock</estilo>
+		<puntuacion>5</puntuacion>
+		<instante>
+			<inicio>18</inicio>
+			<final>192</final>
+		</instante>
+		<estiloCorte>fade in</estiloCorte>
+	</cancion>
+	<cancion titulo="Feo fuerte y formal">
+		<artista>Loquillo</artista>
+		<duracion>175</duracion>
+		<estilo>Rock</estilo>
+		<puntuacion>5</puntuacion>
+		<instante>
+			<inicio>11</inicio>
+			<final>172</final>
+		</instante>
+		<estiloCorte>fade out</estiloCorte>
+	</cancion>
+</lista>

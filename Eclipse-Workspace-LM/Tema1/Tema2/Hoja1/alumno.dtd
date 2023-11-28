@@ -1,0 +1,9 @@
+<!ELEMENT alumno (((nombre, apellidos)|(apellidos, nombre)), delegado?, optativa, claseId)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT apellidos (#PCDATA)>
+<!ELEMENT delegado EMPTY>
+<!ELEMENT optativa (cultura_clasica|teatro|informatica)>
+<!ELEMENT cultura_clasica EMPTY>
+<!ELEMENT teatro EMPTY>
+<!ELEMENT informatica EMPTY>
+<!ELEMENT claseId (#PCDATA)>

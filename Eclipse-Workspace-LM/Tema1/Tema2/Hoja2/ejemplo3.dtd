@@ -1,0 +1,7 @@
+<!ELEMENT cartelera (actor+, pelicula+)>
+
+<!ELEMENT actor (#PCDATA)>
+<!ATTLIST actor cod ID #REQUIRED>
+
+<!ELEMENT pelicula (#PCDATA)>
+<!ATTLIST pelicula actores IDREFS #REQUIRED>

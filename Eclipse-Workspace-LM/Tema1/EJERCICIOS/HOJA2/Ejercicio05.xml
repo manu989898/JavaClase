@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<!--En los apuntes se mencionan cinco normas que debe cumplir un documento XML para
+estar bienformado.Dado el siguiente documento XML, haz pruebas para incumplir
+cada una de las cinco reglas. Tras cada prueba, abre el documento con el
+navegador Firefox y observa el error que te muestra: cuál es el mensaje, en qué
+parte del código lo marca...Elabora un documento con los resultados (una captura
+de pantalla con el error resaltado y a continuación una captura con el mensaje
+de error de Firefox, para cada regla).
+
+-->
+<!--
+EJEMPLO1 MAS DE UN ELEMENTO DE RAIZ
+<bookstore>
+<librerias>
+	<bookcategory="cooking">
+	<titlelang="en">Everyday Italian
+	</title>
+	<author>Giada De Laurentiis</author>
+	<year>2005</year>
+	<price>30.00</price>
+	</book>
+	<bookcategory="children">
+	<titlelang="en">Harry Potter
+	</title>
+	<author>J K. Rowling</author>
+	<year>2005</year>
+	<price>29.99</price>
+	</book>
+</bookstore>
+</librerias>
+-->
+<!--
+EJEMPLO2 ETIQUETA SIN CERRAR
+<bookstore>
+	<bookcategory="cooking">
+	<titlelang="en">Everyday Italian
+	</title>
+	<author>Giada De Laurentiis</author>
+	<year>2005</year>
+	<price>30.00</price>
+	</book>
+	<bookcategory="children">
+	<titlelang="en">Harry Potter
+	</title
+	<author>J K. Rowling</author>
+	<year>2005</year>
+	<price>29.99</price>
+	</book>
+</bookstore>
+-->
+
+<!-- EJEMPLO3 ETIQUETA MAL ANIDADA
+<bookstore>
+	<bookcategory="cooking">
+	<titlelang="en">Everyday Italian
+	</title>
+	<author>Giada De Laurentiis</author>
+	<year>2005</year>
+	<price>30.00</price>
+	</book>
+	<bookcategory="children">
+	<titlelang="en">Harry Potter
+	</title>
+	<author>J K. Rowling</author>
+	<year>2005</year>
+	<price>29.99</price>
+	</book>
+</bookstore>
+-->
+<!--
+ EJEMPLO4 NOMBRE DE ETIQUETA INCORRECTO
+<bookstore>
+	<bookcatego="cooking">
+	<titlelang="en">Everyday Italian
+	</title>
+	<author>Giada De Laurentiis</author>
+	<year>2005</year>
+	<price>30.00</price>
+	</book>
+	<bookcategory="children">
+	<titlelang="en">Harry Potter
+	</title>
+	<author>J K. Rowling</author>
+	<year>2005</year>
+	<price>29.99</price>
+	</book>
+</bookstore>
+-->
+<!--
+EJEMPLO5 VALOR DE ATRIBUTO SIN COMILLAS
+<bookstore>
+	<bookcategory=cooking>
+	<titlelang="en">Everyday Italian
+	</title>
+	<author>Giada De Laurentiis</author>
+	<year>2005</year>
+	<price>30.00</price>
+	</book>
+	<bookcategory="children">
+	<titlelang="en">Harry Potter
+	</title>
+	<author>J K. Rowling</author>
+	<year>2005</year>
+	<price>29.99</price>
+	</book>
+</bookstore>
+-->
+

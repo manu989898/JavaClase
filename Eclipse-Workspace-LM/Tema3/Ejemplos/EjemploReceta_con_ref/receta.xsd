@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    
+    <xs:element name="receta">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="medicamento" maxOccurs="10"/>
+                <xs:element ref="farmacia"/>
+                <xs:element ref="edad"/>
+                <xs:element ref="nombre"/>
+                <xs:element ref="pago"/>
+                <xs:element ref="dni"/>
+                <xs:element ref="medico"/>
+                <xs:element ref="posologia"/>
+                <xs:element ref="alergias"/>
+                <xs:element ref="grupo_sanguineo"/>
+                <xs:element ref="instrucciones"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="medicamento" type="xs:string"/>
+    
+    <xs:element name="farmacia" type="xs:string" default="Juaneda"/>
+    
+    <xs:element name="edad">
+        <xs:simpleType>
+            <xs:restriction base="xs:integer">
+                <xs:minInclusive value="0"/>
+                <xs:maxInclusive value="120"/>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+    
+    <xs:element name="nombre">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:minLength value="1"/>
+                <xs:maxLength value="100"/>     
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+    
+    <xs:element name="pago">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:enumeration value="Gratuito"/>
+                <xs:enumeration value="Integro"/>
+                <xs:enumeration value="Copago"/>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+    
+    <xs:element name="dni">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:pattern value="\d{8}[A-Z]"/>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+    
+    <xs:element name="medico">
+        <xs:complexType>
+            <xs:simpleContent>
+                <xs:extension base="xs:string">
+                    <xs:attribute ref="numColegiado"/>
+                </xs:extension>
+            </xs:simpleContent>
+        </xs:complexType>
+    </xs:element>
+    
+    <xs:attribute name="numColegiado" type="xs:positiveInteger"/>
+
+    <xs:element name="posologia">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="tomas"/>
+                <xs:element ref="horario"/>
+            </xs:sequence>
+            <xs:attribute ref="duracion"/>
+        </xs:complexType>
+    </xs:element>
+    
+    <xs:attribute name="duracion" type="xs:string"/>
+    
+    <xs:element name="tomas" type="xs:positiveInteger"/>
+
+    <xs:element name="horario" type="xs:string"/>
+    
+    <xs:element name="alergias">
+        <xs:complexType/>
+    </xs:element>
+    
+    <xs:element name="grupo_sanguineo">
+        <xs:complexType>
+            <xs:attribute ref="tipo"/>
+        </xs:complexType>
+    </xs:element>
+    
+    <xs:attribute name="tipo">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:enumeration value="A+"/>
+                <xs:enumeration value="A-"/>
+                <xs:enumeration value="B+"/>
+                <xs:enumeration value="B-"/>
+                <xs:enumeration value="AB+"/>
+                <xs:enumeration value="AB-"/>
+                <xs:enumeration value="0+"/>
+                <xs:enumeration value="0-"/>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:attribute>
+
+    <xs:element name="instrucciones">
+        <xs:complexType mixed="true">
+            <xs:choice  minOccurs="0" maxOccurs="unbounded">
+                <xs:element ref="b"/>
+            </xs:choice>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="b" type="xs:string"/>
+    
+</xs:schema>

@@ -1,0 +1,25 @@
+
+<!ELEMENT semaforos (semaforo)*>
+<!ELEMENT semaforo EMPTY>
+<!ATTLIST semaforo color (verde|naranja|rojo) #IMPLIED>
+
+<!--
+Ejercicio2 
+<!ELEMENT semaforos (semaforo)*>
+<!ELEMENT semaforo EMPTY>
+<!ATTLIST semaforo color (verde|naranja|rojo) #REQUIRED>
+-->
+
+<!--
+Ejercicio3 
+<!ELEMENT semaforos (semaforo)*>
+<!ELEMENT semaforo EMPTY>
+<!ATTLIST semaforo color (verde|naranja|rojo) "verde">
+--> 
+
+<!--
+Ejercicio4
+<!ELEMENT semaforos (semaforo)*>
+<!ELEMENT semaforo EMPTY>
+<!ATTLIST semaforo color CDATA "verde">
+-->

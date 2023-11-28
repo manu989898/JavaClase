@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE taller SYSTEM "coche.dtd">
+
+<taller>
+    <coche matricula="MAT-7890ECC" fecha_compra="2020-02-01"
+        fechas_revisiones="2021-01-25 2022-01-28 2023-02-05">
+        <marca>Kia</marca>
+        <modelo>Stonic</modelo>
+    </coche>
+    <coche matricula="MAT-8361DTG" fecha_compra="2019-06-10"
+        fechas_revisiones="2020-06-01 2021-06-15">
+        <marca>Volkswagen</marca>
+        <modelo>Taigo</modelo>
+    </coche>
+    <reparacion mat_vehiculo="MAT-8361DTG">
+        <concepto>Pinchazo rueda trasera izquiera</concepto>
+        <precio>10</precio>
+    </reparacion>
+</taller>

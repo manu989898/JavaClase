@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--Decir que XSD vamos a usar-->
+<receta xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="receta.xsd">
+
+    <medicamento>Paracetamol</medicamento>
+    <medicamento>Omeoprazol</medicamento>
+    <farmacia>Juaneda</farmacia>
+    <edad>70</edad>
+    <nombre>Francisco Santos</nombre>
+    <pago>Integro</pago>
+    <dni>42513270R</dni>
+    <medico numColegiado="242342">Manuel Cuesta Rodriguez</medico>
+    <posologia duracion="Cinco días">
+        <tomas>3</tomas>
+        <horario>Mañana, Tarde, Noche</horario>
+    </posologia>
+    <alergias />
+    <grupo_sanguineo tipo="AB+"/>
+    <instrucciones> Esta medicación debe tomarse en
+         <b>ayunas</b>. No deben superarse los 
+         <b>cuatro</b> comprimidos al día. 
+    </instrucciones>
+</receta>

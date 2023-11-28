@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Redacta el DTD correspondiente al siguiente
+documento XML. Los elementos worker pueden
+estar vacíos o contener texto. El atributo isBoss es obligatorio y debe ser único para cada worker.
+Los únicos valores que puede tomar son "y" o "n". El atributo idBoss es opcional y debe tener un
+valor o valores que aparezcan en el documento en atributos de tipo ID.-->
+<!DOCTYPE workers SYSTEM "Ejercicio9.dtd">
+<workers>
+    <worker id="b1" isBoss="y" />
+    <worker id="b2" isBoss="y" idBoss="b1" />
+    <worker id="w1" isBoss="n" idBoss="b1 b2" />
+    <worker id="w2" isBoss="n" idBoss="b2" />
+    <worker id="w3" isBoss="n" idBoss="b2" />
+</workers>

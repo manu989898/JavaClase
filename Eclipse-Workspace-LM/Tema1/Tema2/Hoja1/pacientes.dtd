@@ -1,0 +1,13 @@
+<!-- 
+Añade al archivo un DTD interno que permita validarlo, siguiendo las siguientes premisas:
+• El elemento pacientes puede tener varios elementos paciente, o ninguno.
+• Un elemento paciente debe tener obligatoriamente un hijo nombre y un hijo que podrá ser
+dni o num_seg_social, pero no ambos. El motivo es que si un paciente no tiene número de la
+seguridad social, se le dará de alta con su DNI.
+-->
+<!ELEMENT pacientes (paciente*)>
+<!ELEMENT paciente (nombre, (dni*|num_seg_social*), alergias?)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT dni (#PCDATA)>
+<!ELEMENT num_seg_social (#PCDATA)>
+<!ELEMENT alergias EMPTY>

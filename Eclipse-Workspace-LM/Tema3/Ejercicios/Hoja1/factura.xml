@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<factura codigo="7190" estado="pendiente"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="factura.xsd">
+    <cliente>
+        <nombre>Mariano Pérez</nombre>
+    </cliente>
+    <articulos>
+        <articulo iva="21">
+            <descripcion>Pendrive 16GB TDK</descripcion>
+            <precioUnitario>9.50</precioUnitario>
+            <unidades>2</unidades>
+        </articulo>
+        <articulo iva="16">
+            <descripcion>Paquete de 500 folios Ofimarket 80g</descripcion>
+            <precioUnitario>6.25</precioUnitario>
+            <unidades>1</unidades>
+        </articulo>
+        <articulo iva="16">
+            <descripcion>Calculadora Casio científica</descripcion>
+            <precioUnitario>12.00</precioUnitario>
+            <unidades>1</unidades>
+        </articulo>
+    </articulos>
+</factura>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE persona SYSTEM "persona.dtd">
+<persona>
+	<nombre>Amadeo</nombre>
+	<apellido>Martínez</apellido>
+	<apellido>López</apellido>
+	<extra>Elevalunas electrico</extra>
+	<extra>Techo solar</extra>
+	<ocasion/>
+	<combustible>
+		<gasolina/>
+	</combustible>
+
+</persona>	

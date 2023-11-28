@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE empleados SYSTEM "Ejercicio7.dtd">
+
+<empleados>
+    <empleado codigo="e0001">
+        <nombre>Alan Sugar</nombre>
+    </empleado>
+    <empleado codigo="e0002" jefe="e0001">
+        <nombre>Jose Luis Domínguez</nombre>
+    </empleado>
+    <empleado codigo="e0003" jefe="e0002">
+        <nombre>Pedro Ruiz</nombre>
+    </empleado>
+    <empleado codigo="e0004" jefe="e0002">
+        <nombre>Paco Suárez</nombre>
+    </empleado>
+    <empleado codigo="e0005" jefe="e0002">
+        <nombre>Paco Menéndez</nombre>
+    </empleado>
+</empleados>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Modifica el xml del ejercicio anterior para que el namespace proveedores sea el espacio de nombres por defecto.
+-->
+
+<contabilidad >
+	<proveedores xmlns="http://www.miempresa.net/proveedores"  xmlns:cli="http://www.miempresa.net/clientes">
+		<proveedornombre nombre="Papelería Carlin"></proveedornombre>
+		<proveedornombres nombre="Librería técnica Quars"></proveedornombres>
+	</proveedores>
+	<cli:clientes>
+		<cli:clientenombre:cli nom="Manuel García" dni="27188299J"></cli:clientenombre>
+		<cli:clientenombre2 nom="Macarena López" dni="19029100L"></cli:clientenombre2>
+	</cli:clientes>
+</contabilidad>

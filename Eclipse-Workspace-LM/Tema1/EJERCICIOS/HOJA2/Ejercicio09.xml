@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 
+Modifica el xml siguiente para que las etiquetas correspondientes a proveedores
+pertenezcan al espacio de nombres prov con identificador
+"http://www.miempresa.net/proveedores". Igualmente las correspondientes a
+clientes pertenecerán al espacio de nombres cli con identificador
+"http://www.miempresa.net/clientes"
+
+<contabilidad>
+	<proveedores> <proveedornombre="Papelería Carlin"/> <proveedornombre="Librería técnica Quars"/>
+	</proveedores>
+	<clientes> <clientenombre="Manuel García"dni="27188299J"/> <clientenombre="Macarena López"dni="19029100L"/>
+	</clientes>
+</contabilidad>
+-->
+<prov:contabilidad xmlns:prov="http://www.miempresa.net/proveedores"  xmlns:cli="http://www.miempresa.net/">
+	<prov:proveedores >
+		<prov:proveedornombre nombre="Papelería Carlin"></prov:proveedornombre>
+		<prov:proveedornombres nombre="Librería técnica Quars"></prov:proveedornombres>
+	</prov:proveedores>
+	<cli:clientes>
+		<cli:clientenombre nom="Manuel García" dni="27188299J"></cli:clientenombre>
+		<cli:clientenombre2 nom="Macarena López" dni="19029100L"></cli:clientenombre2>
+	</cli:clientes>
+</prov:contabilidad>

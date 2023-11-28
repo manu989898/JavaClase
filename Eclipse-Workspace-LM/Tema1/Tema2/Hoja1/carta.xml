@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE carta SYSTEM "carta.dtd">
+<carta>Apreciado <empresa>Ferros Puig</empresa>:
+    Sr. <director>Manel Garcia</director>, le envío esta carta para 
+    comunicarle que le hemos enviado su pedido a la dirección que nos proporcionó.
+    Atentamente, Ferretería, SA.
+</carta>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<cliente id="100">
+	<nombre>Manuel</nombre>
+	<apellidos>Cuesta Rodriguez</apellidos>
+	<identificacion>
+		<tipo>dni</tipo>
+	</identificacion>
+	<dni>43203270R</dni>
+</cliente>
+			

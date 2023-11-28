@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Queremos definir un xml para introducir el horario de clases usando namespaces. 
+    Define un namespace para el mismo y diseña (y rellena) un xml 
+    donde conste toda la información necesaria detu horario de clases 
+    con el nombre horario.xml.
+-->
+
+<horarios xmlns="https://iessonferrer.net/horarios">
+    <lunes>
+        <clase>fol<clase>
+        <clase>fol<clase>
+        <clase>sistemas informaticos<clase>
+        <clase>sistemas informaticos<clase>
+        <clase>base de datos<clase>
+        <clase>base de datos<clase>
+    </lunes>
+    <martes>
+        <clase>sistemas informaticos<clase>
+        <clase>sistemas informaticos<clase>
+        <clase>entornos de desarrollo<clase>
+        <clase>programación<clase>
+        <clase>programación<clase>
+        <clase>lenguaje de marcas<clase>
+    </martes>
+    <miercoles>
+        <clase>lenguaje de marcas<clase>
+        <clase>base de datos<clase>
+        <clase>base de datos<clase>
+        <clase>entornos de desarrollo<clase>
+        <clase>programación<clase>
+        <clase>programación<clase>
+    </miercoles>
+    <jueves>
+        <clase>programación<clase>
+        <clase>programación<clase>
+        <clase>sistemas informaticos<clase>
+        <clase>fol<clase>
+        <clase>base de datos<clase>
+        <clase>base de datos<clase>
+    </jueves>
+    <viernes>
+        <clase>entornos de desarrollo<clase>
+        <clase>programación<clase>
+        <clase>base de datos<clase>
+        <clase>base de datos<clase>
+        <clase>lenguaje de marcas<clase>
+        <clase>lenguaje de marcas<clase>
+    </viernes>
+
+</horarios>

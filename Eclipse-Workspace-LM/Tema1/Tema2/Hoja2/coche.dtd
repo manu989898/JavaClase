@@ -1,0 +1,22 @@
+<!ELEMENT taller (coche+, reparacion+)>
+
+<!-- Usamos ID para que el valor tenga que ser único -->
+<!ATTLIST coche matricula ID #REQUIRED>
+
+<!-- Usamos NMTOKEN para que no se puedan usar espacios en blanco-->
+<!ATTLIST coche fecha_compra NMTOKEN #REQUIRED>
+
+<!-- Usamos NMTOKENS cuando hay varios -->
+<!ATTLIST coche fechas_revisiones NMTOKENS #IMPLIED>
+
+<!ELEMENT coche (marca, modelo)>
+<!ELEMENT marca (#PCDATA)>
+<!ELEMENT modelo (#PCDATA)>
+
+<!ELEMENT reparacion (concepto, precio)>
+
+<!-- Usamos IDREF para que el valor tenga que ser una referencia a un elemento concreto -->
+<!ATTLIST reparacion mat_vehiculo IDREF #REQUIRED>
+
+<!ELEMENT concepto (#PCDATA)>
+<!ELEMENT precio (#PCDATA)>

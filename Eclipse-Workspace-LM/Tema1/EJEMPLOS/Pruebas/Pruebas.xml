@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!--un ejemplo de uso del CDATA-->
+
+<aplicacion>
+    <creador>Carlos</creador>
+    <fecha>15 de septiembre</fecha>
+    <codigo>
+    <![CDATA[
+        cmbCursos = new JComboBox<String>();
+        cmbCursos.addItem("Selecciona un curso");
+        cmbCursos.addItem("1º ESO");
+    ]]>
+    </codigo>
+
+    <!--Un ejemplo de uso de xmlns sin nombre-->
+
+    <horarios xmlns="https://iessonferrer.net/horarios">
+        <lunes>
+            <clase>fol<clase>
+            <clase>fol<clase>
+            <clase>sistemas informaticos<clase>
+            <clase>sistemas informaticos<clase>
+            <clase>base de datos<clase>
+            <clase>base de datos<clase>
+        </lunes>
+        <martes>
+            <clase>sistemas informaticos<clase>
+            <clase>sistemas informaticos<clase>
+            <clase>entornos de desarrollo<clase>
+            <clase>programación<clase>
+            <clase>programación<clase>
+            <clase>lenguaje de marcas<clase>
+        </martes>
+    </horarios>
+
+<!--Un ejemplo de uso de xmlns llamado alumnos-->
+
+    <horarios xmlns:alumnos="https://iessonferrer.net/alumnos">
+        <alumnos:lunes>
+            <clase>fol<clase>
+            <clase>fol<clase>
+            <clase>sistemas informaticos<clase>
+            <clase>sistemas informaticos<clase>
+            <clase>base de datos<clase>
+            <clase>base de datos<clase>
+        </alumnos:lunes>
+        <martes>
+            <clase>sistemas informaticos<clase>
+            <clase>sistemas informaticos<clase>
+            <clase>entornos de desarrollo<clase>
+            <clase>programación<clase>
+            <clase>programación<clase>
+            <clase>lenguaje de marcas<clase>
+        </martes>
+    </horarios>
+
+    <!--Un ejemplo de uso de: <, >, & -->
+
+    <sistema_domotico>
+        <condicion>Temperatura &lt; 17</condicion>
+        <condicion>Humedad &gt; 50</condicion>
+        <condicion>Lámpara apagada &amp; calefacción encendida</condicion>
+
+    </sistema_domotico>
+
+    <!--Un ejemplo de uso de xmlns llamado alumnos usando en una etiqueta-->
+
+
+
+
+

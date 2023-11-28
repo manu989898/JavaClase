@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE articulo SYSTEM "Ejercicio8.dtd">
+
+<articulo>
+    <parrafo> El 24 de marzo de 1882, el <investigador>Dr. Robert Koch</investigador> anunció el
+        descubrimiento de Mycobacterium tuberculosis, la bacteria que causa la <enfermedad>
+        tuberculosis</enfermedad>. En esa época, la <enfermedad>tuberculosis</enfermedad> causaba la
+        muerte a una de cada siete personas que vivían en los Estados Unidos y Europa. El
+        descubrimiento del <investigador>Dr. Koch</investigador> fue el paso más importante que se
+        haya dado para el control y la eliminación de esta mortal enfermedad. </parrafo>
+</articulo>

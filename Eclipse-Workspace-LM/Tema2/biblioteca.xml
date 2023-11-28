@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE biblioteca SYSTEM "biblioteca.dtd" >
+<biblioteca>
+	<libro isbn="978-8415452171" autores="AUT001 AUT002">
+		<titulo categoria="TECNICO">Lenguajes de marcas</titulo>
+		<consulta />
+		<editorial>Paraninfo</editorial>
+		<idioma>Español</idioma>
+	</libro>
+	<libro autores="AUT003">
+		<titulo categoria="ADULTO">El jugador</titulo>
+		<editorial>Paraninfo</editorial>
+		<idioma>Español</idioma>
+	</libro>
+	<libro isbn="978-8496284746 " autores="AUT004">
+		<titulo categoria="JUVENIL">La incógnita Newton</titulo>
+		<editorial>Roca</editorial>
+		<idioma>Español</idioma>
+	</libro>
+	<autor codigo="AUT001">
+		<nombre>Juan Manuel Castro</nombre>
+		<nacionalidad>España</nacionalidad>
+	</autor>
+	<autor codigo="AUT002">
+		<nombre>José Ramón Rodríguez Sánchez</nombre>
+		<nacionalidad>España</nacionalidad>
+	</autor>
+	<autor codigo="AUT003">
+		<nombre>Fiódor Dostoyevski</nombre>
+		<pais>Rusia</pais>
+	</autor>
+	<autor codigo="AUT004">
+		<nombre>Catherine Shaw</nombre>
+		<pais>Reino Unido</pais>
+	</autor>
+</biblioteca>

@@ -1,0 +1,7 @@
+<!-- Modifica el DTD anterior para que los empleados puedan tener más de un jefe. Por ejemplo,
+Pedro Ruiz, Paco Suárez y Paco Menéndez tienen como jefes a Alan Sugar y Jose Luis Domínguez:-->
+<!ELEMENT empleados (empleado)*>
+<!ELEMENT empleado (nombre)>
+<!ELEMENT nombre (#PCDATA)>
+<!ATTLIST empleado codigo ID #REQUIRED>
+<!ATTLIST empleado jefe IDREF #IMPLIED>

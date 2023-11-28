@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 
+En una clínica utilizan un archivo XML para guardar los datos de sus clientes. Aquí podemos ver
+un ejemplo:    
+-->
+
+<!DOCTYPE pacientes SYSTEM "pacientes.dtd">
+<pacientes>
+    <paciente>
+        <nombre>Sofía Ruiz</nombre>
+        <dni>29921001H</dni>
+    </paciente>
+    <paciente>
+        <nombre>Manuel Campos</nombre>
+        <num_seg_social>88399110J</num_seg_social>
+        <alergias/>
+    </paciente>
+</pacientes>

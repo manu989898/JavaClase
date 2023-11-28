@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Una biblioteca almacena sus listados de libros en formato XML. Podemos ver un extracto de
+este XML:
+La biblioteca debe tener al menos un libro. Cada libro debe tener un título y un autor, en ese
+orden.
+Además, un libro tiene dos atributos: isbn, que actuará como identificador único del libro, y
+editorial, que será una cadena de texto sin espacios. Ambos atributos son obligatorios. -->
+
+<!DOCTYPE biblioteca SYSTEM "Ejercicio8.dtd">
+
+<biblioteca>
+    <libro isbn="ISBN-978-8488119202" editorial="ESPASA">
+        <titulo>La Celestina</titulo>
+        <autor>Fernando de Rojas</autor>
+    </libro>
+    <libro isbn="ISBN-978-8411128825" editorial="ALIANZA">
+        <titulo>Lazarillo de Tormes</titulo>
+        <autor>Anónimo</autor>
+    </libro>
+</biblioteca>

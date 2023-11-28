@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="factura">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="cliente" />
+                <xs:element ref="articulos" />
+            </xs:sequence>
+            <xs:attribute ref="codigo" />
+            <xs:attribute ref="estado" use="optional" />
+        </xs:complexType>
+    </xs:element>
+    <xs:attribute name="codigo" type="xs:positiveInteger" />
+    <xs:attribute name="estado">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:enumeration value="pagado" />
+                <xs:enumeration value="pendiente" />
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:attribute>
+
+    <xs:element name="cliente">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="nombre" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="nombre">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:maxLength value="20" />
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+
+    <xs:element name="articulos">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="articulo" maxOccurs="unbounded" />
+            </xs:sequence>
+            <xs:attribute ref="iva" />
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="articulo">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="descripcion" />
+                <xs:element ref="precioUnitario" />
+                <xs:element ref="unidades" />
+            </xs:sequence>
+            <xs:attribute ref="iva" />
+        </xs:complexType>
+    </xs:element>
+
+    <xs:attribute name="iva" type="xs:integer" />
+
+    <xs:element name="descripcion" type="xs:string" />
+
+    <xs:element name="precioUnitario">
+        <xs:simpleType>
+            <xs:restriction base="xs:decimal">
+                <xs:fractionDigits value="2" />
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+
+    <xs:element name="unidades" type="xs:positiveInteger" />
+
+</xs:schema>

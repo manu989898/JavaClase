@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- En este documento XML podemos ver un listado de empleados de la empresa Amstrad en el año
+1985.
+
+El código de cada uno de ellos sirve como identificador único para cada empleado. Además, el valor
+del atributo jefe es opcional, debe aparecer como código de algún otro empleado y por defecto
+tomará el valor "e0001".-->
+<!DOCTYPE empleados SYSTEM "Ejercicio6.dtd">
+
+<empleados>
+    <empleado codigo="e0001">
+        <nombre>Alan Sugar</nombre>
+    </empleado>
+    <empleado codigo="e0002" jefe="e0001">
+        <nombre>Jose Luis Domínguez</nombre>
+    </empleado>
+    <empleado codigo="e0003" jefe="e0001 e0002">
+        <nombre>Pedro Ruiz</nombre>
+    </empleado>
+    <empleado codigo="e0004" jefe="e0001 e0002">
+        <nombre>Paco Suárez</nombre>
+    </empleado>
+    <empleado codigo="e0005" jefe="e0001 e0002">
+        <nombre>Paco Menéndez</nombre>
+    </empleado>
+</empleados>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ejercicio>
+	<!--En una farmacia tienen medicamentos con receta y sin receta. 
+El paracetamol y la aspirina se venden sin receta. 
+La amoxicilina y el nolotil se venden con receta.-->
+	<farmacia>
+
+		<medicamentos>
+			<con_receta>
+				<med>Nolotil</med>
+				<med>Amoxicilina</med>
+			</con_receta>
+
+
+		</medicamentos>
+
+		<medicamentos>
+			<sin_receta>
+				<med>Paracetamol</med>
+				<med>Aspirina</med>
+
+			</sin_receta>
+
+
+		</medicamentos>
+
+	</farmacia>
+
+	<!--Modifica el XML de la actividad anterior para sustituir
+ las etiquetas con_receta y sin_receta por un atributo "receta",
+  que podrá tener los valores "si" o "no-->
+	<farmacia>
+
+		<medicamentos receta="si">
+			<med>Nolotil</med>
+			<med>Amoxicilina</med>
+
+		</medicamentos>
+
+		<medicamentos receta="no">
+			<med>Paracetamol</med>
+			<med>Aspirina</med>
+
+		</medicamentos>
+
+	</farmacia>
+
+</ejercicio>

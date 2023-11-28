@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE alumno SYSTEM "ejemplo2.dtd">
+
+<alumno nivel="2o Bachillerato" grupo="A">
+    <nombre>Marta</nombre>
+    <apellidos>Lagos Andrés</apellidos>
+</alumno>
