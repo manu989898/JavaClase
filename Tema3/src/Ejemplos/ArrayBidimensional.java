@@ -42,7 +42,5 @@ public class ArrayBidimensional {
 
             System.out.println(medidas[fila][0] + "\t" + medidas[fila][1] + "\t" + medidas[fila][2]);
         }
-        System.out.println();
-
     }
 }
