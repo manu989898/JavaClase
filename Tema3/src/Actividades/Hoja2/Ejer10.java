@@ -62,17 +62,12 @@ public class Ejer10 {
         System.out.println("\nArray ordenado: ");
         System.out.println(Arrays.toString(temperaturas));
 
-        //Asignamos el valor de la primera posicion del array a la variable min
-        min = temperaturas[0];
-
-        //Asignamos el valor de la ultima posicion del array a la variable max
-        max = temperaturas[temperaturas.length - 1];
-
+       
         //Mostramos el valor de la variable min
-        System.out.println("\nLa temperatura minima es: " + min);
+        System.out.println("\nLa temperatura minima es: " + temperaturas[0]);
 
         //Mostramos el valor de la variable max
-        System.out.println("\nLa temperatura maxima es: " + max);
+        System.out.println("\nLa temperatura maxima es: " + temperaturas[temperaturas.length - 1]);
 
         
 

@@ -21,7 +21,7 @@ public class Ejer14d {
 
             /*Comprobamos si el número es primo dividiendolo por todos los números anteriores a él
               y 2 (que es el único número par que es primo)*/
-            for (i = 2; i <= (num - 1); i++) {
+            for (i = 2; i <= (num / 2); i++) {
 
                 //Si en algún momento el resto de la división es 0, el número no es primo y asignamos false
                 if (num % i == 0) {

@@ -17,66 +17,36 @@ public class Ejer8 {
         int[] humedad = { 70, 65, 63, 60, 58, 55, 53, 52, 50, 52, 55, 58, 60, 63, 65, 68, 70, 72, 75, 78, 80, 83, 85,
                 88 };
 
-        // Inicializamos variables
-        int aux = 0;
-        int posMin = 0;
-        int min = 0;
-        int max = 0;
+        // Declaramos las variables
+        int humedadMax = humedad[0];
+        int humedadMin = humedad[0];
+        int horaMax = 0;
+        int horaMin = 0;
 
-        // Mostramos el array desordenado
-        System.out.println("\nArray desordenado: ");
+        // Recorremos el array
+        for (int i = 0; i < humedad.length; i++) {
+            // Comprobamos si la humedad es mayor que la humedadMax
+            if (humedad[i] > humedadMax) {
+                // Si es mayor, guardamos la humedad y la hora
+                humedadMax = humedad[i];
+                horaMax = i;
+            }
+            // Comprobamos si la humedad es menor que la humedadMin
+            if (humedad[i] < humedadMin) {
+                // Si es menor, guardamos la humedad y la hora
+                humedadMin = humedad[i];
+                horaMin = i;
+            }
+        }
+
+        // Mostramos los resultados
+        System.out.println("La humedad máxima ha sido de " + humedadMax + "% a las " + horaMax + " horas.");
+        System.out.println("La humedad mínima ha sido de " + humedadMin + "% a las " + horaMin + " horas.");
+
+        // Mostramos el array
         System.out.println(Arrays.toString(humedad));
 
-        // Recorremos el array menos la posicion final
-        for (int i = 0; i < humedad.length - 1; i++) {
-
-            // Asignamos el valor de la posicion actual a la variable min
-            posMin = i;
-
-            // Recorremos el array desde la posicion actual + 1
-            for (int j = i + 1; j < humedad.length; j++) {
-
-                // Comprobamos si el valor de la posicion actual es mayor que el valor de la
-                // posicion j
-                if (humedad[posMin] > humedad[j]) {
-
-                    // Asignamos el valor de la posicion j a la variable min
-                    posMin = j;
-                }
-            }
-            // Intercambiamos los valores
-            aux = humedad[i];
-            humedad[i] = humedad[posMin];
-            humedad[posMin] = aux;
-        }
-
-        // Mostramos el array ordenado
-        System.out.println("\nArray ordenado: ");
-        System.out.println(Arrays.toString(humedad));
-
-        // Mostramos la humedad minima
-        System.out.println("\nLa humedad minima es: " + humedad[0] + "%");
-
-        // Mostramos la humedad maxima
-        System.out.println("\nLa humedad maxima es: " + humedad[humedad.length - 1] + "%");
-
-        // Recorremos el array para mostrar las horas en las que se ha producido la
-        // humedad minima
-        System.out.println("\nLa humedad minima se ha producido a las: ");
-        for (int i = 0; i < humedad.length; i++) {
-            if (humedad[i] == humedad[0]) {
-                System.out.print(i + "h ");
-            }
-        }
-
-        // Recorremos el array para mostrar las horas en las que se ha producido la
-        // humedad maxima
-        System.out.println("\nLa humedad maxima se ha producido a las: ");
-        for (int i = 0; i < humedad.length; i++) {
-            if (humedad[i] == humedad[humedad.length - 1]) {
-                System.out.print(i + "h ");
-            }
-        }
+        
 
     }
 }
