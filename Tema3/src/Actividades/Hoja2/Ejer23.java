@@ -90,6 +90,7 @@ public class Ejer23 {
         for (int i = 0; i < temperaturas[2].length; i++) {
             
             for (int j = 0; j < temperaturas[2][i].length; j++) {
+                
                 System.out.print(temperaturas[2][i][j] + "ºC ");
             }
             System.out.println();
@@ -97,19 +98,26 @@ public class Ejer23 {
 
         // Calculamos la suma de todas las temperaturas del array
         for (int i = 0; i < temperaturas.length; i++) {
+            
             for (int j = 0; j < temperaturas[i].length; j++) {
+                
                 for (int k = 0; k < temperaturas[i][j].length; k++) {
+                    
                     sumaTemperaturas += temperaturas[i][j][k];
                 }
             }
         }
         System.out.println("\nLa suma de todas las temperaturas es: " + sumaTemperaturas + "ºC");
 
-        // Calculamos la temperatura media de las 5 habitaciones mediante un bucle
+        // Calculamos la temperatura media 
         for (int i = 0; i < temperaturas.length; i++) {
+            
             for (int j = 0; j < temperaturas[i].length; j++) {
+                
                 for (int k = 0; k < temperaturas[i][j].length; k++) {
+                    
                     if (temperaturas[i][j][k] != 0) {
+                        // Almacenamos la suma de las temperaturas
                         temperaturaMedia += temperaturas[i][j][k];
                         contador++;
                     }
@@ -117,6 +125,6 @@ public class Ejer23 {
             }
         }
         temperaturaMedia = temperaturaMedia / contador;
-        System.out.println("\nLa temperatura media de las 5 habitaciones es: " + temperaturaMedia + "ºC");
+        System.out.println("\nLa temperatura media es: " + temperaturaMedia + "ºC");
     }
 }

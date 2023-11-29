@@ -3,8 +3,8 @@ package Actividades.Hoja2;
 public class Ejer15 {
     public static void main(String[] args) {
 
-        /*
-         * /*
+        
+         /*
          * Esta tabla muestra los nombres y precios de cuatro artículos de unos grandes
          * almacenes:
          * Producto Precio (€)
@@ -17,6 +17,7 @@ public class Ejer15 {
          * y calcula el precio total de los cuatro artículos.
          * Ayuda: Puedes convertir un String a float con el método:
          * Float.parseFloat(numero_float);
+         * Integer.parseInt(numero_int);
          * Añade al programa anterior otro bucle que recorra el array y encuentre el
          * menor y el mayor precio
          */
@@ -39,10 +40,8 @@ public class Ejer15 {
         }
         // Declaramos variables
         float precioTotal = 0;
-        float precioMax = 0;
-        float precioMin = 0;
-        int contadorMax = 0;
-        int contadorMin = 0;
+        int posMin=0;
+        int posMax=0;
         
         // Calculamos el precio total
         for (int i = 0; i < precios.length; i++) {
@@ -59,33 +58,19 @@ public class Ejer15 {
         // Recorremos el array
         for (int i = 0; i < precios.length; i++) {
 
-            // Comprobamos si estamos en la primera posición
-            if (i == 0) {
+            if (Float.parseFloat(precios[i][1])< Float.parseFloat(precios[posMin][1])){
 
-                // Asignamos el valor actual a la variable precioMax y precioMin
-                precioMax = Float.parseFloat(precios[i][1]);
-                precioMin = Float.parseFloat(precios[i][1]);
+                posMin=i;
             }
-
-            // Comprobamos si el precio actual es mayor que el precio máximo
-            if (Float.parseFloat(precios[i][1]) > precioMax) {
-
-                // Asignamos el valor actual a la variable precioMax
-                precioMax = Float.parseFloat(precios[i][1]);
-                contadorMax = i;
-            }
-
-            // Comprobamos si el precio actual es menor que el precio mínimo
-            if (Float.parseFloat(precios[i][1]) < precioMin) {
-
-                // Asignamos el valor actual a la variable precioMin
-                precioMin = Float.parseFloat(precios[i][1]);
-                contadorMin = i;
+            if (Float.parseFloat(precios[i][1])> Float.parseFloat(precios[posMax][1])){
+                
+                posMax=i;
             }
         }
-
         // Mostramos el precio máximo y el precio mínimo junto al nombre del producto
-        System.out.println("El precio máximo es: " + precioMax + " y corresponde al producto: " + precios[contadorMax][0]);
-        System.out.println("El precio mínimo es: " + precioMin + " y corresponde al producto: " + precios[contadorMin][0]);       
+        System.out.println("El precio máximo es: " + precios[posMax][1] + " y corresponde al producto: " + precios[posMax][0]);
+        System.out.println("El precio mínimo es: " + precios[posMin][1] + " y corresponde al producto: " + precios[posMin][0]);       
+        
     }
 }
+
