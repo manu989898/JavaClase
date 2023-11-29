@@ -21,8 +21,7 @@ public class Ejer10 {
         //Inicializamos variables
         int aux = 0;
         int posMin = 0;
-        int min = 0;
-        int max = 0;
+      
 
         Scanner escaner = new Scanner(System.in);
 
@@ -69,7 +68,7 @@ public class Ejer10 {
         //Mostramos el valor de la variable max
         System.out.println("\nLa temperatura maxima es: " + temperaturas[temperaturas.length - 1]);
 
-        
+        escaner.close();
 
     }
 

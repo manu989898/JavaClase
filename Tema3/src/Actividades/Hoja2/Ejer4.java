@@ -52,7 +52,7 @@ public class Ejer4 {
 
             System.out.println("Se ha encontrado un valor no válido en la posición " + i + ". El programa terminará");
         }
-   
+        scan.close();
     }
 
 }
