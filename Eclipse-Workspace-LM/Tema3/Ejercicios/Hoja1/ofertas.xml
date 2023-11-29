@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Feu un esquema per documents com aquest.
+Notes:
+L'id de la oferta ha d'esser un enter major d'1.
+El nom de la oferta pot anar dins una etiqueta nom.
+La velocitat de transferència pot estar en Kbps, Mbps o Gbps
+La moneda del preu serà un valor fix Euro.
+Els preus tindran dos decimals.
+El nom de la companyia serà tret d'una enumeració amb tots els valors possibles
+Els atributs els quals valors son si o no sols poden prendre aquests valors
+Les dates s'han de verificar en quant a format
+La permanència pot esser-hi o no. Si hi és, l'atribut temps pot prendre els valors
+dies, mesos i anys.
+L'atribut quantitat pot prendre valors sense decimals sencers positius amb el 0 inclòs.
+-->
+
+
+<connexions_ADSL xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="ofertas.xsd">
+    <oferta id="1">
+        <nom>Arrakis BT Go</nom>
+        <nom_companyia>Arrakis</nom_companyia>
+        <velocitat_transferencia unitat="Mbps">
+            <pujada>20</pujada>
+            <baixada>50</baixada>
+        </velocitat_transferencia>
+        <preu moneda="Euro">
+            <alta gratis="Si" permanencia="No" />
+            <linia>13.97</linia>
+            <mensual>36.50</mensual>
+            <total_mensual>50.47</total_mensual>
+        </preu>
+    </oferta>
+    <oferta id="2">
+        <nom>Arrakis eOficina</nom>
+        <nom_companyia>Arrakis</nom_companyia>
+        <velocitat_transferencia unitat="Mbps">
+            <pujada>40</pujada>
+            <baixada>120</baixada>
+        </velocitat_transferencia>
+        <preu moneda="Euro">
+            <alta gratis="Si" permanencia="No" />
+            <linia>13.97</linia>
+            <mensual>59.90</mensual>
+            <total_mensual>73.87</total_mensual>
+        </preu>
+    </oferta>
+    <oferta id="3">
+        <nom>Fibra 300 Megas simétricos + Llamadas gratis con Línea Jazztel </nom>
+        <nom_companyia>Jazztel</nom_companyia>
+        <fibra />
+        <velocitat_transferencia unitat="Mbps">
+            <pujada>300</pujada>
+            <baixada>300</baixada>
+        </velocitat_transferencia>
+        <preu moneda="Euro">
+            <alta gratis="Si" permanencia="No" />
+            <linia>0</linia>
+            <promocio fins="2019-01-01">
+                <promocio_preu>15.94</promocio_preu>
+            </promocio>
+            <mensual>19.95</mensual>
+            <total_mensual>19.95</total_mensual>
+        </preu>
+    </oferta>
+    <oferta id="4">
+        <nom>Movistar Fusión fibra 100 Mb</nom>
+        <nom_companyia>Movistar</nom_companyia>
+        <fibra />
+        <velocitat_transferencia unitat="Mbps">
+            <pujada>50</pujada>
+            <baixada>100</baixada>
+        </velocitat_transferencia>
+        <preu moneda="Euro">
+            <alta gratis="Si" permanencia="Si">
+                <permanencia_alta temps="mesos" quantitat="12" />
+            </alta>
+            <linia>13.97</linia>
+            <promocio fins="2019-01-01">
+                <promocio_preu>24.90</promocio_preu>
+            </promocio>
+            <promocio fins="2019-06-01">
+                <promocio_preu>26.90</promocio_preu>
+            </promocio>
+            <mensual>29.90</mensual>
+            <total_mensual>43.87</total_mensual>
+        </preu>
+    </oferta>
+    <oferta id="5">
+        <nom>Movistar Fibra Óptica 300 Mb</nom>
+        <nom_companyia>Movistar</nom_companyia>
+        <fibra />
+        <velocitat_transferencia unitat="Mbps">
+            <pujada>100</pujada>
+            <baixada>300</baixada>
+        </velocitat_transferencia>
+        <preu moneda="Euro">
+            <alta gratis="Si" permanencia="Si">
+                <permanencia_alta temps="mesos" quantitat="12" />
+            </alta>
+            <linia>13.97</linia>
+            <promocio>
+                <promocio_preu>39.90</promocio_preu>
+            </promocio>
+            <mensual>39.90</mensual>
+            <total_mensual>53.87</total_mensual>
+        </preu>
+    </oferta>
+    <oferta id="6">
+        <nom>ASDL Rural</nom>
+        <nom_companyia>Orange </nom_companyia>
+        <velocitat_transferencia unitat="Mbps">
+            <pujada>0.512</pujada>
+            <baixada>6</baixada>
+        </velocitat_transferencia>
+        <preu moneda="Euro">
+            <alta gratis="Si" permanencia="Si">
+                <permanencia_alta temps="mesos" quantitat="18" />
+            </alta>
+            <linia>13.97</linia>
+            <promocio fins="2019-01-01">
+                <promocio_preu>11.95</promocio_preu>
+            </promocio>
+            <mensual>15.95</mensual>
+            <total_mensual>29.92</total_mensual>
+            <extres>Router Wifi</extres>
+            <extres>Alta gratis online</extres>
+        </preu>
+    </oferta>
+    <ofertes_actives>1 4 5 6</ofertes_actives>
+</connexions_ADSL> 

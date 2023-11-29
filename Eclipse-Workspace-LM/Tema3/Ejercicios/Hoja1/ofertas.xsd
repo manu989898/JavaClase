@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:element name="connexions_ADSL"/>
+    <xs:element name="oferta"/>
+    <xs:attribute name="id"/>
+
+    <xs:element name="nom"/>
+    <xs:element name="nom_companyia"/>
+    <xs:element name="fibra"/>
+    <xs:element name="velocitat_transferencia"/>
+    <xs:attribute name="unitat"/>
+
+    <xs:element name="pujada"/>
+    <xs:element name="baixada"/>
+    <xs:element name="preu"/>
+    <xs:attribute name="moneda"/>
+
+    <xs:element name="alta"/>
+    <xs:attribute name="gratis"/>
+    <xs:attribute name="permanencia"/>
+
+    <xs:element name="permanencia_alta"/>
+    <xs:attribute name="temps"/>
+    <xs:attribute name="quantitat"/>
+
+    <xs:element name="linia"/>
+    <xs:element name="mensual"/>
+    <xs:element name="total_menusal"/>
+
+    <xs:element name="promocio"/>
+    <xs:attribute name="fins"/>
+    <xs:element name="promocio_preu"/>
+    <xs:element name="extres"/>
+    <xs:element name="ofertes_actives"/>
+</xs:schema>
