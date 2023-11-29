@@ -7,8 +7,8 @@
                 <xs:element ref="cliente" />
                 <xs:element ref="articulos" />
             </xs:sequence>
-            <xs:attribute ref="codigo" />
-            <xs:attribute ref="estado" use="optional" />
+            <xs:attribute ref="codigo" use="required" />
+            <xs:attribute ref="estado" />
         </xs:complexType>
     </xs:element>
     <xs:attribute name="codigo" type="xs:positiveInteger" />
@@ -42,7 +42,6 @@
             <xs:sequence>
                 <xs:element ref="articulo" maxOccurs="unbounded" />
             </xs:sequence>
-            <xs:attribute ref="iva" />
         </xs:complexType>
     </xs:element>
 
@@ -53,11 +52,11 @@
                 <xs:element ref="precioUnitario" />
                 <xs:element ref="unidades" />
             </xs:sequence>
-            <xs:attribute ref="iva" />
+            <xs:attribute ref="iva" use="required" />
         </xs:complexType>
     </xs:element>
 
-    <xs:attribute name="iva" type="xs:integer" />
+    <xs:attribute name="iva" type="xs:positiveInteger" />
 
     <xs:element name="descripcion" type="xs:string" />
 

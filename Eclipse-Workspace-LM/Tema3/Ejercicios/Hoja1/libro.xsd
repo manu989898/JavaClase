@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="libro">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="titulo" />
+                <xs:element ref="precio" />
+                <xs:element ref="publicacion" />
+                <xs:element ref="autor" />
+                <xs:element ref="capitulo" maxOccurs="unbounded" />
+            </xs:sequence>
+            <xs:attribute ref="codigo" />
+        </xs:complexType>
+    </xs:element>
+
+    <xs:attribute name="codigo">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:length value="7" />
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:attribute>
+
+    <xs:element name="titulo" type="xs:string" />
+
+    <xs:element name="precio">
+        <xs:simpleType>
+            <xs:restriction base="xs:decimal">
+                <xs:fractionDigits value="2" />
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+
+    <xs:element name="publicacion">
+        <xs:complexType>
+            <xs:attribute ref="fecha" use="required" />
+        </xs:complexType>
+    </xs:element>
+    <xs:attribute name="fecha" type="xs:date" />
+
+    <xs:element name="autor" type="xs:string" />
+
+    <xs:element name="capitulo">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="titulo" />
+                <xs:element ref="parrafo" maxOccurs="unbounded" />
+            </xs:sequence>
+            <xs:attribute ref="num" use="required" />
+        </xs:complexType>
+    </xs:element>
+    <xs:attribute name="num" type="xs:positiveInteger" />
+
+    <xs:element name="parrafo">
+        <xs:complexType mixed="true">
+            <xs:choice minOccurs="0" maxOccurs="unbounded">
+                <xs:element ref="i" />
+            </xs:choice>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="i" type="xs:string"/>
+</xs:schema>

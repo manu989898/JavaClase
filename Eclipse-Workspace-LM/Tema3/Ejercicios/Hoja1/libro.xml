@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<libro codigo="LIB9801" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="libro.xsd">
+    <titulo>Un gato callejero llamado Bob</titulo>
+    <precio>15.10</precio>
+    <publicacion fecha="2010-09-01" />
+    <autor>James Bowen</autor>
+    <capitulo num="1">
+        <titulo>Compañeros de viaje</titulo>
+        <parrafo>Según una famosa cita que leí en alguna parte, <i>a todos se nos
+                ofrecen segundas oportunidades</i> cada día de nuestras vidas. Están ahí para que
+            las tomemos, <i>pero simplemente no lo hacemos</i>. </parrafo>
+        <parrafo>He pasado buena parte de mi vida confirmando esa cita. Se me
+            dieron un montón de oportunidades, algunas veces a diario. Durante
+            mucho tiempo no supe aprovecharlas, pero de pronto, a principios de
+            la primavera de 2007, eso comenzó a cambiar.
+        </parrafo>
+    </capitulo>
+    <capitulo num="2">
+        <titulo>Camino a la recuperación</titulo>
+        <parrafo>Llevo viviendo entre gatos desde que era niño, y siempre he
+            sentido que les comprendía bien. A lo largo de mi infancia, mi
+            familia tuvo varios siameses y, en un momento dado, también tuvimos
+            un hermoso gato pardo.
+        </parrafo>
+    </capitulo>
+</libro>
