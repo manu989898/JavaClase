@@ -21,38 +21,38 @@ public class Ejer4 {
          * mayores o iguales a cero, y false si se encuentra un número negativo.
          */
 
-        Scanner scan = new Scanner(System.in);
-        
-        double[] productos = new double[10];
-        boolean preciosCorrectos = true;
-        double suma = 0;
-        int i = 0;
-
-        for (i = 0; i < productos.length; i++) {
-
-            System.out.println("Introduce el precio del producto nº" + (i + 1) + ":");
-            productos[i] = scan.nextDouble();
-
-            if (productos[i] < 0) {
-
-                preciosCorrectos = false;
-                break;
-            }
-        }
-        
-        if (preciosCorrectos) {
+        try (Scanner scaner = new Scanner(System.in)) {
+            double[] productos = new double[10];
+            boolean preciosCorrectos = true;
+            double suma = 0;
+            int i = 0;
 
             for (i = 0; i < productos.length; i++) {
 
-                suma += productos[i];
+                System.out.println("Introduce el precio del producto nº" + (i + 1) + ":");
+                productos[i] = scaner.nextDouble();
+
+                if (productos[i] < 0) {
+
+                    preciosCorrectos = false;
+                    break;
+                }
             }
+            
+            if (preciosCorrectos) {
 
-            System.out.println("La suma de los precios es: " + suma);
-        } else {
+                for (i = 0; i < productos.length; i++) {
 
-            System.out.println("Se ha encontrado un valor no válido en la posición " + i + ". El programa terminará");
+                    suma += productos[i];
+                }
+
+                System.out.println("La suma de los precios es: " + suma);
+            } else {
+
+                System.out.println("Se ha encontrado un valor no válido en la posición " + i + ". El programa terminará");
+            }
+            scaner.close();
         }
-        scan.close();
     }
 
 }
