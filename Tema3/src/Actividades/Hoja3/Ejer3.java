@@ -26,9 +26,8 @@ public class Ejer3 {
                     posMin = j;
                 }
             }
-
             aux = cotizaciones[i];
-            
+
             //Asignamos el valor de la posicion min a la posicion actual
             cotizaciones[i] = cotizaciones[posMin];
             

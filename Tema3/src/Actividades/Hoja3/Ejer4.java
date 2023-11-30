@@ -21,7 +21,6 @@ public class Ejer4 {
                 System.exit(0);
             }  
         }
-        
         System.out.println("valor: -1");
     }
 }
