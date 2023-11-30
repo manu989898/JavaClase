@@ -36,12 +36,13 @@ public class Ejer22 {
         // Declaramos variables
         float nota = 0;
 
-        // Muestro la estructura del array
+        /* Muestro la estructura del array
         System.out.println("\nEstructura del array: ");
         System.out.println("[alumno1][nombre] [alumno1][examen] [alumno1][trabajo] [alumno1][evaluación]");
         System.out.println("[alumno2][nombre] [alumno2][examen] [alumno2][trabajo] [alumno2][evaluación]");
         System.out.println("[alumno3][nombre] [alumno3][examen] [alumno3][trabajo] [alumno3][evaluación]");
-    
+        */
+
         // Pedimos los datos de los alumnos
         for (int i = 0; i < notas.length; i++) {
 
@@ -71,9 +72,6 @@ public class Ejer22 {
         System.out.println("\nAlumnos: ");
 
         for (int i = 0; i < notas.length; i++) {
-
-            System.out.println("\nAlumno " + (i + 1) + ": ");
-
             // Añadimos +1 en el segundo indice para cambiar de columna y en este caso la fila seria i
             System.out.println("Nombre: " + notas[i][0]);
 
