@@ -28,7 +28,7 @@ public class Ejer22 {
 
         // Declaramos el array bidimensional
         // Array de 3 filas(una por cada alumno) y 4 columnas(nombre, ,examen, trabajo y actitud)
-        String[][] notas = new String[3][5];
+        String[][] notas = new String[3][4];
 
         // Declaramos el scanner
         Scanner escaner = new Scanner(System.in);
