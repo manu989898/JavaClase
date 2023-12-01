@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+
+<libros xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Ejemplo1.xsd" >
+    <libro>
+        <titulo>El quijote</titulo>
+        <autor>Miguel de cervantes</autor>
+        <nacionalidad>
+            <nacional/>
+        </nacionalidad>
+    </libro>
+    <libro>
+        <titulo isbn="123-214-548">Estudio en escarlata</titulo>
+        <autor>Arthur Conan Doyle</autor>
+        <nacionalidad>
+            <extranjero/>
+        </nacionalidad>
+    </libro>
+</libros>
