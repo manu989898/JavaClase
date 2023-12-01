@@ -15,7 +15,8 @@ L'atribut quantitat pot prendre valors sense decimals sencers positius amb el 0 
 -->
 
 
-<connexions_ADSL xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="ofertas.xsd">
+<connexions_ADSL xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="ofertas.xsd">
     <oferta id="1">
         <nom>Arrakis BT Go</nom>
         <nom_companyia>Arrakis</nom_companyia>
@@ -107,7 +108,7 @@ L'atribut quantitat pot prendre valors sense decimals sencers positius amb el 0 
     </oferta>
     <oferta id="6">
         <nom>ASDL Rural</nom>
-        <nom_companyia>Orange </nom_companyia>
+        <nom_companyia>Orange</nom_companyia>
         <velocitat_transferencia unitat="Mbps">
             <pujada>0.512</pujada>
             <baixada>6</baixada>

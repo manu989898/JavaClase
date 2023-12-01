@@ -1,36 +1,161 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
 
-    <xs:element name="connexions_ADSL"/>
-    <xs:element name="oferta"/>
-    <xs:attribute name="id"/>
+    <xs:element name="connexions_ADSL">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="oferta" maxOccurs="unbounded" />
+                <xs:element ref="ofertes_actives" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="oferta">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="nom" />
+                <xs:element ref="nom_companyia" />
+                <xs:element ref="fibra" minOccurs="0" />
+                <xs:element ref="velocitat_transferencia" />
+                <xs:element ref="preu" />
+            </xs:sequence>
+            <xs:attribute ref="id" use="required" />
+        </xs:complexType>
+    </xs:element>
+    <xs:attribute name="id" type="xs:positiveInteger" />
 
-    <xs:element name="nom"/>
-    <xs:element name="nom_companyia"/>
-    <xs:element name="fibra"/>
-    <xs:element name="velocitat_transferencia"/>
-    <xs:attribute name="unitat"/>
+    <xs:element name="nom" type="xs:string" />
 
-    <xs:element name="pujada"/>
-    <xs:element name="baixada"/>
-    <xs:element name="preu"/>
-    <xs:attribute name="moneda"/>
+    <xs:element name="nom_companyia">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:enumeration value="Arrakis" />
+                <xs:enumeration value="Jazztel" />
+                <xs:enumeration value="Movistar" />
+                <xs:enumeration value="Orange" />
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+    <xs:element name="fibra">
+        <xs:complexType />
+    </xs:element>
+    <xs:element name="velocitat_transferencia">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="pujada" />
+                <xs:element ref="baixada" />
+            </xs:sequence>
+            <xs:attribute ref="unitat" />
+        </xs:complexType>
+    </xs:element>
+    <xs:attribute name="unitat">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:enumeration value="Kbps" />
+                <xs:enumeration value="Mbps" />
+                <xs:enumeration value="Gbps" />
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:attribute>
 
-    <xs:element name="alta"/>
-    <xs:attribute name="gratis"/>
-    <xs:attribute name="permanencia"/>
+    <xs:element name="pujada" type="xs:decimal" />
+    <xs:element name="baixada" type="xs:decimal" />
+    <xs:element name="preu">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="alta" />
+                <xs:element ref="linia" />
+                <xs:element ref="promocio" minOccurs="0" maxOccurs="unbounded" />
+                <xs:element ref="mensual" />
+                <xs:element ref="total_mensual" />
+                <xs:element ref="extres" minOccurs="0" maxOccurs="unbounded" />
+            </xs:sequence>
+            <xs:attribute ref="moneda" />
+        </xs:complexType>
+    </xs:element>
+    <xs:attribute name="moneda" fixed="Euro" />
 
-    <xs:element name="permanencia_alta"/>
-    <xs:attribute name="temps"/>
-    <xs:attribute name="quantitat"/>
+    <xs:element name="alta">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="permanencia_alta" minOccurs="0" />
+            </xs:sequence>
+            <xs:attribute ref="gratis" use="required"/>
+            <xs:attribute ref="permanencia" />
+        </xs:complexType>
+    </xs:element>
+    <xs:attribute name="gratis">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:enumeration value="Si" />
+                <xs:enumeration value="No" />
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="permanencia">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:enumeration value="Si" />
+                <xs:enumeration value="No" />
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:attribute>
 
-    <xs:element name="linia"/>
-    <xs:element name="mensual"/>
-    <xs:element name="total_menusal"/>
+    <xs:element name="permanencia_alta">
+        <xs:complexType>
+            <xs:attribute ref="temps" use="required"/>
+            <xs:attribute ref="quantitat" use="required"/>
+        </xs:complexType>
+    </xs:element>
 
-    <xs:element name="promocio"/>
-    <xs:attribute name="fins"/>
-    <xs:element name="promocio_preu"/>
-    <xs:element name="extres"/>
-    <xs:element name="ofertes_actives"/>
+    <xs:attribute name="temps">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:enumeration value="mesos" />
+                <xs:enumeration value="dies" />
+                <xs:enumeration value="anys" />
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="quantitat" type="xs:nonNegativeInteger" />
+
+    <xs:element name="linia">
+        <xs:simpleType>
+            <xs:restriction base="xs:decimal">
+                <xs:fractionDigits value="2" />
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+    <xs:element name="mensual">
+        <xs:simpleType>
+            <xs:restriction base="xs:decimal">
+                <xs:fractionDigits value="2" />
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+    <xs:element name="total_mensual">
+        <xs:simpleType>
+            <xs:restriction base="xs:decimal">
+                <xs:fractionDigits value="2" />
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+
+    <xs:element name="promocio">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="promocio_preu" />
+            </xs:sequence>
+            <xs:attribute ref="fins" />
+        </xs:complexType>
+    </xs:element>
+    <xs:attribute name="fins" type="xs:date" />
+    <xs:element name="promocio_preu">
+        <xs:simpleType>
+            <xs:restriction base="xs:decimal">
+                <xs:fractionDigits value="2" />
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+    <xs:element name="extres" type="xs:string" />
+    <xs:element name="ofertes_actives" type="xs:string" />
 </xs:schema>
