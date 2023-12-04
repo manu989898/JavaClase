@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Cascadia+Code&display=swap');
+
+body {
+    font-family: 'Cascadia Code', monospace;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    width: 40%;
+    padding: 20px;
+    margin: 10px;
+    border: 1.5px solid #ccc;
+    border-radius: 20px;
+    flex: 1 0 20%; /* Esto hará que las tarjetas tengan al menos el 20% del ancho del contenedor y se expandan para llenar el espacio disponible */
+    margin: 10px;
+    
+
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.551);
+}
+
+.description-box {
+    padding: 20px;
+    margin: 20px 0;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    
+}
+.description-box:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.551);
+}
+
+.description-box2 {
+    padding: 10px;
+    margin: 5px 0;
+    border: 1.5px solid #ccc;
+    border-radius: 20px;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+
+.card h2 {
+    text-align: center;
+}
+.card p {
+    text-align: center;
+}
+.card, .description-box {
+    margin: 20px;
+}
+.description-box-contact {
+    padding: 20px;
+    margin: 20px 0;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+}
+h1 {
+    text-align: center;
+}
+.description-box h2, p{
+    text-align: center;
+}
