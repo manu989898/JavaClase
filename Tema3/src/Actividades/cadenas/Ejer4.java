@@ -12,10 +12,8 @@ public class Ejer4 {
 
         String frase;
 
-
         System.out.println("Introduce una frase: ");
         frase = escaner.nextLine();
-
 
         for (int i = 0; i < frase.length(); i++) {
 
