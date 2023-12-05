@@ -25,20 +25,8 @@ public class Ejer6 {
         System.out.println("Introduce la letra por la cual se va a sustituir: ");
         letra2 = escaner.nextLine();
 
-        // Reocrremos la cadena de atrás hacia adelante
-        for (int i = 0; i < frase.length(); i++) {
+        frase = frase.replace(letra1.charAt(0), letra2.charAt(0));
 
-            // Si la letra en la posición i es igual a la letra1
-            if (frase.charAt(i) == letra1.charAt(0)) {
-                
-                // Se mostrará la letra2
-                System.out.print(letra2.charAt(0));
-            } else {
-                
-                // Si no, se mostrará la letra en la posición i
-                System.out.print(frase.charAt(i));
-            }
-        }
         escaner.close();
     }
 }
