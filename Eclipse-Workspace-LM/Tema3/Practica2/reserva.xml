@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<reserva xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="reserva.xsd" >
+    <viajero>
+        <nombre>Federico Jiménez Mateo</nombre>
+        <dni>22909100T</dni>
+    </viajero>
+    <pago medio="visa">
+        <precio>90.57</precio>
+        <pagado />
+    </pago>
+    <vuelo>
+        <fecha>2022-01-15</fecha>
+        <origen>
+            <aeropuerto codigo="PMI">Palma de Mallorca</aeropuerto>
+            <hora>17:00</hora>
+        </origen>
+    </vuelo>
+    <vuelo>
+        <fecha>2022-01-15</fecha>
+        <origen>
+            <aeropuerto codigo="MAD">Madrid</aeropuerto>
+            <hora>18:50</hora>
+        </origen>
+    </vuelo>
+</reserva>

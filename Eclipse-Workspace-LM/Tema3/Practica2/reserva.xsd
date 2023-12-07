@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="reserva">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="viajero" />
+                <xs:element ref="pago" />
+                <xs:element ref="vuelo" minOccurs="1" maxOccurs="unbounded" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="viajero">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="nombre" />
+                <xs:choice>
+                    <xs:element ref="dni" />
+                    <xs:element ref="pasaporte" />
+                </xs:choice>
+
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="nombre" type="xs:string" />
+    <xs:element name="dni" type="xs:string" />
+    <xs:element name="pasaporte" type="xs:string" />
+
+    <xs:element name="pago">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="precio" />
+                <xs:element ref="pagado" />
+            </xs:sequence>
+            <xs:attribute ref="medio" />
+        </xs:complexType>
+    </xs:element>
+    <xs:attribute name="medio">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:enumeration value="visa" />
+                <xs:enumeration value="paypal" />
+                <xs:enumeration value="contado" />
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:attribute>
+    <xs:element name="precio" >
+        <xs:simpleType>
+            <xs:restriction base="xs:decimal">
+                <xs:fractionDigits value="2" />
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+    <xs:element name="pagado" >
+        <xs:complexType/>
+    </xs:element>
+    <xs:element name="vuelo" >
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="fecha"/>
+                <xs:element ref="origen"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="fecha" type="xs:string" />
+    <xs:element name="origen" >
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="aeropuerto" />
+                <xs:element ref="hora" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="aeropuerto">
+        <xs:complexType>
+            <xs:simpleContent>
+                <xs:extension base="xs:string">
+                    <xs:attribute ref="codigo" />
+                </xs:extension>
+            </xs:simpleContent>
+        </xs:complexType>
+    </xs:element>
+    <xs:attribute name="codigo">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:pattern value="[A-Z]{3}" />
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:attribute>
+    <xs:element name="hora" type="xs:string"/>
+</xs:schema>
