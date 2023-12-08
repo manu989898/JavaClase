@@ -87,5 +87,5 @@
         </xs:simpleType>
     </xs:attribute>
     <!--Creo que seria time pero al no poner segundos uso xs:String-->
-    <xs:element name="hora" type="xs:string"/>
+    <xs:element  name="hora" type="xs:string"/>
 </xs:schema>
