@@ -26,7 +26,8 @@ public class Ejer6 {
         letra2 = escaner.nextLine();
 
         frase = frase.replace(letra1.charAt(0), letra2.charAt(0));
-
+        System.out.println(frase);
+        
         escaner.close();
     }
 }
