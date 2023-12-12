@@ -22,5 +22,6 @@ public class EjerExtra {
             System.out.println("La palabra " + palabra + " aparece en la posición " + contador);
             contador = frase.indexOf(palabra, contador + 1);
         }
+        escaner.close();
     }
 }
