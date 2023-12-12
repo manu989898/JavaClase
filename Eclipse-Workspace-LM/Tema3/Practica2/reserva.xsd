@@ -13,10 +13,10 @@
         <xs:complexType>
             <xs:sequence>
                 <xs:element ref="nombre" />
-                <xs:choice>
-                    <xs:element ref="dni" />
-                    <xs:element ref="pasaporte" />
-                </xs:choice>
+                    <xs:choice>
+                        <xs:element ref="dni" />
+                        <xs:element ref="pasaporte" />
+                    </xs:choice>
 
             </xs:sequence>
         </xs:complexType>

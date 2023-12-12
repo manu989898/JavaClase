@@ -1,0 +1,29 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="ciutat">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="nom" />
+                <xs:element ref="state" />
+                <xs:element ref="description"/>
+                <xs:element ref="population"/>
+                <xs:element ref="location"/>
+                <xs:element ref="latitude"/>
+                <xs:element ref="longitude"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="nom" type="xs:string"/>
+    <xs:element name="state" >
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:maxLength value="2" />
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+    <xs:element name="description" type="xs:string"/>
+    <xs:element name="population" type="xs:positiveInteger"/>
+    <xs:element name="location" type="xs:string"/>
+    <xs:element name="latitude" type="xs:string"/>
+    <xs:element name="longitude" type="xs:string"/>
+
+</xs:schema>
