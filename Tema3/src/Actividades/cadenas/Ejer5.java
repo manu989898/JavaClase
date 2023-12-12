@@ -16,13 +16,12 @@ public class Ejer5 {
         System.out.println("Introduce una frase: ");
         frase = escaner.nextLine();
 
-
         for (int i = 0; i < frase.length(); i++) {
             if (frase.charAt(i) == ' ') {
                 contador++;
             }
         }
-        
+
         System.out.println("La frase consta de: " + contador + " palabras.");
         escaner.close();
     }
