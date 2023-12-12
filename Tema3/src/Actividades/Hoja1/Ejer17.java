@@ -31,8 +31,8 @@ public class Ejer17 {
 
                 mayor++;
             }
-
         }
+        
         //Imprimimos el total de la compra y  la cantidad de productos superiroes a 10 euros.
         System.out.println("\nEl precio total de la compra es de: " + total);
         System.out.println("\nLa cantidad de productos superiores a 10 euros es de: " + mayor);

@@ -54,6 +54,7 @@ public class Ejer5 {
 
                 //Calculamos el descuento
                 descuento = precios[contador] * 0.90;
+                precios[contador] = descuento;
 
                 //Restamos el descuento a la variable total
                 total = total + descuento;

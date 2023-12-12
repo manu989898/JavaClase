@@ -40,9 +40,12 @@ public class Ejer12 {
         //Mostramos el array ordenado
         System.out.println("Array ordenado: ");
         for (int i = 0; i < numeros.length; i++) {
+
             System.out.print(numeros[i] + ", ");
         }
+
         System.out.println();
+        
         //Mostramos el numero atómico menor
         System.out.println("Número atómico menor: " + numeros[0]);
 

@@ -48,5 +48,6 @@ public class Ejer11 {
             }
             System.out.println(Arrays.toString(edades));
         }   
+        escaner.close();
     }
 }
