@@ -59,6 +59,7 @@ public class OrdenarMetSeleccion {
                     //Asignamos el valor de la posicion j a la variable min
                     posMin = j; 
                 }
+                
             }  
             //Asignamos el valor de la posicion actual a la variable aux
             aux = array[i];
@@ -68,6 +69,8 @@ public class OrdenarMetSeleccion {
             
             //Asignamos el valor de la variable aux a la posicion min
             array[posMin] = aux;
+
+            System.out.println(Arrays.toString(array));
         }
         //Mostramos el array ordenado
         System.out.println(Arrays.toString(array));
