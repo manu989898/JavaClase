@@ -16,10 +16,14 @@ public class Ejer5 {
         System.out.println("Introduce una frase: ");
         frase = escaner.nextLine();
 
+        // Eliminamos los espacios al principio y al final
         frase = frase.trim();
 
+        // Recorremos la cadena
         for (int i = 0; i < frase.length(); i++) {
-            if (frase.charAt(i) == ' ') {
+
+            // Si hay un espacio y el siguiente caracter no es un espacio contara +1 palabra
+            if ((frase.charAt(i) == ' ') && (frase.charAt(i + 1) != ' ')) {
                 contador++;
             }
         }

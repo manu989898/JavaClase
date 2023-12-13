@@ -14,19 +14,19 @@ public class Ejer9 {
         boolean saltadaPalabra = false;
         System.out.println("introduce una frase: ");
         String frase = escaner.nextLine();
-        escaner.close(); 
+        escaner.close();
 
-        System.out.println("\nLa primera palabra de la frase es: " );
+        System.out.println("\nLa primera palabra de la frase es: ");
 
-        
-        for (int i = 0; i < frase.length() ; i++) {
+        frase = frase.trim();
+        for (int i = 0; i < frase.length(); i++) {
 
-            if (frase.charAt(i) == ' ' && !saltadaPalabra){
+            if (frase.charAt(i) == ' ' && !saltadaPalabra) {
                 saltadaPalabra = true;
-        
-            } else if (saltadaPalabra){ 
-                System.out.print(frase.charAt(i));  
-            }   
+
+            } else if (saltadaPalabra) {
+                System.out.print(frase.charAt(i));
+            }
         }
     }
 }
