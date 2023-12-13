@@ -12,27 +12,27 @@ public class Ejer11 {
         Scanner escaner = new Scanner(System.in);
 
         String frase;
-        int i = 0;
-        int j = 0;
+        int startPos = 0;
+        int posSearcher = 0;
 
         System.out.println("Introduce una frase: ");
         frase = escaner.nextLine();
         
 
-        // mientaRs que i sea menor que la longitud de la frase
-        while (i < frase.length()) {
+        // mientras que posEspacio sea menor que la longitud de la frase
+        while (startPos < frase.length()) {
 
-            // j es la posición del primer espacio en blanco a partir de i
-            j = frase.indexOf(" ", i);
+            // posEspacioSiguiente es la posición del primer espacio en blanco a partir de posEspacio
+            posSearcher = frase.indexOf(" ", startPos);
 
-            // si j es -1, es que no hay más espacios en blanco
-            if (j == -1) {
-                j = frase.length();
+            // si posEspacioSiguiente es -1, es que no hay más espacios en blanco
+            if (posSearcher == -1) {
+                posSearcher = frase.length();
             }
 
-            // si la posición de j es igual a la longitud de la frase, es que no hay más
-            System.out.println(frase.substring(i, j));
-            i = j + 1;
+            // si la posición de posEspacioSiguiente es igual a la longitud de la frase, es que no hay más
+            System.out.println(frase.substring(startPos, posSearcher));
+            startPos = posSearcher + 1;
 
         }
         escaner.close();
