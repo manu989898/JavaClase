@@ -16,11 +16,18 @@ public class Ejer10 {
         System.out.println("ingresa una frase");
         frase = escaner.nextLine();
 
+        // recorremos la frase buscando espacios en blanco
         for (int i = 0; i < frase.length(); i++) {
 
-            
+            // si encontramos un espacio en blanco incrementamos el contador
+            if (frase.indexOf(" ", i) == i) {
+                contador++;
+            }
         }
-        
+
+        // mostramos el número de palabras
+        System.out.println("La frase está formada por " + (contador + 1) + " palabras");
+
         escaner.close();
     }
 }
