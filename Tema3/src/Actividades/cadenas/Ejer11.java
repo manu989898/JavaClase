@@ -13,26 +13,27 @@ public class Ejer11 {
 
         String frase;
         int startPos = 0;
-        int posSearcher = 0;
+        int searcherPos = 0;
 
         System.out.println("Introduce una frase: ");
         frase = escaner.nextLine();
         
 
-        // mientras que posEspacio sea menor que la longitud de la frase
+        // mientras que startPos sea menor que la longitud de la frase
         while (startPos < frase.length()) {
 
-            // posEspacioSiguiente es la posición del primer espacio en blanco a partir de posEspacio
-            posSearcher = frase.indexOf(" ", startPos);
+            // buscamos el siguiente espacio en blanco
+            searcherPos = frase.indexOf(" ", startPos);
 
-            // si posEspacioSiguiente es -1, es que no hay más espacios en blanco
-            if (posSearcher == -1) {
-                posSearcher = frase.length();
+            // si no hay más espacios en blanco, posSearcher será -1 y le asignamos la longitud de la frase
+            if (searcherPos == -1) {
+                searcherPos = frase.length();
             }
 
-            // si la posición de posEspacioSiguiente es igual a la longitud de la frase, es que no hay más
-            System.out.println(frase.substring(startPos, posSearcher));
-            startPos = posSearcher + 1;
+            // mostramos la palabra que hay entre startPos y posSearcher
+            System.out.println(frase.substring(startPos, searcherPos));
+            // actualizamos startPos para que empiece a buscar desde la posición siguiente
+            startPos = searcherPos + 1;
 
         }
         escaner.close();
