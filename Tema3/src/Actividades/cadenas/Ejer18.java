@@ -31,5 +31,6 @@ public class Ejer18 {
             fraseMayusculas += primeraLetra + restoPalabra + " ";
         }
         System.out.println("Frase con la primera letra de cada palabra en mayúsculas: " + fraseMayusculas);
+        escaner.close();
     }
 }

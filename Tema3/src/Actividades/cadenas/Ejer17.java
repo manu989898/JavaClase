@@ -8,7 +8,7 @@ public class Ejer17 {
          * Programa que lee una frase desde el teclado y la muestra quitando la última palabra.
          */
 
-         Scanner escaner = new Scanner(System.in);
+        Scanner escaner = new Scanner(System.in);
         
         System.out.println("Introduce una frase: ");
         String frase = escaner.nextLine();
