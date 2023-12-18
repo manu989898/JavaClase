@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="classe">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="curs"/>
+                <xs:element ref="professor"/>
+                <xs:element ref="alumnes"/>
+            </xs:sequence>
+            <xs:attribute ref="modul" use="required"/>
+            <xs:attribute ref="nommodul" use="required"/>
+        </xs:complexType>
+    </xs:element>
+    <!--Restringimos que sea positivo-->
+    <xs:attribute name="modul">
+        <xs:simpleType>
+            <xs:restriction base="xs:positiveInteger"/>
+        </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="nommodul" type="xs:string"/>
+
+    <xs:element name="curs">
+        <xs:complexType>
+            <xs:attribute ref="especialitat" use="required"/>
+            <xs:attribute ref="numero" use="required"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:attribute name="especialitat">
+        <xs:simpleType>
+            <!--Usamos enumeration para las opciones-->
+            <xs:restriction base="xs:string">
+                <xs:enumeration value="DAW" />
+                <xs:enumeration value="ASIX"/>
+                <xs:enumeration value="DAM"/>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="numero">
+        <xs:simpleType>
+            <!--Restringimos que sea positivo-->
+            <xs:restriction base="xs:positiveInteger" />
+        </xs:simpleType>
+    </xs:attribute>
+    <xs:element name="professor">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="nom"/>
+                <xs:element ref="cognom"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="nom" type="xs:string"/>
+    <xs:element name="cognom" type="xs:string"/>
+    <xs:element name="alumnes">
+        <xs:complexType>
+            <xs:sequence>
+                <!--Usamos minOccurs para poner que mínimo tiene que ser 1-->
+                <xs:element ref="alumne" minOccurs="1" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="alumne">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="nom"/>
+                <xs:element ref="cognom"/>
+                <xs:element ref="nota"/>
+            </xs:sequence>
+            <xs:attribute ref="delegat" use="optional"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:attribute name="delegat" fixed="sí"/>
+    <xs:element name="nota">
+        <xs:simpleType>
+            <xs:restriction base="xs:integer">
+                <xs:minInclusive value="0"/>
+                <xs:maxInclusive value="10"/>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+</xs:schema>

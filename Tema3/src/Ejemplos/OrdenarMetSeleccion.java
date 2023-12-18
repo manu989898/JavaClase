@@ -42,7 +42,7 @@ public class OrdenarMetSeleccion {
         int posMin = 0;
         
         //Mostramos el array desordenado
-        System.out.println(Arrays.toString(array));
+        System.out.println("Fase 0: " + Arrays.toString(array));
 
         //Recorremos el array menos la posicion final
         for (int i = 0; i < array.length -1; i++) {
@@ -59,6 +59,7 @@ public class OrdenarMetSeleccion {
                     //Asignamos el valor de la posicion j a la variable min
                     posMin = j; 
                 }
+                
             }  
             //Asignamos el valor de la posicion actual a la variable aux
             aux = array[i];
@@ -68,9 +69,10 @@ public class OrdenarMetSeleccion {
             
             //Asignamos el valor de la variable aux a la posicion min
             array[posMin] = aux;
+
+            System.out.println("Fase " + (i+1)+ ": " + Arrays.toString(array));
         }
-        //Mostramos el array ordenado
-        System.out.println(Arrays.toString(array));
+      
         
         /*  
             Para mostrar el array sin bucle para recorrerlo

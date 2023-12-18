@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>  
+<?xml version="1.0" encoding="UTF-8"?>
 
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
     <xs:element name="libros">
@@ -8,7 +8,7 @@
             </xs:sequence>
         </xs:complexType>
     </xs:element>
-    <xs:element name="libro" >
+    <xs:element name="libro">
         <xs:complexType>
             <xs:sequence>
                 <xs:element ref="titulo" />
@@ -17,18 +17,29 @@
             </xs:sequence>
         </xs:complexType>
     </xs:element>
-    <xs:element name="titulo" >
+    <xs:element name="titulo">
         <xs:complexType>
             <xs:simpleContent>
-                <xs:extension base="xs:string" >
+                <xs:extension base="xs:string">
                     <xs:attribute ref="isbn" />
                 </xs:extension>
             </xs:simpleContent>
         </xs:complexType>
     </xs:element>
-    <xs:attribute name="isbn" />
-    <xs:element name="autor" />
-    <xs:element name="nacionalidad" />
-    <xs:element name="nacional" />
-    <xs:element name="extranjera" />
+    <xs:attribute name="isbn" type="xs:string" />
+    <xs:element name="autor" type="xs:string" />
+    <xs:element name="nacionalidad">
+        <xs:complexType>
+            <xs:choice>
+                <xs:element ref="nacional" />
+                <xs:element ref="extranjero" />
+            </xs:choice>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="nacional">
+        <xs:complexType />
+    </xs:element>
+    <xs:element name="extranjero">
+        <xs:complexType />
+    </xs:element>
 </xs:schema>
