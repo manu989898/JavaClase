@@ -52,8 +52,9 @@ public class Ejer1 {
             System.out.println();
         }
         System.out.println("\n### RESULTADO DEL ANALÍSIS ###");
-        System.out.println("Se han introducido datos de " + contador + "  pacientes.");
+        System.out.println("\nSe han introducido datos de " + contador + "  pacientes.");
         System.out.println("La media de edad es de: " + (total / contador) + " años.");
         System.out.println("Hay " + jubilados + " jubilados.");
+        teclado.close();
     }
 }
