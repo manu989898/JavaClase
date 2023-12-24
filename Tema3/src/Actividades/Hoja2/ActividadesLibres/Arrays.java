@@ -77,4 +77,8 @@ public class Arrays {
             System.out.println(productos[i] + " - " + precios[i]);     
         }
     }
+
+    public static String[] removeEmptyElements(String[] datos) {
+        return null;
+    }
 }
