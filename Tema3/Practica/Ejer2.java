@@ -71,7 +71,7 @@ public class Ejer2 {
         }
         System.out.println("\nAnálisis de producción: ");
 
-        // Mostrando el peso máximo (al estar ordenaod el array, se encuentra en la
+        // Mostrando el peso máximo (al estar ordenado el array, se encuentra en la
         // última posición)
         System.out.println("\n  * Variedad que produce más: " + produccion[produccion.length - 1][0] + " " + "("
                 + produccion[produccion.length - 1][1] + " kg).");
