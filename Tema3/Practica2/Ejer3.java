@@ -8,22 +8,6 @@ public class Ejer3 {
          * En esta actividad tienes que escribir un programa para obtener información
          * de este documento XML:
          * 
-         * <?xml version="1.0" encoding="UTF-8"?>
-         * <factura>
-         * <fecha>2023-12-20</fecha> <cliente>Rubén Martínez</cliente>
-         * <articulos>
-         * <articulo>
-         * <nombre>Cuaderno Oxford A4</nombre>
-         * <precio>3.25</precio> </articulo>
-         * <articulo>
-         * <nombre>Archivador</nombre>
-         * <precio>4</precio>
-         * </articulo>
-         * <articulo>
-         * <nombre>Grapadora grande</nombre>
-         * <precio>5.5</precio> </articulo>
-         * </articulos>
-         * </factura>
          * Para ello, quita los espacios y los saltos de línea y guarda el texto en
          * forma de variable así:
          * String xml =
