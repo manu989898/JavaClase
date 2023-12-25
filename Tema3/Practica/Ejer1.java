@@ -66,6 +66,6 @@ public class Ejer1 {
         teclado.close();
         
         // Syso para mostrar quien es el mejor profesor
-        System.out.println("Carlos es el mejor profesor de programación.");
+        System.out.println("Carlos és el mejor profesor de programación.");
     }
 }
