@@ -39,7 +39,7 @@ public class Ejer3 {
             String nombre = articulos[i].substring(articulos[i].indexOf("<nombre>") + 8,
                     articulos[i].indexOf("</nombre>"));
             
-            System.out.println("  * " + nombre);
+            System.out.println("  * " + nombre) ; 
         }
 
         // He estado tres dias para plantear como atacar este problema!!!
