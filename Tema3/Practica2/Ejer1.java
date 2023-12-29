@@ -44,7 +44,7 @@ public class Ejer1 {
         for (int i = 0; i < contador; i++) {
             if (pacientes[i][0] == null) {
                 break;
-            } else if (Integer.parseInt(pacientes[i][1]) > 65 && pacientes[i][0] != null) {
+            } else if (Integer.parseInt(pacientes[i][1]) > 65) {
                 jubilados++;
             }
 

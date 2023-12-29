@@ -30,8 +30,7 @@ public class Ejer2 {
         String[][] produccion = { { "Navel Lane Late", "8.5" }, { "Navelina", "4" }, { "Washington Navel", "6.7" },
                 { "Thomson", "4.9" }, { "Newhall", "10.1" }, { "Navelate", "6.3" }, { "Ricalate", "5.5" } };
 
-        // Ordenación por selección 
-        
+        // Ordenación por selección
         for (int i = 0; i < produccion.length - 1; i++) {
             posMin = i;
             // Recorre el array desde la posición i + 1 hasta el final
