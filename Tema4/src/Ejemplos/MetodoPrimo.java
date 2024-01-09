@@ -4,7 +4,8 @@ public class MetodoPrimo {
     public static void main(String[] args) {
 
         /*
-         * Programa que con un metodo compruebe los números primos que hay entre 0 y 1000;
+         * Programa que con un metodo compruebe los números primos que hay entre 0 y
+         * 1000;
          */
 
         int numero = 0;
