@@ -14,7 +14,6 @@ public class Ejer12 {
         System.out.println("Array antes de ordenar: \n" + Arrays.toString(edades));
 
         arrayOrdenado(edades);
-
     }
 
     static void arrayOrdenado (int[] edades) {
@@ -37,6 +36,6 @@ public class Ejer12 {
             edades[posMin] = aux;
         }
 
-        System.out.println("Array despues de llamar al método: \n" +Arrays.toString(edades));
+        System.out.println("Array despues de llamar al método: \n" + Arrays.toString(edades));
     }
 }
