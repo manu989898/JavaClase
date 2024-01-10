@@ -18,7 +18,7 @@ public class Ejer3 {
          * comprados (esto último mediante un bucle):
          */
 
-        String xml = "<factura><fecha>2023-12-20</fecha><cliente>Rubén Martínez</cliente><articulos><articulo><nombre>Cuaderno Oxford A4</nombre><precio>3.25</precio></articulo><articulo><nombre>Archivador</nombre><precio>4</precio></articulo><articulo><nombre>Grapadora grande</nombre><precio>5.5</precio></articulo></articulos></factura>";
+        String xml = "<factura><fecha>2023-12-20</fecha><cliente>Rubén Martínez</cliente><articulos><articulo><nombre>Cuaderno Oxford A4</nombre><precio>3.25</precio></articulo><articulo><nombre>Archivador</nombre><precio>4</precio></articulo><articulo><nombre>Grapadora grande</nombre><precio>5.5</precio></articulo><articulo><nombre>Cuaderno Oxford A4</nombre><precio>3.25</precio></articulo></articulos></factura>";
         System.out.println("\n### MI JAVA PARSER ###");
         // Aqui le decimos que asigne a un String llamado fecha lo que esta entre las etiquetas <fecha> y </fecha> del String xml
         // Para ello, le decimos que nos muestre lo que esta entre el primer indice de <fecha> + 7 
