@@ -1,4 +1,4 @@
-package Actividades;
+package actividades;
 
 import java.util.Arrays;
 

@@ -42,9 +42,11 @@ no.
         }
 
         if (palabra.equals(palabraReves)) {
+        	
             return true;
-        } else {
+        } 
+        	
             return false;
         }
     }
-}
+

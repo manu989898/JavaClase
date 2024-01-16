@@ -1,4 +1,4 @@
-package Actividades;
+package actividades;
 
 public class Ejer2 {
     public static void main(String[] args) {
