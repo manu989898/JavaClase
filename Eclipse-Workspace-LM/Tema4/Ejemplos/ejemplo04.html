@@ -31,13 +31,21 @@
         .fila-alta{
             height: 50px;
         }
+        .resaltado{
+            font-size: 20px;
+            color: blue;
+        }
+        /*Usamos '#' para los id's*/
+        #h1_tabla {
+            color: brown;
+        }
        
     </style>
 </head>
 
 <body>
 
-    <h1>Tabla</h1>
+    <h1 id="h1_tabla">Tabla</h1>
     
     <table >
         <tr class="fila-alta">
@@ -87,6 +95,7 @@
     <a href="ejemplo07.html" target="_blank">Ejemplo 7</a><br>
     <a href="ejemplo08.html" target="_blank">Ejemplo 8</a><br>
     <a href="ejemplo09.html" target="_blank">Ejemplo 9</a><br>
+    <a href="ejemplo10.html" target="_blank">Ejemplo 10</a><br>
 
     <br>
 
@@ -94,13 +103,11 @@
     <a href="#seccion1">Sección 1</a><br>
     <a href="#seccion2">Sección 2</a><br>
     <a href="#seccion3">Sección 3</a><br>
-    <a href="#seccion4">Sección 4</a><br>
-    <a href="#seccion5">Sección 5</a><br>
-    <a href="#seccion6">Sección 6</a><br>
+
 
     <h3 id="seccion1">Sección 1</h3>
     <p>
-        Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nunc vel orci lacinia,
+        Orci varius <span class="resaltado">natoque penatibus</span> et magnis dis parturient montes, nascetur ridiculus mus. Nunc vel orci lacinia,
         maximus est in, pharetra urna. Ut id libero finibus nibh euismod ultricies. Morbi a bibendum tellus. Ut dapibus
         interdum libero, nec vulputate ante auctor a. Aenean dapibus, arcu in vehicula volutpat, turpis lacus dignissim
         augue, sit amet varius dolor nisl vel nisl. Duis dictum sit amet augue sed blandit. Cras non orci a justo
@@ -126,32 +133,15 @@
         <br><a href="#volver">Volver a links</a>
     </p>
 
-    <h3 id="seccion4">Sección 4</h3>
-    <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam, voluptates ad magni dignissimos atque tempore
-        deserunt deleniti libero, esse culpa quisquam blanditiis. Blanditiis eaque necessitatibus possimus amet
-   
-        <br><a href="#volver">Volver a links</a>
-    </p>
-    <h3 id="seccion5">Sección 5</h3>
-    <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam quibusdam, id a molestias est quod! Quae iure
-        ab incidunt molestiae voluptatum dolore sequi eaque possimus provident, reprehenderit consequuntur omnis
-        corporis magnam repudiandae excepturi, labore facere ipsum nobis! Beatae nihil fugit quas nulla, reiciendis
+    <form action="/recibir_datos.php" method="post">
+        <label for="nombre">Nombre</label><br>
+        <input type="text" name="nombre" id="nombre"><br><br>
 
-        minus eum dicta.
-        <br><a href="#volver">Volver a links</a>
-    </p>
-    <h3 id="seccion6">Sección 6</h3>
-    <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi dicta dolore corporis adipisci sapiente eveniet,
-        officiis quaerat molestias. Qui dicta earum iure repellat odio et consequuntur sint tenetur, quis cupiditate
+        <label for="apellidos">Apellidos</label><br>
+        <input type="text" name="apellidos" id="apellidos"><br>
 
-        <br><a href="#volver">Volver a links</a>
-    </p>
-
-    
-
+        <input type="submit" value="enviar">
+    </form>
 
 </body>
 
