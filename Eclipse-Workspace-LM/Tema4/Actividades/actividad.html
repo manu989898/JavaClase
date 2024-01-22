@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--Quiero que los inputrs vayan uno debajo de otro-->
+    <style>
+        div {
+            border: 1px solid black;
+            padding: 10px;
+            width: 600px;
+        }
+
+        fieldset {
+            width: 350px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <H1>Formulario de inscripción</H1>
+        <fieldset>
+            <legend>Datos Personales</legend> <br>
+
+            <form action="/recibir_datos.php" method="post">
+                <!--/* quiero un formulario con 7 campos, el primero para introducir el nombre, el segundo
+        // para introducir los apellidos, el tercero para intrucir la fecha de nacimiento
+        // el cuarto de tipo seleccion tipo disc para el estado civil(soltero, casado) el quinto de tipo texto
+        //para introducir la direccion, el sexto de tipo desplegable para introducir
+        //en cual de las islas vivo, y el septimo un selector de color preferido.
+        // el boton de enviar debe estar en la parte inferior del formulario y el boton de borrar
+
+        // el boton de borrar debe estar a la derecha del boton de enviar */ -->
+
+
+                Nombre <br>
+                <input type="text" name="nombre" id="nombre" placeholder="Nombre"><br><br>
+
+                Apellidos <br>
+                <input type="text" name="apellidos" id="apellidos" placeholder="Apellidos"><br><br>
+
+                Fecha de nacimiento <br>
+                <input type="date" name="fecha_nacimiento" id="fecha_nacimiento" placeholder="Fecha de nacimiento">
+                <br><br>
+
+                Estado civil <br>
+                <input type="radio" name="Estado_Civil" id="casado"> casado <br>
+                <input type="radio" name="Estado_Civil" id="soltero"> soltero <br><br>
+
+                Dirección <br>
+                <input type="text" name="direccion" id="direccion" placeholder="Direccion"> <br><br>
+
+                Isla <br>
+                <label for="isla"></label>
+                <select name="isla" id="isla">
+                    <option value="Mallorca">Mallorca</option>
+                    <option value="Menorca">Menorca</option>
+                    <option value="Ibiza">Ibiza</option>
+                    <option value="Formentera">Formentera</option>
+                    <option value="Cabrera">Cabrera</option>
+                </select> <br><br>
+
+                Color favorito <br>
+                <input type="color" name="color" id="color"> <br><br>
+
+
+
+        </fieldset><br>
+        <fieldset>
+            <legend>Contacto</legend><br>
+
+
+            Correo electrónico <br>
+            <input type="text" name="correo" id="correo" placeholder="Correo"><br><br>
+
+            Contraseña <br>
+            <input type="text" name="ontraseña" id="contraseña" placeholder="Contraseña"><br><br>
+
+            <input type="checkbox"> Deseo recibir publicidad <br>
+            <input type="checkbox"> Acepto los términos <br>
+            <textarea placeholder="Escribe aquí cualquier observación que se te ocurra" name="comentarios"
+                id="comentarios" cols="30" rows="2"></textarea><br>
+            <input type="submit" value="enviar">
+            <input type="reset" value="borrar">
+            </form>
+
+        </fieldset> <br>
+
+    </div>
+
+</body>
+
+</html>

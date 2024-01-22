@@ -15,5 +15,6 @@ public class ConvertirAcadena {
         String pulgadas2 = "" + pulgadasTv;
         System.out.println("El tamaño del monitor es de " + pulgadas + pulgadas2
                 + " pulgadas");
+        
     }
 }
