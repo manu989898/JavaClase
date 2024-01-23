@@ -11,6 +11,11 @@ public class Coche {
 	String averia;
 	int quilometros;
 	
+	// Constructor implícito
+	Coche(){
+		
+	}
+	
 	// Constructor explícito que tome los 5 valores de los atributos
 	Coche(String matricula, String marca, String modelo, String averia, int quilometros){
 		this.matricula = matricula;
@@ -22,9 +27,13 @@ public class Coche {
 	
 	// Constructor explicíto que tome matricula, marca y modelo.
 	Coche(String matricula, String marca, String modelo){
+		
+		/*  lo mismo es escribir esto que lo de abajo.
 		this.matricula = matricula;
 		this.marca = marca;
-		this.modelo = modelo;
+		this.modelo = modelo; 
+		*/
+		this(matricula, marca, modelo, null, 0);
 	}
 	
 	
@@ -49,6 +58,7 @@ public class Coche {
 		quilometros = escaner.nextInt();
 		
 	}
+	
 	
 	void mostrar() {
 		System.out.println("\n*** DATOS DEL VEHÍCULO ***");

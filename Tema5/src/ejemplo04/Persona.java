@@ -27,6 +27,7 @@ public class Persona {
 
 	}
 	
+	// Constructor con solo apellidos y nombre
 	Persona(String apellidos, String nombre) {
 		
 		this.apellidos = apellidos;
@@ -35,11 +36,22 @@ public class Persona {
 		this.dni = "Sin DNI";
 		// Dejamos el atributo fechaNacimiento con el valor por defecto, null.
 		
+		/* una manera de simplificarlo mas seria escribir
+		 
+		 * this(apellidos, nombre, "Sin DNI", null);
+		 
+		 */
 	}
+	
+	
+		
 	
 	// Constructor explícito. Le pasamos el dni y dejamos el resto de atirbutos con valor null.
 	Persona(String dni){
+		
 		this.dni = dni;
+		
+		// this(null, null, dni, null);  Es lo mismo que poner this.dni = dni;
 	}
 
 	// Muestra en la terminal todos los valores de los atributos.
