@@ -26,35 +26,26 @@
             <legend>Datos Personales</legend> <br>
 
             <form action="/recibir_datos.php" method="post">
-                <!--/* quiero un formulario con 7 campos, el primero para introducir el nombre, el segundo
-        // para introducir los apellidos, el tercero para intrucir la fecha de nacimiento
-        // el cuarto de tipo seleccion tipo disc para el estado civil(soltero, casado) el quinto de tipo texto
-        //para introducir la direccion, el sexto de tipo desplegable para introducir
-        //en cual de las islas vivo, y el septimo un selector de color preferido.
-        // el boton de enviar debe estar en la parte inferior del formulario y el boton de borrar
 
-        // el boton de borrar debe estar a la derecha del boton de enviar */ -->
+             
+                <label for="nombre">Nombre</label><br>
+                <input type="text" name="nombre" id="nombre" placeholder="Nombre" title="Este campo es obligatorio"><br><br>
 
+                <label for="apellidos">Apellidos</label><br>
+                <input type="text" name="apellidos" id="apellidos" placeholder="Apellidos" title="Este campo es obligatorio"><br><br>
 
-                Nombre <br>
-                <input type="text" name="nombre" id="nombre" placeholder="Nombre"><br><br>
-
-                Apellidos <br>
-                <input type="text" name="apellidos" id="apellidos" placeholder="Apellidos"><br><br>
-
-                Fecha de nacimiento <br>
+                <label for="fecha_nacimiento">Fecha de nacimiento</label><br>
                 <input type="date" name="fecha_nacimiento" id="fecha_nacimiento" placeholder="Fecha de nacimiento">
                 <br><br>
-
-                Estado civil <br>
+                <!--No esta bien el de estado civil creo -->
+                <label for="Estado_Civil">Estado civil</label><br>
                 <input type="radio" name="Estado_Civil" id="casado"> casado <br>
                 <input type="radio" name="Estado_Civil" id="soltero"> soltero <br><br>
 
-                Dirección <br>
+                <label for="direccion">Dirección</label><br>
                 <input type="text" name="direccion" id="direccion" placeholder="Direccion"> <br><br>
 
-                Isla <br>
-                <label for="isla"></label>
+                <label for="isla">Isla</label><br>
                 <select name="isla" id="isla">
                     <option value="Mallorca">Mallorca</option>
                     <option value="Menorca">Menorca</option>
@@ -63,7 +54,7 @@
                     <option value="Cabrera">Cabrera</option>
                 </select> <br><br>
 
-                Color favorito <br>
+                <label for="color">Color Favorito</label><br>
                 <input type="color" name="color" id="color"> <br><br>
 
 
@@ -73,14 +64,19 @@
             <legend>Contacto</legend><br>
 
 
-            Correo electrónico <br>
-            <input type="text" name="correo" id="correo" placeholder="Correo"><br><br>
+            <label for="correo">Correo electrónico</label><br>
+            <input type="email" name="correo" id="correo" placeholder="Correo"><br><br>
 
-            Contraseña <br>
-            <input type="text" name="ontraseña" id="contraseña" placeholder="Contraseña"><br><br>
+            <label for="contrasenia">Contraseña</label><br>
+            <input type="text" name="contrasenia" id="contrasenia" placeholder="Contraseña"><br><br>
 
-            <input type="checkbox"> Deseo recibir publicidad <br>
-            <input type="checkbox"> Acepto los términos <br>
+            <label for="publi">Deseo recibir publicidad</label>
+            <input type="checkbox" name="publi" value="publi" checked><br>
+            
+            <label for="terminos" title="Este campo es obligatorio">Acepto los términos</label>
+            <input type="checkbox" name="terminos" value="publi" checked title="Es obligatorio aceptarlos""><br>
+            
+            <br><label for="comentarios">Comentarios</label><br>
             <textarea placeholder="Escribe aquí cualquier observación que se te ocurra" name="comentarios"
                 id="comentarios" cols="30" rows="2"></textarea><br>
             <input type="submit" value="enviar">
