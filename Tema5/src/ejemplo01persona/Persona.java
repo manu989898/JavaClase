@@ -9,7 +9,21 @@ public class Persona {
 	String nombre;
 	String dni;
 	String fechaNacimiento;
-
+	
+	/* //    ****   CONSTRUCTOR   ***
+	
+	// Constructor explícito. Le pasamos los apellidos y el nombre 
+	// y dejamos los otros datos con valores por defecto.
+	Persona(String apellidos, String nombre){
+		this.apellidos = apellidos;
+		this.nombre = nombre;	
+		// Damos un valor por defecto a DNI ya que no se lo damos en el ()
+		this.dni = "Sin DNI";	
+		// Dejamos el atributo fechaNacimiento por defecto, null.
+	}
+	
+	*/
+	
 	// Métodos.
 	void mostrar() {
 		System.out.println("Nombre completo: " + apellidos + " " + nombre);
