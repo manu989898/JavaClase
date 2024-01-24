@@ -43,9 +43,6 @@ public class Persona {
 		 */
 	}
 	
-	
-		
-	
 	// Constructor explícito. Le pasamos el dni y dejamos el resto de atirbutos con valor null.
 	public Persona(String dni){
 		
@@ -77,7 +74,6 @@ public class Persona {
 		}
 		return fechaNacimiento.substring(6);
 	}
-
 
 	// GETERS Y SETERS
 	
@@ -111,7 +107,5 @@ public class Persona {
 
 	public void setFechaNacimiento(String fechaNacimiento) {
 		this.fechaNacimiento = fechaNacimiento;
-	}
-	
-	
+	}	
 }
