@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Florencia</title>
+</head>
+
+<body>
+    <h1>Florencia</h1>
+    <p>Florencia (en italiano: Firenze) es una ciudad situada en el norte de la región central de Italia, capital y
+        ciudad más poblada de la ciudad metropolitana homónima y de la región de Toscana, de la que es su centro
+        histórico, artístico, económico y administrativo. Cuenta con unos 378 239 habitantes,2​ y es el centro de un
+        área metropolitana de aproximadamente un millón y medio de habitantes.</p>
+
+    <img class="smallImg" src="imgs/Florencia.jpeg" alt="Florencia">
+    
+    <h3>Navegación</h3>
+    <ul>
+        <li><a target="_blank" href="index.html">La Unión Europea</a></li>
+        <li><a target="_blank" href="praga.html">Praga</a></li>
+    </ul>
+
+    <h3>Encuesta de opinión</h3>
+    <fieldset>
+        <legend>Danos tu opinión</legend>
+        <form action="/recibir_datos.php" method="get">
+            <label for="nombre">Tu nombre</label><br>
+            <input type="text" name="nombre" id="nombre" ><br><br>
+
+            <label for="correo">Tu correo</label><br>
+            <input type="email" name="correo" id="correo" ><br><br>
+
+            <label for="opcion">¿Te gustaría visitar Florencia?</label><br>
+            <input type="radio" value="Si" name="opcion" id="si" checked> Si <br>
+            <input type="radio" value="No" name="opcion" id="no"> No <br><br>
+
+            <!--enviar y borrar-->
+            <input type="submit" value="Enviar opinión">
+            <input type="reset" value="Borrar el formulario">
+        </form>
+    </fieldset>
+</body>
+
+</html>
