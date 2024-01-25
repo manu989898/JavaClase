@@ -27,12 +27,16 @@
     <fieldset>
         <legend>Danos tu opinión</legend>
         <form action="/recibir_datos.php" method="get">
+            
+            <!--Campo nombre-->
             <label for="nombre">Tu nombre</label><br>
-            <input type="text" name="nombre" id="nombre" ><br><br>
+            <input type="text" name="nombre" id="nombre" required><br><br>
 
+            <!--Campo email-->
             <label for="correo">Tu correo</label><br>
-            <input type="email" name="correo" id="correo" ><br><br>
+            <input type="email" name="correo" id="correo" required><br><br>
 
+            <!--Check de si o no-->
             <label for="opcion">¿Te gustaría visitar Florencia?</label><br>
             <input type="radio" value="Si" name="opcion" id="si" checked> Si <br>
             <input type="radio" value="No" name="opcion" id="no"> No <br><br>
