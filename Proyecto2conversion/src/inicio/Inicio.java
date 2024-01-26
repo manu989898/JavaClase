@@ -22,5 +22,4 @@ public class Inicio {
 		double calorias = escaner.nextDouble();
 		System.out.println("\n" + calorias + " calorias son: " + Conversor.julios(calorias)+ " julios");
 	}
-
 }

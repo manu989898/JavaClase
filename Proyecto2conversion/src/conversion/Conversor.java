@@ -6,8 +6,6 @@ public class Conversor {
 	private static double MB_ATM = 0.000986923;
 	private static double CAL_A_JULIOS = 4.184;
 	
-	
-	
 	public Conversor() {
 		
 	}
