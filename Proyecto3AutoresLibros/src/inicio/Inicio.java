@@ -48,7 +48,7 @@ public class Inicio {
 		System.out.println("\n**** DATOS DEL AUTOR ****");
 		System.out.println(autor1.toString());
 		System.out.println("\n*** DATOS DEL LIBRO ****");
-		System.out.println(libro1.toString() + ", Año actual: " + libro1.getAnioActual());
+		System.out.println(libro1.toString() + ", Año actual: " + Libro.getAnioActual());
 		
 	}
 
