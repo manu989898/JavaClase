@@ -9,6 +9,10 @@
     <fullyQualifiedTypeName name="ejemplo07Visibilidad.Persona"/>
     <fullyQualifiedTypeName name="geometria.Cilindro"/>
     <fullyQualifiedTypeName name="org.junit.jupiter.api.BeforeEach"/>
-    <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="conversion.Conversor"/>
+    <fullyQualifiedTypeName name="biblioteca.Autor"/>
+    <fullyQualifiedTypeName name="biblioteca.Libro"/>
+    <fullyQualifiedTypeName name="auxiliar.Alumno"/>
+    <fullyQualifiedTypeName name="auxiliar.Grupo"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
 </qualifiedTypeNameHistroy>
