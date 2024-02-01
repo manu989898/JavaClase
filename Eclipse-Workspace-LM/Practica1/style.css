@@ -24,3 +24,10 @@ fieldset{
 h1, h2, h3{
     color: palevioletred;
 }
+body{
+    font-size: 14px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+ul {
+    list-style-type: square;
+}
