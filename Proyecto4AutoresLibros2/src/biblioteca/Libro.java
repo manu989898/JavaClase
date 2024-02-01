@@ -32,11 +32,9 @@ public class Libro {
 	
 	public String toString() {
 		if (autores.length ==1) {
-			return "Título: " + titulo + ", ISBN: " + isbn +
-					"\n, Nombre autor: " + autores[0].getNombre();
+			return "Título: " + titulo + ", ISBN: " + isbn + " Autor: " + autores[0].getNombre();
 		} 
-		return "Título: " + titulo + ", ISBN: " + isbn +
-				"\n, Nombre autor: " + "Varios autores.";
+		return "Título: " + titulo + ", ISBN: " + isbn + "Autor: " + "Varios autores ";
 		//Titulo, isbn, nombre autor, anioActual.
 		
 	}

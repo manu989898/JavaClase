@@ -26,7 +26,7 @@ public class Autor {
 
 	public String toString() {
 		
-		return "Nombre: " + nombre + ", email: " + email + ", año nacimiento" + anioNacimiento;
+		return "Nombre: " + nombre + ", email: " + email + ", año de nacimiento: " + anioNacimiento;
 	}
 	
 
