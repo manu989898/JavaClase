@@ -32,5 +32,13 @@ public class Instituto {
 		}
 	}
 	
+	public void muestraAlumnos() {
+		for (int i = 0; i < alumnos.length; i++) {
+			if (alumnos[i] != null) {
+				break;
+			}
+		}
+	}
+	
 	
 }
