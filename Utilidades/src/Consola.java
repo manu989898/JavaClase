@@ -24,4 +24,21 @@ public class Consola {
 		
 		return leerInt("Entrada incorrecta: se esperaba un número entero.");
 	}
+
+	public static double leerDouble(String mensajeError) {
+		
+		while (!entrada.hasNextDouble()) {
+			System.out.println(mensajeError);
+			entrada.nextLine();
+		}
+		double num = entrada.nextDouble();
+		entrada.nextLine();
+		return num;
+	}
+	
+	public static double leerDouble() {
+		
+		return leerDouble("Entrada incorrecta: se esperaba un número decimal");
+	}
+
 }
