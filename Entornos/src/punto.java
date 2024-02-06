@@ -3,7 +3,7 @@ public class punto {
 
 	private double x;
 	private double y;
-
+	private int age;
 	public punto(double x, double y) {
 		this.x = x;
 		this.y = y;
@@ -27,6 +27,21 @@ public class punto {
 
 	public void setY(double y) {
 		this.y = y;
+	}
+	
+	
+
+	public int getAge() {
+		return age;
+	}
+
+	public void setAge(int age) {
+		if(age >=18 && age<100) {
+		this.age = age;
+		
+		}else {
+			throw new ArithmeticException("Person is not eligible to vote"); 
+		}
 	}
 
 	public double distancia(punto p) {

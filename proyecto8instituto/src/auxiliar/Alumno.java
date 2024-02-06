@@ -13,7 +13,10 @@ public class Alumno {
 	}
 	
 	public Alumno(int numExpediente, String apellidos, String nombre,Grupo grupo) {
-		
+		this.numExpediente = numExpediente;
+		this.apellidos = apellidos;
+		this.nombre = nombre;
+		this.grupo = grupo;
 	}
 	
 	public String toString() {

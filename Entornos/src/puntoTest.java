@@ -25,4 +25,6 @@ class puntoTest {
 		double distancia = p1.distancia(p2);
 		assertEquals(1, distancia);
 	}
-}
+	
+	
+	}
