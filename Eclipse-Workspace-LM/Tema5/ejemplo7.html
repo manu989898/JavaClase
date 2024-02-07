@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo7</title>
+    <style>
+        .alinear {
+            /* Para alinear el texto a la justificación */
+            text-align: justify;
+            text-align-last: center;
+        }
+        .sentido{
+            /* Para escribir de derecha a izquierda */
+            direction: rtl;
+            unicode-bidi: bidi-override;
+        }
+        .alinear-vertical{
+            /* Para alinear las imagenes a la altura del texto en la base */
+            vertical-align: baseline;
+            width: 30px;
+        }
+        a{
+            /* Para eliminar el subrayado de los links */
+            text-decoration: none;
+        }
+        .texto-decorado{
+            /* Para decorar el texto */
+            text-decoration: underline;
+            text-decoration-color: brown;
+            text-decoration-thickness: 2px;
+            text-decoration-style: wavy;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Alineaciones</h1>
+    <p class="alinear">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente ad ullam nisi nemo est dolor delectus, illo
+        suscipit vero sit sunt soluta incidunt. At alias possimus dolorem magnam vero sed?
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum facere non distinctio earum quisquam architecto
+        minus deleniti expedita est doloremque! Sapiente quisquam saepe cupiditate ratione, necessitatibus corporis
+        doloremque aperiam assumenda?
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem recusandae, perspiciatis laboriosam
+        doloremque quas fuga repellendus, possimus itaque nostrum eius, repudiandae culpa quibusdam sint ex in. Totam,
+        eligendi? Assumenda, dolores.
+    </p>
+    <p class="sentido">
+        Este párrafo se deberia mostrar escrito de derecha a izquierda.
+    </p>
+    <p >hola me llamo Pedro y soy un <img class="alinear-vertical" src="imgs/hamsters/w150px/hamster01.png" alt="pulpo">, a que mola!</p>
+    <h2>Decoración de texto</h2>
+    <p>Puedes consultar la <a href="https://www.wikipedia.es">Wikipedia</a> para más información.</p>
+    <p><span class="texto-decorado">Nunca se debe usar html </span> dar formato a una página web.</p>
+</body>
+
+</html>
