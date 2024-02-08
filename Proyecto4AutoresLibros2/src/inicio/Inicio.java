@@ -39,8 +39,10 @@ public class Inicio {
 		Libro.setAnioActual(anio);
 		System.out.println("\n*** DATOS DEL LIBRO ****");
 		System.out.println(libro1.toString() + ", Año actual: " + Libro.getAnioActual());
-
+		System.out.println(libro1.muestraAutores());
 	}
+	
+	
 
 	// static siempre porque está en el main
 	private static Autor leerAutor() {
@@ -60,6 +62,8 @@ public class Inicio {
 
 		return new Autor(nombre, email, anioNacimiento);
 
+		
 	}
+
 
 }

@@ -1,4 +1,4 @@
-package ejemplo09CocheGetters;
+package ejemplo14Finalize;
 
 import java.util.Scanner;
 
@@ -69,11 +69,6 @@ public class Coche {
 		System.out.println("KM: " + quilometros);
 	}
 
-	@Override
-	protected void finalize() throws Throwable {
-		
-		System.out.println("ELIMINANDO OBJETO DE LA MEMORIA");
-	}
 	
 	//Getters y Setters
 	public String getMatricula() {
@@ -121,7 +116,6 @@ public class Coche {
 		
 		this.quilometros = quilometros;
 	}
-	
 
 }
 

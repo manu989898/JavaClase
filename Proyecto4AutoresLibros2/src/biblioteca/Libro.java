@@ -1,5 +1,8 @@
 package biblioteca;
 
+import java.util.Arrays;
+import java.util.Iterator;
+
 public class Libro {
 
 	// ---- VARIABLES ----
@@ -77,6 +80,15 @@ public class Libro {
 	public static void setAnioActual(int anioActual) {
 		Libro.anioActual = anioActual;
 	}
-	
-	
+
+	public String muestraAutores() {
+		String autoresMostrar = "";
+		System.out.println("MOSTRANDO AUTORES");
+		for (int i = 0; i < autores.length; i++) {
+			if(autores[i] != null) {
+				autoresMostrar= autoresMostrar + " - " + autores[i].getNombre() + "\n";
+			}
+		}
+		return autoresMostrar;
+	}	
 }

@@ -19,23 +19,41 @@ public class Instituto {
 	}
 
 	public void delAlumno(int numExpediente) {
-
-		for (int i = 0; i < alumnos.length; i++) {
-			if (alumnos[i] != null && alumnos[i].getNumExpediente() == numExpediente) {
-				alumnos[i] = null;
-				return;
-			}
+		
+		int pos = buscaAlumnos(numExpediente);
+		if(pos != -1) {
+		alumnos[pos] = null;
 		}
 	}
 
 	public void muestraAlumnos() {
-	
+
 		for (int i = 0; i < alumnos.length; i++) {
 			if (alumnos[i] != null) {
 				System.out.println(alumnos[i]);
 			}
 		}
 		System.out.println();
+	}
+
+	public int numAlumnos() {
+		int numAlumn = 0;
+		for (int i = 0; i < alumnos.length; i++) {
+			if (alumnos[i] != null) {
+				numAlumn++;
+			}
+		}
+		return numAlumn;
+	}
+
+	public int buscaAlumnos(int numExpediente) {
+		int posicion = -1;
+		for (int i = 0; i < alumnos.length; i++) {
+			if (alumnos[i] != null && alumnos[i].getNumExpediente() == numExpediente) {
+				return i;
+			}
+		}
+		return -1;
 	}
 
 }

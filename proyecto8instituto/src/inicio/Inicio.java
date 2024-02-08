@@ -25,6 +25,9 @@ public class Inicio {
 		
 		insti.delAlumno(50);
 		insti.muestraAlumnos();
+		
+		System.out.println("Hay " + insti.numAlumnos());
+		System.out.println("El alumno con el num de exp 101 está en la posición: " + insti.buscaAlumnos(101));
 	}
 
 }
