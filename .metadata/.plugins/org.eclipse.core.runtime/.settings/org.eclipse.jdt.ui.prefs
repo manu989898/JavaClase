@@ -2,9 +2,7 @@ content_assist_disabled_computers=org.eclipse.jdt.ui.textProposalCategory\u0000o
 content_assist_lru_history=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><history maxLHS\="100" maxRHS\="10"><lhs name\="geometria.Cilindro"><rhs name\="geometria.Cilindro"/></lhs><lhs name\="auxiliar.Grupo"><rhs name\="auxiliar.Grupo"/></lhs></history>
 content_assist_number_of_computers=15
 eclipse.preferences.version=1
-java_multi_line_comment=192,97,203
 java_multi_line_comment_bold=true
-java_single_line_comment=192,97,203
 java_single_line_comment_bold=true
 org.eclipse.jdt.ui.formatterprofiles.version=23
 spelling_locale_initialized=true
