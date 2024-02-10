@@ -1,7 +1,8 @@
 
 public class CuentaCorriente {
+int saldo;
+String iban;
 
-}
 public getSaldo() {
     return saldo;
 }
@@ -28,4 +29,10 @@ public void transferirDinero(CuentaCorriente cuentaDestino, double importe) {
 }
 public void mostrarSaldo() {
     System.out.println("Saldo: " + saldo);
+}
+    CuentaCorriente(String iban, int saldo) {
+    this.iban = iban;
+    this.saldo = saldo;
+
+}
 }

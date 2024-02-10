@@ -38,6 +38,7 @@ public class apuntes {
          * Se prueba el programa en distintos sistemas operativos y plataformas
          */
     }
+
     // PRUEBAS AUTOMÁTICAS
     // JUnit
     @Test
@@ -46,7 +47,7 @@ public class apuntes {
         cuenta1.setSaldo(100);
         assertEquals(100, cuenta1.getSaldo());
     }
-    
+
     @Test
     void testExtraerDinero() {
         CuentaCorriente cuenta1 = new CuentaCorriente();
@@ -56,13 +57,17 @@ public class apuntes {
     }
 
     // TRY CATCH
-    //ejemplo try catch
-    try {
+    // ejemplo try catch
+    try
+
+    {
         CuentaCorriente cuenta1 = new CuentaCorriente("ES34535", 100);
         cuenta1.extraerDinero(200);
         fail("ERROR: No se ha lanzado la excepción esperada");
 
-    } catch (Exception e) {
+    }catch(
+    Exception e)
+    {
         // Código que se ejecuta si se lanza una excepción
     }
 
@@ -79,4 +84,4 @@ public class apuntes {
             saldo -= importe;
         }
     }
-}
+}}
