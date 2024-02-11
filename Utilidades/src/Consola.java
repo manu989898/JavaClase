@@ -25,6 +25,10 @@ public class Consola {
 		return leerInt("Entrada incorrecta: se esperaba un número entero.");
 	}
 
+	
+	// **********  PARTE PRÁCTICA 3B  ***********
+	
+	
 	public static double leerDouble(String mensajeError) {
 		
 		while (!entrada.hasNextDouble()) {
@@ -38,7 +42,12 @@ public class Consola {
 	
 	public static double leerDouble() {
 		
-		return leerDouble("Entrada incorrecta: se esperaba un número decimal");
+		return leerDouble("Entrada incorrecta: se esperaba un número.");
 	}
-
+		
+	public static String leerString() {
+		String cadena = entrada.nextLine();
+		return cadena;
+		
+	}
 }
