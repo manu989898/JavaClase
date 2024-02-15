@@ -19,7 +19,7 @@ public class Lavadora {
 		
 		return "Código: " + id + ", Motor: " + motor.getFabricante() + ", Marca: " + marca + ", Precio: " + precio;
 	}
-
+	
 	public int getId() {
 		return id;
 	}

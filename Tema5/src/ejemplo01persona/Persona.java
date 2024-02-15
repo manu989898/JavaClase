@@ -1,6 +1,6 @@
 package ejemplo01persona;
 
-import java.util.Iterator;
+
 
 public class Persona {
 
