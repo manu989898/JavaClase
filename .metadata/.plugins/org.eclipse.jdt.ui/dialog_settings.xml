@@ -58,8 +58,8 @@
 		<item key="OmitCallToSuper" value="false"/>
 	</section>
 	<section name="DialogBounds_GenerateConstructorUsingFieldsSelectionDialog">
-		<item key="DIALOG_X_ORIGIN" value="20"/>
-		<item key="DIALOG_Y_ORIGIN" value="20"/>
+		<item key="DIALOG_X_ORIGIN" value="0"/>
+		<item key="DIALOG_Y_ORIGIN" value="0"/>
 		<item key="DIALOG_WIDTH" value="629"/>
 		<item key="DIALOG_HEIGHT" value="721"/>
 		<item key="DIALOG_FONT_NAME" value="1|Ubuntu|11.0|0|GTK|1|"/>
@@ -69,14 +69,20 @@
 		<item key="FinalModifier" value="false"/>
 		<item key="SynchronizedModifier" value="false"/>
 		<item key="Comments" value="false"/>
+		<item key="LimitElements" value="false"/>
+		<item key="IgnoreDefault" value="true"/>
+		<item key="StringStyle" value="0"/>
+		<item key="LimitValue" value="10"/>
+		<item key="SkipNull" value="false"/>
+		<item key="ToStringTemplateSelected" value="0"/>
 	</section>
 	<section name="AddGetterSetterDialog">
 		<item key="SortOrdering" value="false"/>
 		<item key="RemoveFinal" value="false"/>
 	</section>
 	<section name="DialogBounds_GetterSetterTreeSelectionDialog">
-		<item key="DIALOG_X_ORIGIN" value="20"/>
-		<item key="DIALOG_Y_ORIGIN" value="20"/>
+		<item key="DIALOG_X_ORIGIN" value="0"/>
+		<item key="DIALOG_Y_ORIGIN" value="0"/>
 		<item key="DIALOG_WIDTH" value="646"/>
 		<item key="DIALOG_HEIGHT" value="739"/>
 		<item key="DIALOG_FONT_NAME" value="1|Ubuntu|11.0|0|GTK|1|"/>
@@ -103,5 +109,12 @@
 		<list key="JarPackageWizardPage.DESTINATION_NAMES_ID">
 			<item value="/home/horabaixa/Escritorio/Utilidades.jar"/>
 		</list>
+	</section>
+	<section name="DialogBounds_GenerateToStringDialog">
+		<item key="DIALOG_X_ORIGIN" value="0"/>
+		<item key="DIALOG_Y_ORIGIN" value="0"/>
+		<item key="DIALOG_WIDTH" value="566"/>
+		<item key="DIALOG_HEIGHT" value="749"/>
+		<item key="DIALOG_FONT_NAME" value="1|Ubuntu|11.0|0|GTK|1|"/>
 	</section>
 </section>
