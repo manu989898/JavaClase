@@ -13,14 +13,13 @@ public class Cliente extends Persona {
 		this.visa = visa;
 		
 	}
-	
+	@Override
 	public void mostrar() {
 		
-		// Llamamos al método mostrar de la clase padre ya que sus atributos son privados.
-		super.mostrar();
+		System.out.println("\n" + getNombre() + " " + getApellidos() + " " + ", con Dni" + getDni() + ".");
 		
 		// Añadimos el atributo extra de Cliente.
-		System.out.print(", visa: " + visa);
+		System.out.print("\n, visa: " + visa);
 	}
 	
 }

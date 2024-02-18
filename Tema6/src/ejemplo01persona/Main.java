@@ -3,10 +3,6 @@ package ejemplo01persona;
 public class Main {
 
 	public static void main(String[] args) {
-
-		Persona p1 = new Persona("Cuesta Rodriguez", "Manuel", "4356789J");
-
-		p1.mostrar();
 		
 		Cliente c1 = new Cliente ("Gutierrez Martín", "Pedro"," 43456464L", "34534564533");
 		
@@ -15,7 +11,7 @@ public class Main {
 		Empleado e1 = new Empleado ("Guzmán Bosc", "Luis", "4534533J", "E1");
 		
 		e1.mostrar();
-	
+		
 	}
 
 }

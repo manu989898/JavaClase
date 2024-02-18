@@ -11,9 +11,10 @@ public class Empleado extends Persona{
 		this.empleadoId = empleadoId;
 	}
 	
+	@Override
 	public void mostrar() {
 		
-		super.mostrar();
+		System.out.println("\n" + getNombre() + " " + getApellidos() + " " + ", con Dni" + getDni() + ".");
 		System.out.println(", ID: " + empleadoId);
 	}
 

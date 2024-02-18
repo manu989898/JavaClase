@@ -22,5 +22,10 @@
     <fullyQualifiedTypeName name="project.Lavadora"/>
     <fullyQualifiedTypeName name="project.Taller"/>
     <fullyQualifiedTypeName name="ejemplo01persona.Persona"/>
+<<<<<<< HEAD
     <fullyQualifiedTypeName name="Consola"/>
+=======
+    <fullyQualifiedTypeName name="java.lang.Override"/>
+    <fullyQualifiedTypeName name="ejemplo05Interfaces.Figura2D"/>
+>>>>>>> 14049b04813a23c030687c634acd9b7dd013e6fc
 </qualifiedTypeNameHistroy>
