@@ -6,5 +6,11 @@ public abstract class Medio {
 	private double duracion;
 
 	public abstract void reproducir();
+	
+	public Medio(String nombre, double duracion) {
+		
+		this.nombre = nombre;
+		this.duracion = duracion;
+	}
 		
 }
