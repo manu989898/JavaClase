@@ -1,6 +1,7 @@
 package ejemplo02Vehiculo;
 
-public class Moto extends Vehiculo {
+// Al hacerla clase final no podrá tener clases hijas.
+public final class Moto extends Vehiculo {
 
 	private boolean baul;
 

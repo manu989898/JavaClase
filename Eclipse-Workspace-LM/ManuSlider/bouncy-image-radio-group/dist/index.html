@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>2much_tech - Bouncy image radio group</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+  <h1>SLIDER DE IMÁGENES</h1>
+<!-- partial:index.partial.html -->
+<fieldset>
+  <label style="--_img: url(https://logowik.com/content/uploads/images/731_java.jpg)">
+    <input type="radio" name="images" value="Java">
+  </label>
+  <label style="--_img: url(data:image/png;base64,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)">
+    <input type="radio" name="images" value="Pink Princess">
+  </label>
+  <label style="--_img: url(https://m.media-amazon.com/images/I/21YGM37O9yL._SR600%2C315_PIWhiteStrip%2CBottomLeft%2C0%2C35_SCLZZZZZZZ_FMpng_BG255%2C255%2C255.jpg)">
+    <input type="radio" name="images" value="Monstera" checked>
+  </label>
+  <label style="--_img: url(https://i.pinimg.com/originals/a2/7d/14/a27d14a27b5ef7d35c241d5cc9c1deb4.png)">
+    <input type="radio" name="images" value="Pothos">
+  </label>
+  <label style="--_img: url(https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/CSS.3.svg/800px-CSS.3.svg.png)">
+    <input type="radio" name="images" value="Rubber Tree">
+  </label>
+</fieldset>
+<!-- partial -->
+  
+</body>
+</html>
