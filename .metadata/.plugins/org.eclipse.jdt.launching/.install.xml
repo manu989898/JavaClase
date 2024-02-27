@@ -1,11 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <dirs>
-<<<<<<< HEAD
     <entry loc="/usr/lib/jvm/java-17-openjdk-amd64" stamp="1709045270688"/>
-=======
-    <entry loc="/usr/lib/jvm/java-17-openjdk-amd64" stamp="1701330539118"/>
-    <entry loc="C:\Program Files\Java\jdk-20" stamp="1691513440546"/>
->>>>>>> 7dd9fce5df0c6893da18641d23be3571d70c0074
     <entry loc="/home/horabaixa/Escritorio/eclipse/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.linux.x86_64_17.0.8.v20230831-1047" stamp="1694095530000"/>
     <entry loc="/home/horabaixa/Escritorio/eclipse/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.linux.x86_64_17.0.8.v20230831-1047/jre" stamp="1694095530000"/>
 </dirs>

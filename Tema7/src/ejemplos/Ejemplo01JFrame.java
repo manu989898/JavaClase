@@ -13,6 +13,8 @@ public class Ejemplo01JFrame extends JFrame {
 		setVisible(true);
 
 		// Layout sirve para aplicarle un ordena los objetos del JFrame.
+		// Se podría poner FlowLayout.RIGHT para que alinee todo a la derecha.
+		
 		FlowLayout dis = new FlowLayout();
 		setLayout(dis);
 
