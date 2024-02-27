@@ -18,5 +18,4 @@ public class Main {
 		
 		Guardable g1 = o1;
 	}
-
 }

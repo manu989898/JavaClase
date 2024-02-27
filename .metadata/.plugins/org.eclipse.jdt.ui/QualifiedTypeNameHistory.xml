@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<<<<<<< HEAD
+<qualifiedTypeNameHistroy/>
+=======
 <qualifiedTypeNameHistroy>
     <fullyQualifiedTypeName name="ejemplo05Interfaces.Mostrable"/>
     <fullyQualifiedTypeName name="ejemplo05Interfaces.Rectangulo"/>
@@ -14,3 +17,4 @@
     <fullyQualifiedTypeName name="javax.swing.JCheckBox"/>
     <fullyQualifiedTypeName name="javax.swing.ButtonGroup"/>
 </qualifiedTypeNameHistroy>
+>>>>>>> bb2f76bd5cf098e0ec7380ef49d675747864664e

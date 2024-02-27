@@ -1,8 +1,12 @@
 //org.eclipse.ui.commands/state/org.eclipse.ui.navigator.resources.nested.changeProjectPresentation/org.eclipse.ui.commands.radioState=false
+<<<<<<< HEAD
 ACTIVE_HYPERLINK_COLOR=138,201,242
 CONFLICTING_COLOR=240,15,66
 CONTENT_ASSIST_BACKGROUND_COLOR=52,57,61
 CONTENT_ASSIST_FOREGROUND_COLOR=238,238,238
+=======
+//org.eclipse.ui.commands/state/org.eclipse.wst.xml.views.XPathView.processor.xpathprocessor/org.eclipse.ui.commands.radioState=xpath10
+>>>>>>> 7dd9fce5df0c6893da18641d23be3571d70c0074
 ColorsAndFontsPreferencePage.expandedCategories=Torg.eclipse.ui.workbenchMisc\tTorg.eclipse.debug.ui.presentation\tTorg.eclipse.egit.ui.GitTheme\tTorg.eclipse.jdt.ui.presentation\tTorg.eclipse.mylyn.tasks.ui.presentation\tTterminal.views.theme.category\tTorg.eclipse.compare.contentmergeviewer.TextMergeViewer\tTorg.eclipse.ui.presentation.default\tTorg.eclipse.mylyn.wikitext.ui.presentation
 ColorsAndFontsPreferencePage.selectedElement=Forg.eclipse.jface.textfont
 EDITION_COLOR=238,238,238
