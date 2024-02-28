@@ -10,10 +10,12 @@ public class Main {
 		
 		Paquete p1 = new Paquete(1,"Carlos Sogorb", d1);
 		Paquete p2 = new Paquete(2,"Manuel Cuesta", d2);
+		Paquete p3 = new Paquete(3,"Carlos Sogorb", d1);
+		Paquete p4 = new Paquete(4,"Manuel Cuesta", d2);
 		
 		System.out.println(p1.toString());
 		
-		Camion c1 = new Camion(2);
+		Camion c1 = new Camion(4);
 		
 		System.out.println("\nmostrando paquetes sin añadir ninguno");
 		c1.showPaquetes();
@@ -21,8 +23,10 @@ public class Main {
 		System.out.println("\nAñadiendo paquetes...");
 		c1.addPaquete(p1);
 		c1.addPaquete(p2);
+		c1.addPaquete(p3);
+		c1.addPaquete(p4);
 		
-		System.out.println("\nMostrando paquetes con paquetes");
+		System.out.println("\nMostrando paquetes con en el camión");
 		c1.showPaquetes();
 		
 		System.out.println("\nEliminando p2...");
