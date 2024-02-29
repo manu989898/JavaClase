@@ -49,7 +49,7 @@ public class Camion {
 		// Prueba del valor de numPaquetes al eleimninar uno. 
 		//System.out.println(numPaquetes);
 	}
-	
+
 	public void showPaquetes(String ciudad) {
 		
 		for (int i = 0; i < numPaquetes; i++) {
