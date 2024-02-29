@@ -12,7 +12,7 @@ public class Ejer8 {
          * solución de la ecuación.
          */
 
-        double a = 1, b = -3, c = 1;
+        double a = 3, b = -5, c = 2 ;
         
         System.out.println("Las soluciones de la ecuación " + a + "x^2 + " + b + "x + " + c + " son: " + solucion1(a, b, c) + " y " + solucion2(a, b, c));
 
