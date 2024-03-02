@@ -53,7 +53,7 @@ public class Ejemplo01JFrame extends JFrame {
 		cmbGenero.addItem("Dance");
 		cmbGenero.addItem("Punk");
 
-		add(lblPagina);
+		add(lblPagina);-
 		add(btnPlay);
 		add(btnStop);
 		add(btnPausa);
