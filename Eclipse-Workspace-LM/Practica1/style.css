@@ -1,0 +1,33 @@
+.bigImg{
+    width: 400px;
+}
+.smallImg{
+    width: 200px;
+}
+table, th, tr, td{
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 5px 20px 5px 20px;
+    text-align: center;
+    
+}
+tr:nth-child(even) {
+    background-color: lightblue;
+}
+th{
+    background-color: palevioletred;
+    color :white
+}
+fieldset{
+    width: 250px;
+}
+h1, h2, h3{
+    color: palevioletred;
+}
+body{
+    font-size: 14px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+ul {
+    list-style-type: square;
+}

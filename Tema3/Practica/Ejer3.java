@@ -28,7 +28,7 @@ public class Ejer3 {
         
         // Bucle para recorrer el texto
         for (int i = 0; i < texto.length(); i++) {
-            // Si el caracter es el 80 
+            // Si el resto de dividir i entre el ancho de línea es 0 
             if (i % ANCHO_LINEA == 0) {
                 // Salto de línea
                 System.out.println();

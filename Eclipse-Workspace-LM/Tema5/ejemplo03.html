@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo3</title>
+    <style>
+        div{
+            margin-bottom: 10px;
+            width: 250px;
+            height: 150px;
+        }
+        div.bordes_iguales{
+            border: 5px solid red;
+            border-style: dashed;
+        }
+        div.bordes_individuales{
+            border-top: 5px solid blue;
+            border-right: 5px solid green;
+            border-bottom: 5px solid rgb(182, 34, 132);
+            border-left: 5px solid black;
+            border-top-style: dashed;
+            border-right-style: dotted;
+            border-bottom-style: double;
+            border-left-style: solid;
+        }
+        div.borde_redondeado{
+            border: 5px solid black;
+            border-radius: 7px;
+        }
+        div.circular{
+            border: 5px solid rgb(216, 185, 9);
+            border-radius: 50%;
+            height: 250px;
+            
+        }
+    </style>
+</head>
+<body>
+    <h1>Bordes</h1>
+    <div class="bordes_iguales">
+        Esto es un div con bordes iguales
+    </div>
+
+    <div class="bordes_individuales">
+        Esto es un div con bordes individuales
+    </div>
+    <div class="borde_redondeado">
+        Esto es un borde redondeado
+    </div>
+    <div class="circular">
+        div circular usando bordes redondeados
+    </div>
+</body>
+</html>

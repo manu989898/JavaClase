@@ -23,10 +23,13 @@ public class Ejer1 {
         int total = 0;
         String[][] pacientes = new String[10][10];
 
+        // Bucle para recorrer el array
         for (int i = 0; i < pacientes.length; i++) {
 
             System.out.println("Nombre (máximo 20 caracteres) :");
             pacientes[i][0] = teclado.nextLine();
+            
+            // Si el nombre es vacio (pulsar ENTER), salimos del bucle
             if (pacientes[i][0].equals("")) {
                 break;
             }
@@ -41,10 +44,13 @@ public class Ejer1 {
         System.out.println();
         System.out.printf("%-20s %-4s \n", "Nombre", "Edad");
         System.out.println("==================== =====");
+        // Bucle para recorrer el array
         for (int i = 0; i < contador; i++) {
+            // Si el nombre es vacio, salimos del bucle
             if (pacientes[i][0] == null) {
                 break;
-            } else if (Integer.parseInt(pacientes[i][1]) > 65 && pacientes[i][0] != null) {
+            // Si la edad es mayor de 65, incrementamos el contador de jubilados
+            } else if (Integer.parseInt(pacientes[i][1]) > 65) {
                 jubilados++;
             }
 

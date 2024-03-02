@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--Quiero que los inputrs vayan uno debajo de otro-->
+    <style>
+        div {
+            border: 1px solid black;
+            padding: 10px;
+            width: 600px;
+        }
+
+        fieldset {
+            width: 350px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <H1>Formulario de inscripción</H1>
+        <fieldset>
+            <legend>Datos Personales</legend> <br>
+
+            <form action="/recibir_datos.php" method="post">
+
+             
+                <label for="nombre">Nombre</label><br>
+                <input type="text" name="nombre" id="nombre" placeholder="Nombre" title="Este campo es obligatorio"><br><br>
+
+                <label for="apellidos">Apellidos</label><br>
+                <input type="text" name="apellidos" id="apellidos" placeholder="Apellidos" title="Este campo es obligatorio"><br><br>
+
+                <label for="fecha_nacimiento">Fecha de nacimiento</label><br>
+                <input type="date" name="fecha_nacimiento" id="fecha_nacimiento" placeholder="Fecha de nacimiento">
+                <br><br>
+                <!--No esta bien el de estado civil creo -->
+                <label for="Estado_Civil">Estado civil</label><br>
+                <input type="radio" name="Estado_Civil" id="casado"> casado <br>
+                <input type="radio" name="Estado_Civil" id="soltero"> soltero <br><br>
+
+                <label for="direccion">Dirección</label><br>
+                <input type="text" name="direccion" id="direccion" placeholder="Direccion"> <br><br>
+
+                <label for="isla">Isla</label><br>
+                <select name="isla" id="isla">
+                    <option value="Mallorca">Mallorca</option>
+                    <option value="Menorca">Menorca</option>
+                    <option value="Ibiza">Ibiza</option>
+                    <option value="Formentera">Formentera</option>
+                    <option value="Cabrera">Cabrera</option>
+                </select> <br><br>
+
+                <label for="color">Color Favorito</label><br>
+                <input type="color" name="color" id="color"> <br><br>
+
+
+
+        </fieldset><br>
+        <fieldset>
+            <legend>Contacto</legend><br>
+
+
+            <label for="correo">Correo electrónico</label><br>
+            <input type="email" name="correo" id="correo" placeholder="Correo"><br><br>
+
+            <label for="contrasenia">Contraseña</label><br>
+            <input type="text" name="contrasenia" id="contrasenia" placeholder="Contraseña"><br><br>
+
+            <label for="publi">Deseo recibir publicidad</label>
+            <input type="checkbox" name="publi" value="publi" checked><br>
+            
+            <label for="terminos" title="Este campo es obligatorio">Acepto los términos</label>
+            <input type="checkbox" name="terminos" value="publi" checked title="Es obligatorio aceptarlos""><br>
+            
+            <br><label for="comentarios">Comentarios</label><br>
+            <textarea placeholder="Escribe aquí cualquier observación que se te ocurra" name="comentarios"
+                id="comentarios" cols="30" rows="2"></textarea><br>
+            <input type="submit" value="enviar">
+            <input type="reset" value="borrar">
+            </form>
+
+        </fieldset> <br>
+
+    </div>
+
+</body>
+
+</html>

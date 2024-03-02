@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .sombreado-gris {
+            background-color: grey;
+        }
+        table {
+            border-collapse: collapse;
+        }
+        td {
+            width: 40px;
+        }
+        /* Aplicamos un sombreado a todas las filas en posicion par */
+        /* Si usamos (even) sera para los pares, si usamos (odd) seria para las impares */
+        tr:nth-child(even) {
+            background-color: grey;
+        }
+        ul{
+            list-style-type: disc;
+        }
+        
+    </style>
+    <table>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+        </tr>
+        <tr>
+            <td>9</td>
+            <td>10</td>
+            <td>11</td>
+            <td>12</td>
+        </tr>
+        <tr>
+            <td>13</td>
+            <td>14</td>
+            <td>15</td>
+            <td>16</td>
+        </tr>
+        <tr>
+            <td>17</td>
+            <td>18</td>
+            <td>19</td>
+            <td>20</td>
+        </tr>
+        
+    </table>
+
+    <h2>LISTAS</h2>
+    Lista sin ordenar 
+    <ul>
+        <li>Detergente</li>
+        <li>Pan</li>
+        <li>Comida de Pulpo</li>
+        <li>Refrescos</li>
+        <li>Leche</li>
+    </ul>
+
+    Lista ordenada
+    <ol type="A">
+        <li>Rafa Nadal</li>
+        <li>Novac Djokovic</li>
+        <li>Carlos Alcaráz</li>
+    </ol>
+
+</body>
+</html>
