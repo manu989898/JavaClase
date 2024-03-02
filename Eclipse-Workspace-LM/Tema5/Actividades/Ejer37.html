@@ -9,14 +9,12 @@
         * {
             margin: 0;
             padding: 0;
-            max-width: 900px;
+            
         }
 
-        .fondo img {
-            display: block;
-            margin: auto;
-            width: 100%;
+        img {
             height: 100vh;
+            width: 100%;
         }
 
         .superior {
@@ -29,7 +27,7 @@
         .inferior {
             position: absolute;
             bottom: 20px;
-            left: 730px;
+            left: 830px;
         }
 
         .superior, .inferior {
@@ -38,14 +36,24 @@
             padding: 5PX;
             font-size: 15px;
             color: rgb(0, 0, 0);
+            display: inline-block;
+
+        }
+        div{
+            margin: auto;
+            width: 1000px;
+            height: 100vh;
+        
         }
     </style>
 </head>
 
 <body>
-    <div class="fondo"> <img src="/JavaClase/Eclipse-Workspace-LM/Tema5/imgs/arquitectura/castillo-san-olaf.jpg" alt=""></div>
-    <div class="superior">Castillo extraño fotografiado durante la primavera</div>
-    <div class="inferior">Manu design solutions</div>
+    <div>
+    <img src="/JavaClase/Eclipse-Workspace-LM/Tema5/imgs/arquitectura/castillo-san-olaf.jpg" alt=""></div>
+    <p class="superior">Castillo extraño fotografiado durante la primavera</p>
+    <p class="inferior">Manu design solutions</p>
+</div>
 </body>
 
 </html>
