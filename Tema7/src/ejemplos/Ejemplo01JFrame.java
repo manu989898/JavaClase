@@ -11,7 +11,7 @@ public class Ejemplo01JFrame extends JFrame {
 		super("Reptroductor");
 
 		// Damos valores a la ventana.
-		setSize(250, 320);
+		setSize(250, 500);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
 		// Layout sirve para aplicarle un ordena los objetos del JFrame.
@@ -29,9 +29,11 @@ public class Ejemplo01JFrame extends JFrame {
 		JLabel lblPagina = new JLabel("REPRODUCTOR DE MÚSICA", JLabel.LEFT);
 		JLabel lblSatisfecho = new JLabel("Aceptas recibir publicidad?");
 		JLabel lblGenero = new JLabel("Selecciona un género");
+		JLabel lblDescripcion = new JLabel ("Por qué es tu canción favorita?");
+		JLabel lblOpinion = new JLabel ("Dejanos tu opinión");
 
 		// Creamos un campo a rellenar
-		JTextField txtPagina = new JTextField("Buscar", 10);
+		JTextField txtPagina = new JTextField("Buscar", 19);
 
 		// Creamos un checkbox
 		JCheckBox chkCursoJava = new JCheckBox("Like", false);
@@ -52,19 +54,41 @@ public class Ejemplo01JFrame extends JFrame {
 		cmbGenero.addItem("Classic");
 		cmbGenero.addItem("Dance");
 		cmbGenero.addItem("Punk");
+		
+		// Creamos un Area de texto
+		JTextArea txtDescripcion = new JTextArea();
+		JTextArea txtOpinion = new JTextArea();
+		
+		// Creamos un pane que es para que puedas hacer scroll
+		JScrollPane scrPanel = new JScrollPane(txtDescripcion);
+		JScrollPane scrPanelOpi = new JScrollPane(txtOpinion);
+		
+		// Usamos setPreferredSize para dar un tamaño al elemento
+		scrPanel.setPreferredSize(new Dimension(220,80));
+		btnBuscar.setPreferredSize(new Dimension(220,30));
+		scrPanelOpi.setPreferredSize(new Dimension(220,80));
+	
+		// Para que las lineas de texto no se salgan del ancho del rectángulo y no corte las palabras
+		txtOpinion.setLineWrap(true);
+		txtOpinion.setWrapStyleWord(true);
 
+		
 		add(lblPagina);
 		add(btnPlay);
 		add(btnStop);
 		add(btnPausa);
-		add(txtPagina);
 		add(lblGenero);
 		add(cmbGenero);
+		add(txtPagina);
 		add(btnBuscar);
 		add(chkCursoJava);
 		add(lblSatisfecho);
 		add(radAcepto);
 		add(radNoAcepto);
+		add(lblDescripcion);
+		add(scrPanel);
+		add(lblOpinion);
+		add(scrPanelOpi);
 		setVisible(true);
 
 	}
