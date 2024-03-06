@@ -11,7 +11,7 @@ public class Ejemplo01JFrame extends JFrame {
 		super("Reptroductor");
 
 		// Damos valores a la ventana.
-		setSize(270, 550);
+		setSize(260, 560);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
 		// Layout sirve para aplicarle un ordena los objetos del JFrame.
@@ -24,11 +24,17 @@ public class Ejemplo01JFrame extends JFrame {
 		// Siempre entre try-catch
 		try {
 
-			UIManager.setLookAndFeel("com.jtattoo.plaf.smart.SmartLookAndFeel"); // Para uno custom
+			UIManager.setLookAndFeel("javax.swing.plaf.nimbus.NimbusLookAndFeel");
+
+			 //UIManager.setLookAndFeel("com.jtattoo.plaf.smart.SmartLookAndFeel"); //Para
+			// uno custom
+
 			// UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName()); Para
 			// usar el mismo del sistema operativo
+
 			// UIManager.setLookAndFeel(UIManager.getCrossPlatformLookAndFeelClassName());
 			// Para que sea igual en todos los SO
+
 			SwingUtilities.updateComponentTreeUI(this);
 
 		} catch (Exception e) {
@@ -51,7 +57,7 @@ public class Ejemplo01JFrame extends JFrame {
 		JLabel lblOpinion = new JLabel("Dejanos tu opinión");
 
 		// Creamos un campo a rellenar
-		JTextField txtPagina = new JTextField("Buscar", 15);
+		JTextField txtPagina = new JTextField("Buscar...", 15);
 
 		// Creamos un checkbox
 		JCheckBox chkCursoJava = new JCheckBox("Like", false);
@@ -72,7 +78,14 @@ public class Ejemplo01JFrame extends JFrame {
 		cmbGenero.addItem("Classic");
 		cmbGenero.addItem("Dance");
 		cmbGenero.addItem("Punk");
-
+		
+		// Creamos un Slider
+		JSlider sldPista = new JSlider(JSlider.HORIZONTAL,0,100,20); 	// Valor mínimo, máximo y valor de inicio.
+		sldPista.setMinorTickSpacing(5);													// Elegir valor mínimo de rayas.
+		sldPista.setMajorTickSpacing(20);													// Elegir valor máximo de rayas.
+		sldPista.setPaintTicks(true);															// Mostrar las rallas en la regla o no.
+		sldPista.setPaintLabels(true);
+		
 		// Creamos un Area de texto
 		JTextArea txtDescripcion = new JTextArea();
 		JTextArea txtOpinion = new JTextArea();
@@ -99,6 +112,7 @@ public class Ejemplo01JFrame extends JFrame {
 		add(btnPlay);
 		add(btnStop);
 		add(btnPausa);
+		add(sldPista);
 		add(lblGenero);
 		add(cmbGenero);
 		add(txtPagina);
@@ -112,6 +126,8 @@ public class Ejemplo01JFrame extends JFrame {
 		add(lblOpinion);
 		add(scrPanelOpi);
 		add(btnGuardar);
+		
+		// Para hacer visible
 		setVisible(true);
 
 	}
@@ -119,18 +135,27 @@ public class Ejemplo01JFrame extends JFrame {
 	public static void main(String[] args) {
 
 		Ejemplo01JFrame ventana = new Ejemplo01JFrame();
-		
+
 		// Uso de paneles de Dialogo
 		// JOptionPane.showMessageDialog(null, "Esto es un Message Dialog");
-		
-		// En este constructor podemos añadir nombre de ventana y icono usando números enteros o " JOptionPane. "
-		JOptionPane.showMessageDialog(null, "Esto es un Message Dialog", "Message Dialog", JOptionPane.ERROR_MESSAGE);
-		
+
+		// En este constructor podemos añadir nombre de ventana y icono usando números
+		// enteros o " JOptionPane. "
+		// JOptionPane.showMessageDialog(null, "Esto es un Message Dialog", "Message
+		// Dialog", JOptionPane.ERROR_MESSAGE);
+
 		// En este podemos elegir "Si", "No", "Cancelar".
 		// JOptionPane.showConfirmDialog(null, "Esto es un Confirm Dialog");
-		
-		// En este constructor  podemos Elegir los botones e icono.
-		JOptionPane.showConfirmDialog(null, "Esto es un Confirm Dialog", null, JOptionPane.YES_NO_OPTION, JOptionPane.WARNING_MESSAGE);
+
+		// En este constructor podemos Elegir los botones e icono.
+		// JOptionPane.showConfirmDialog(null, "Esto es un Confirm Dialog", null,
+		// JOptionPane.YES_NO_OPTION, JOptionPane.WARNING_MESSAGE);
+
+		// En este constructor podremos escribir y nos devolverá un String
+		// JOptionPane.showInputDialog("Escribe tu DNI");
+
+		// En este constructor le asignamos ventana, mensaje, nombre de ventana e icono.
+		// JOptionPane.showInputDialog(null, "Escribe tu DNI", "DNI", JOptionPane.INFORMATION_MESSAGE);
 
 	}
 }
