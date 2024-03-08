@@ -80,10 +80,10 @@ public class Ejemplo01JFrame extends JFrame {
 		cmbGenero.addItem("Punk");
 		
 		// Creamos un Slider
-		JSlider sldPista = new JSlider(JSlider.HORIZONTAL,0,100,20); 	// Valor mínimo, máximo y valor de inicio.
+		JSlider sldPista = new JSlider(JSlider.HORIZONTAL,0,100,20); 						// Valor mínimo, máximo y valor de inicio.
 		sldPista.setMinorTickSpacing(5);													// Elegir valor mínimo de rayas.
 		sldPista.setMajorTickSpacing(20);													// Elegir valor máximo de rayas.
-		sldPista.setPaintTicks(true);															// Mostrar las rallas en la regla o no.
+		sldPista.setPaintTicks(true);														// Mostrar las rallas en la regla o no.
 		sldPista.setPaintLabels(true);
 		
 		// Creamos un Area de texto
@@ -105,7 +105,7 @@ public class Ejemplo01JFrame extends JFrame {
 
 		// Para que las lineas de texto no se salgan del ancho del rectángulo y no corte
 		// las palabras
-		txtOpinion.setLineWrap(true);
+		txtOpinion.setLineWrap(true);g
 		txtOpinion.setWrapStyleWord(true);
 
 		add(lblPagina);
