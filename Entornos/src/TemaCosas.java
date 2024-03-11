@@ -54,7 +54,17 @@ public class TemaCosas {
          * 
          * Grafo de evolución simple: Representa en una simple secuencia lineal las versiones.
          * Arbol: Representa las versiones en una estructura de árbol. SE LLAMA HEAD A LA ULTIMA VERSION.
-         *  
+         * 
+         * Los cambios de una versión a otra son los Deltas:
+         * Deltas directos: Se almacena la primera versión y los cambios que se han hecho.
+         * Deltas inversos: Se almacena la última versión y los cambios necesarios para reconstruir cada versión.
+         * Marcado selectivo: Se almacena texto refundido de todas las versiones y se indican por secciones.
+         * 
+         * 
+         * Herramientas de control de versiones (149):
+         * Sistemas centralizados: El repositorio se encuentra en un servidor central.
+         * Sistemas distribuidos: Cada usuario tiene su propio repositorio.
+         * 
          * 
          * Git (150)
          * Ubicaciones de los archivos:
