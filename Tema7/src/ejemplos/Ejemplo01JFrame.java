@@ -2,6 +2,7 @@ package ejemplos;
 
 import java.awt.*;
 import javax.swing.*;
+import javax.swing.border.Border;
 
 public class Ejemplo01JFrame extends JFrame {
 
@@ -11,12 +12,12 @@ public class Ejemplo01JFrame extends JFrame {
 		super("Reptroductor");
 
 		// Damos valores a la ventana.
-		setSize(260, 560);
+		setSize(340, 680);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
 		// Layout sirve para aplicarle un ordena los objetos del JFrame.
 		// Se podría poner FlowLayout.RIGHT para que alinee todo a la derecha.
-		FlowLayout dis = new FlowLayout();
+		BorderLayout dis = new BorderLayout();
 		setLayout(dis);
 
 		// Para dar un aspecto a las ventanas(Temas). UIManager y SwingUtilities,
@@ -24,9 +25,9 @@ public class Ejemplo01JFrame extends JFrame {
 		// Siempre entre try-catch
 		try {
 
-			UIManager.setLookAndFeel("javax.swing.plaf.nimbus.NimbusLookAndFeel");
+			// UIManager.setLookAndFeel("javax.swing.plaf.nimbus.NimbusLookAndFeel");
 
-			 //UIManager.setLookAndFeel("com.jtattoo.plaf.smart.SmartLookAndFeel"); //Para
+			// UIManager.setLookAndFeel("com.jtattoo.plaf.smart.SmartLookAndFeel"); //Para
 			// uno custom
 
 			// UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName()); Para
@@ -42,12 +43,19 @@ public class Ejemplo01JFrame extends JFrame {
 			System.out.println("Error al cambiar el Look And Feel");
 		}
 
-		// Creamos botones
-		JButton btnPlay = new JButton("Play");
-		JButton btnStop = new JButton("Stop");
-		JButton btnPausa = new JButton("Pausa");
-		JButton btnBuscar = new JButton("Buscar");
-		JButton btnGuardar = new JButton("Guardar");
+		// Creamos un objeto icono para asignarlo a un botón.
+		ImageIcon imgReproductor = new ImageIcon("iconos/39.png");
+		ImageIcon imgBuscar = new ImageIcon("iconos/65.png");
+		ImageIcon imgStop = new ImageIcon("iconos/90.png");
+		ImageIcon imgRepeat = new ImageIcon("iconos/42.png");
+		ImageIcon imgGuardar = new ImageIcon("iconos/22.png");
+
+		// Creamos botones y les asignamos la imágen al botón.
+		JButton btnPlay = new JButton("Play", imgReproductor);
+		JButton btnStop = new JButton("Stop", imgStop);
+		JButton btnPausa = new JButton("Repeat", imgRepeat);
+		JButton btnBuscar = new JButton("Buscar", imgBuscar);
+		JButton btnGuardar = new JButton("Guardar", imgGuardar);
 
 		// Creamos un texto
 		JLabel lblPagina = new JLabel("REPRODUCTOR DE MÚSICA V12.3", JLabel.LEFT);
@@ -55,6 +63,18 @@ public class Ejemplo01JFrame extends JFrame {
 		JLabel lblGenero = new JLabel("Selecciona un género");
 		JLabel lblDescripcion = new JLabel("Por qué es tu canción favorita?");
 		JLabel lblOpinion = new JLabel("Dejanos tu opinión");
+		JLabel lblVolumen = new JLabel("Volume");
+		JLabel lblCancionesFav = new JLabel("Canciones favoritas");
+		JLabel lblNivelDescarga = new JLabel("Nivel de descarga");
+		
+		// Creamos una barra de progreso
+		JProgressBar prgDescarga = new JProgressBar(0,100);
+		prgDescarga.setValue(27);
+		prgDescarga.setStringPainted(true);
+		prgDescarga.setPreferredSize(new Dimension(250,30));
+		//prgDescarga.setForeground(Color.green);
+		//prgDescarga.setBackground(Color.green);
+		
 
 		// Creamos un campo a rellenar
 		JTextField txtPagina = new JTextField("Buscar...", 15);
@@ -78,17 +98,21 @@ public class Ejemplo01JFrame extends JFrame {
 		cmbGenero.addItem("Classic");
 		cmbGenero.addItem("Dance");
 		cmbGenero.addItem("Punk");
-		
+
 		// Creamos un Slider
-		JSlider sldPista = new JSlider(JSlider.HORIZONTAL,0,100,20); 						// Valor mínimo, máximo y valor de inicio.
-		sldPista.setMinorTickSpacing(5);													// Elegir valor mínimo de rayas.
-		sldPista.setMajorTickSpacing(20);													// Elegir valor máximo de rayas.
-		sldPista.setPaintTicks(true);														// Mostrar las rallas en la regla o no.
+		JSlider sldPista = new JSlider(JSlider.VERTICAL, 0, 100, 20); // Valor mínimo, máximo y valor de inicio.
+		sldPista.setMinorTickSpacing(5); // Elegir valor mínimo de rayas.
+		sldPista.setMajorTickSpacing(20); // Elegir valor máximo de rayas.
+		sldPista.setPaintTicks(true); // Mostrar las rallas en la regla o no.
 		sldPista.setPaintLabels(true);
-		
+
 		// Creamos un Area de texto
 		JTextArea txtDescripcion = new JTextArea();
 		JTextArea txtOpinion = new JTextArea();
+		
+		// Para que las lineas de texto no se salgan del ancho del rectángulo y no corte las palabras
+		txtOpinion.setLineWrap(true);
+		txtOpinion.setWrapStyleWord(true);
 
 		// Creamos un pane que es para que puedas hacer scroll
 		JScrollPane scrPanel = new JScrollPane(txtDescripcion);
@@ -96,36 +120,68 @@ public class Ejemplo01JFrame extends JFrame {
 
 		// Creamos una dimensión para asiognarle el mismo tamaño a los demás.
 		Dimension botones = new Dimension(120, 50);
-
+		
 		// Usamos setPreferredSize para dar un tamaño al elemento
 		scrPanel.setPreferredSize(new Dimension(220, 80));
-		btnBuscar.setPreferredSize(new Dimension(220, 30));
+		btnBuscar.setPreferredSize(new Dimension(240, 30));
 		scrPanelOpi.setPreferredSize(new Dimension(220, 80));
 		btnGuardar.setPreferredSize(botones);
+		
+		//Creamos un array de canciones para pasarlo al JList.
+		String[] canciones = {"Money for nothing", "Hate it or love it", "Nothing else mathers", "November Rain", "The unforguiven"};
+		
+		// Creamos una Lista
+		JList<String> lsCanciones = new JList<>(canciones);
+		JScrollPane scrCanciones = new JScrollPane(lsCanciones);
+		scrCanciones.setPreferredSize(new Dimension(240,80));
+		// Creamos una Tool Bar y le añadimos los botones
+		JToolBar tlbHerramientas = new JToolBar();
+		tlbHerramientas.add(btnPlay);
+		tlbHerramientas.add(btnStop);
+		tlbHerramientas.add(btnPausa);
 
-		// Para que las lineas de texto no se salgan del ancho del rectángulo y no corte
-		// las palabras
-		txtOpinion.setLineWrap(true);g
-		txtOpinion.setWrapStyleWord(true);
+		// Creamos un panel con FlowLayout para todo lo que no es ToolBar
+		JPanel pnCentro = new JPanel();
+		pnCentro.setLayout(new FlowLayout());
 
-		add(lblPagina);
-		add(btnPlay);
-		add(btnStop);
-		add(btnPausa);
-		add(sldPista);
-		add(lblGenero);
-		add(cmbGenero);
-		add(txtPagina);
-		add(btnBuscar);
-		add(chkCursoJava);
-		add(lblSatisfecho);
-		add(radAcepto);
-		add(radNoAcepto);
-		add(lblDescripcion);
-		add(scrPanel);
-		add(lblOpinion);
-		add(scrPanelOpi);
-		add(btnGuardar);
+		JPanel pnLateral = new JPanel();
+		pnLateral.setLayout(new FlowLayout());
+		
+		JPanel pnVolumen = new JPanel();
+		pnLateral.setLayout(new FlowLayout());
+		
+		JPanel pnLatVol = new JPanel();
+		pnLateral.setLayout(new FlowLayout());
+		
+		pnLateral.setBorder(BorderFactory.createLineBorder(Color.DARK_GRAY));
+		pnCentro.setBorder(BorderFactory.createLineBorder(Color.DARK_GRAY));
+
+		// Añadimos al panel todos los elementos
+		pnCentro.add(lblPagina);
+		pnVolumen.add(lblVolumen);
+		pnLateral.add(sldPista);
+		pnCentro.add(lblGenero);
+		pnCentro.add(cmbGenero);
+		pnCentro.add(txtPagina);
+		pnCentro.add(btnBuscar);
+		pnCentro.add(chkCursoJava);
+		pnCentro.add(lblSatisfecho);
+		pnCentro.add(radAcepto);
+		pnCentro.add(radNoAcepto);
+		pnCentro.add(lblDescripcion);
+		pnCentro.add(scrPanel);
+		pnCentro.add(lblOpinion);
+		pnCentro.add(scrPanelOpi);
+		pnCentro.add(btnGuardar);
+		pnCentro.add(lblNivelDescarga);
+		pnCentro.add(prgDescarga);
+		pnCentro.add(lblCancionesFav);
+		pnCentro.add(scrCanciones);
+		// Añadimos a la ventana los dos paneles.
+		add(tlbHerramientas, BorderLayout.NORTH);
+		add(pnCentro, BorderLayout.CENTER);
+		// add(pnVolumen, BorderLayout.NORTH);
+		add(pnLateral, BorderLayout.EAST);
 		
 		// Para hacer visible
 		setVisible(true);
@@ -155,7 +211,10 @@ public class Ejemplo01JFrame extends JFrame {
 		// JOptionPane.showInputDialog("Escribe tu DNI");
 
 		// En este constructor le asignamos ventana, mensaje, nombre de ventana e icono.
-		// JOptionPane.showInputDialog(null, "Escribe tu DNI", "DNI", JOptionPane.INFORMATION_MESSAGE);
+		// JOptionPane.showInputDialog(null, "Escribe tu DNI", "DNI",
+		// JOptionPane.INFORMATION_MESSAGE);
+
+		// new Ejemplo08ToolBar();
 
 	}
 }
