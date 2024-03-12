@@ -3,34 +3,12 @@ public class TemaCosas {
         
         /*
          * Bad Smells
-         * 
-         * Codigo duplicado: El mismo código aparece en más de un lugar
-         * Cirugia a tiros : Un cambio en una parte del código requiere cambios en muchas otras partes
-         * Complejidad artificial: El código es más complejo de lo que necesita ser.
-         * 
-         * A nivel de clase:
-         * 
-         * Clase larga: La clase tiene demasiados métodos y/o atributos
-         * Clase simple: La clase tiene pocos métodos y/o atributos
-         * Envidia de funcionalidad: Una clase usa más métodos de otra clase que los suyos propios
-         * Código divergente: Al realizar un cambio en el sistema una clase sufre más cambios que otra.
-         * Grupo de datos: Un grupo de atributos en varias clases que deberian estar en una sola clase
-         * Intimidad inapropiada: Una clase expone demasiados atributos
-         * Legado rechazado: Una clase no usa métodos de la superclase
-         * Complejidad ciclomática: La complejidad ciclomática de una clase es demasiado alta
-         * 
-         * A nivel de método:
-         * 
-         * Método largo: El método tiene demasiadas líneas y es dificil de entender
-         * Cadenas de mensajes largas: Un método llama a muchos métodos de otras clases
-         * Demasiados parámetros: Un método tiene demasiados parámetros
-         * Linea de código muy larga: Una línea de código es demasiado larga
-         * Excesiva devolución de valores: Un método devuelve mas datos de los necesarios.
-         * Tamaño del identificador: El nombre de un método o atributo es demasiado largo
+         * Son una serie de sintomas que pueden hacer que el código sea complicado
+         * de entender, sea lento en ejecutar y dificil de mantener. 
+         * Puede funcionar pero no es un buen código.
          * 
          * 
          * Control de versiones (147):
-         * 
          * Sirve para:
          * Identificar el cambio.
          * Controlar el cambio.
