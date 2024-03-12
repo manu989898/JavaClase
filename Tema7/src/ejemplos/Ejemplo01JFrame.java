@@ -134,10 +134,13 @@ public class Ejemplo01JFrame extends JFrame {
 		JList<String> lsCanciones = new JList<>(canciones);
 		JScrollPane scrCanciones = new JScrollPane(lsCanciones);
 		scrCanciones.setPreferredSize(new Dimension(240,80));
+		
 		// Creamos una Tool Bar y le añadimos los botones
 		JToolBar tlbHerramientas = new JToolBar();
 		tlbHerramientas.add(btnPlay);
 		tlbHerramientas.add(btnStop);
+		// Para añadir un separador a los iconos
+		tlbHerramientas.addSeparator();
 		tlbHerramientas.add(btnPausa);
 
 		// Creamos un panel con FlowLayout para todo lo que no es ToolBar
