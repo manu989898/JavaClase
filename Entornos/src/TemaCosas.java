@@ -20,14 +20,6 @@ public class TemaCosas {
          * EC agregados: Archivos de pruebas, archivos de datos, archivos de ejecución.
          * 
          * 
-         * La GCS (148): consta de las siguientes actividades:
-         * 
-         * Identificación de los EC: 
-         * Control de cambios: Que los cambios de implementen bien.
-         * Auditoría de la configuración: Verificar que los cambios se han implementado bien. 
-         * Generación de informes: Documentar los cambios.
-         * 
-         * 
          * Gestión de versiones (148 y 149):
          * 
          * Grafo de evolución simple: Representa en una simple secuencia lineal las versiones.
