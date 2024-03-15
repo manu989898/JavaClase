@@ -1,10 +1,19 @@
 package ejemplosEventos;
 
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 import javax.swing.*;
 import javax.swing.border.Border;
 
-public class Ejemplo01JFrame extends JFrame {
+public class Ejemplo01JFrame extends JFrame implements ActionListener {
+
+	JButton btnPlay;
+	JButton btnStop;
+	JButton btnPausa;
+	JButton btnBuscar;
+	JButton btnGuardar;
 
 	public Ejemplo01JFrame() {
 
@@ -51,11 +60,17 @@ public class Ejemplo01JFrame extends JFrame {
 		ImageIcon imgGuardar = new ImageIcon("iconos/22.png");
 
 		// Creamos botones y les asignamos la imágen al botón.
-		JButton btnPlay = new JButton("Play", imgReproductor);
-		JButton btnStop = new JButton("Stop", imgStop);
-		JButton btnPausa = new JButton("Repeat", imgRepeat);
-		JButton btnBuscar = new JButton("Buscar", imgBuscar);
-		JButton btnGuardar = new JButton("Guardar", imgGuardar);
+		btnPlay = new JButton("Play", imgReproductor);
+		btnStop = new JButton("Stop", imgStop);
+		btnPausa = new JButton("Repeat", imgRepeat);
+		btnBuscar = new JButton("Buscar", imgBuscar);
+		btnGuardar = new JButton("Guardar", imgGuardar);
+
+		btnPlay.addActionListener(this);
+		btnStop.addActionListener(this);
+		btnPausa.addActionListener(this);
+		btnBuscar.addActionListener(this);
+		btnGuardar.addActionListener(this);
 
 		// Creamos un texto
 		JLabel lblPagina = new JLabel("REPRODUCTOR DE MÚSICA V12.3", JLabel.LEFT);
@@ -66,15 +81,14 @@ public class Ejemplo01JFrame extends JFrame {
 		JLabel lblVolumen = new JLabel("Volume");
 		JLabel lblCancionesFav = new JLabel("Canciones favoritas");
 		JLabel lblNivelDescarga = new JLabel("Nivel de descarga");
-		
+
 		// Creamos una barra de progreso
-		JProgressBar prgDescarga = new JProgressBar(0,100);
+		JProgressBar prgDescarga = new JProgressBar(0, 100);
 		prgDescarga.setValue(27);
 		prgDescarga.setStringPainted(true);
-		prgDescarga.setPreferredSize(new Dimension(250,30));
-		//prgDescarga.setForeground(Color.green);
-		//prgDescarga.setBackground(Color.green);
-		
+		prgDescarga.setPreferredSize(new Dimension(250, 30));
+		// prgDescarga.setForeground(Color.green);
+		// prgDescarga.setBackground(Color.green);
 
 		// Creamos un campo a rellenar
 		JTextField txtPagina = new JTextField("Buscar...", 15);
@@ -109,8 +123,9 @@ public class Ejemplo01JFrame extends JFrame {
 		// Creamos un Area de texto
 		JTextArea txtDescripcion = new JTextArea();
 		JTextArea txtOpinion = new JTextArea();
-		
-		// Para que las lineas de texto no se salgan del ancho del rectángulo y no corte las palabras
+
+		// Para que las lineas de texto no se salgan del ancho del rectángulo y no corte
+		// las palabras
 		txtOpinion.setLineWrap(true);
 		txtOpinion.setWrapStyleWord(true);
 
@@ -120,21 +135,22 @@ public class Ejemplo01JFrame extends JFrame {
 
 		// Creamos una dimensión para asiognarle el mismo tamaño a los demás.
 		Dimension botones = new Dimension(120, 50);
-		
+
 		// Usamos setPreferredSize para dar un tamaño al elemento
 		scrPanel.setPreferredSize(new Dimension(220, 80));
 		btnBuscar.setPreferredSize(new Dimension(240, 30));
 		scrPanelOpi.setPreferredSize(new Dimension(220, 80));
 		btnGuardar.setPreferredSize(botones);
-		
-		//Creamos un array de canciones para pasarlo al JList.
-		String[] canciones = {"Money for nothing", "Hate it or love it", "Nothing else mathers", "November Rain", "The unforguiven"};
-		
+
+		// Creamos un array de canciones para pasarlo al JList.
+		String[] canciones = { "Money for nothing", "Hate it or love it", "Nothing else mathers", "November Rain",
+				"The unforguiven" };
+
 		// Creamos una Lista
 		JList<String> lsCanciones = new JList<>(canciones);
 		JScrollPane scrCanciones = new JScrollPane(lsCanciones);
-		scrCanciones.setPreferredSize(new Dimension(240,80));
-		
+		scrCanciones.setPreferredSize(new Dimension(240, 80));
+
 		// Creamos una Tool Bar y le añadimos los botones
 		JToolBar tlbHerramientas = new JToolBar();
 		tlbHerramientas.add(btnPlay);
@@ -149,13 +165,13 @@ public class Ejemplo01JFrame extends JFrame {
 
 		JPanel pnLateral = new JPanel();
 		pnLateral.setLayout(new FlowLayout());
-		
+
 		JPanel pnVolumen = new JPanel();
 		pnLateral.setLayout(new FlowLayout());
-		
+
 		JPanel pnLatVol = new JPanel();
 		pnLateral.setLayout(new FlowLayout());
-		
+
 		pnLateral.setBorder(BorderFactory.createLineBorder(Color.DARK_GRAY));
 		pnCentro.setBorder(BorderFactory.createLineBorder(Color.DARK_GRAY));
 
@@ -185,7 +201,7 @@ public class Ejemplo01JFrame extends JFrame {
 		add(pnCentro, BorderLayout.CENTER);
 		// add(pnVolumen, BorderLayout.NORTH);
 		add(pnLateral, BorderLayout.EAST);
-		
+
 		// Para hacer visible
 		setVisible(true);
 
@@ -219,5 +235,29 @@ public class Ejemplo01JFrame extends JFrame {
 
 		// new Ejemplo08ToolBar();
 
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+
+		JButton btnPulsado = (JButton) e.getSource();
+
+		if (btnPulsado == btnGuardar) {
+
+			JOptionPane.showMessageDialog(null, "Guardado!");
+
+		} else if (btnPulsado == btnBuscar) {
+
+			JOptionPane.showMessageDialog(null, "Buscando...");
+
+		} else if (btnPulsado == btnPlay) {
+
+			JOptionPane.showMessageDialog(null, "Reproduciendo atope!");
+
+		} else if (btnPulsado == btnStop) {
+
+			JOptionPane.showMessageDialog(null, "Parado");
+
+		}
 	}
 }
