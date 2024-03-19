@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            background-color: #2c2c2c;
+        }
+        .contenedor{
+            /*borde superior e inferior blancos*/
+            border-top: 1px solid white;
+            border-bottom: 1px solid white; 
+            overflow: auto;
+            margin-left: 30px;
+            margin-right: 30px;
+            padding: 5px;
+        }
+        
+        li{
+            list-style: none;
+            margin-left: 20px;
+            float: left;
+            padding: 5px;
+            
+        }
+        h1{
+            text-align: center;
+            color: white;
+            margin-bottom: 30px;
+        }
+        .selectionado{
+            color: white;
+            text-decoration: none;
+        }
+        .selectionado:hover{
+            text-decoration: underline;
+            
+        }
+        
+        .first{
+            color: green;
+            text-decoration: none;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Barra de menú de Xataka</h1>
+    <div class="contenedor">
+        <ul class="izq">
+            <li><a class="first" href="">BUSCAR</a></li>
+            <li><a class="selectionado" href="">ANÁLISIS</a></li>
+            <li><a class="selectionado" href="">XATAKA SELECCIÓN</a></li>
+            <li><a class="selectionado" href="">MÓVILES</a></li>
+            <li><a class="selectionado" href="">CIENCIA</a></li>
+            <li><a class="selectionado" href="">PRO</a></li>
+            <li><a class="selectionado" href="">NEWSLETTER</a></li>
+        </ul>
+    </div>
+</body>
+</html>
