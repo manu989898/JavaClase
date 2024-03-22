@@ -44,9 +44,9 @@ public class EjemploKeyEvent2 extends JFrame {
 				int codigo = e.getKeyCode();
 				int velocidad = 3;
 				if (codigo == KeyEvent.VK_UP) {
-					y = y -velocidad;
+					y = y - velocidad;
 				} else if (codigo == KeyEvent.VK_DOWN) {
-					y = y +velocidad;
+					y = y + velocidad;
 				} else if (codigo == KeyEvent.VK_RIGHT) {
 					x = x + velocidad;
 				} else if (codigo == KeyEvent.VK_LEFT) {
