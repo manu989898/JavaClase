@@ -105,7 +105,7 @@ public class Ejemplo01JFrame extends JFrame {
 
 		// Para que las lineas de texto no se salgan del ancho del rectángulo y no corte
 		// las palabras
-		txtOpinion.setLineWrap(true);g
+		txtOpinion.setLineWrap(true);
 		txtOpinion.setWrapStyleWord(true);
 
 		add(lblPagina);
@@ -132,9 +132,9 @@ public class Ejemplo01JFrame extends JFrame {
 
 	}
 
-	public static void main(String[] args) {
+	
 
-		Ejemplo01JFrame ventana = new Ejemplo01JFrame();
+		
 
 		// Uso de paneles de Dialogo
 		// JOptionPane.showMessageDialog(null, "Esto es un Message Dialog");
@@ -157,5 +157,7 @@ public class Ejemplo01JFrame extends JFrame {
 		// En este constructor le asignamos ventana, mensaje, nombre de ventana e icono.
 		// JOptionPane.showInputDialog(null, "Escribe tu DNI", "DNI", JOptionPane.INFORMATION_MESSAGE);
 
+	public static void main(String[] args) {
+		Ejemplo01JFrame ventana = new Ejemplo01JFrame();
 	}
 }
