@@ -5,7 +5,5 @@
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="src" path="src"/>
-	<classpathentry exported="true" kind="lib" path="/home/horabaixa/Descargas/JTattooDemo.jar"/>
-	<classpathentry kind="output" path="bin"/>
+	
 </classpath>
