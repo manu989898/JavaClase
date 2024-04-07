@@ -5,7 +5,10 @@
     <fullyQualifiedTypeName name="ejemplo05Interfaces.Mes"/>
     <fullyQualifiedTypeName name="practica2.Condensador"/>
     <fullyQualifiedTypeName name="java.util.Scanner"/>
+<<<<<<< HEAD
     <fullyQualifiedTypeName name="javax.swing.JCheckBox"/>
+=======
+>>>>>>> 6d49ab67d04d465c3064ea38affeb10bc8d18d95
     <fullyQualifiedTypeName name="javax.swing.ButtonGroup"/>
     <fullyQualifiedTypeName name="javax.swing.SwingUtilities"/>
     <fullyQualifiedTypeName name="ejemplos.Main"/>
@@ -13,12 +16,16 @@
     <fullyQualifiedTypeName name="ejemplos.Ejemplo01JFrame"/>
     <fullyQualifiedTypeName name="ejemplos.Ejemplo08ImageIcon"/>
     <fullyQualifiedTypeName name="javax.swing.JToolBar"/>
+<<<<<<< HEAD
     <fullyQualifiedTypeName name="javax.swing.ImageIcon"/>
+=======
+>>>>>>> 6d49ab67d04d465c3064ea38affeb10bc8d18d95
     <fullyQualifiedTypeName name="java.net.UnixDomainSocketAddress"/>
     <fullyQualifiedTypeName name="javax.swing.JApplet"/>
     <fullyQualifiedTypeName name="javax.swing.border.Border"/>
     <fullyQualifiedTypeName name="javax.swing.JList"/>
     <fullyQualifiedTypeName name="javax.swing.JProgressBar"/>
+<<<<<<< HEAD
     <fullyQualifiedTypeName name="java.lang.Math"/>
     <fullyQualifiedTypeName name="javax.swing.JFrame"/>
     <fullyQualifiedTypeName name="javax.swing.JComboBox"/>
@@ -40,6 +47,40 @@
     <fullyQualifiedTypeName name="java.beans.PropertyChangeListener"/>
     <fullyQualifiedTypeName name="javax.swing.JOptionPane"/>
     <fullyQualifiedTypeName name="Cuenta"/>
+=======
+>>>>>>> 6d49ab67d04d465c3064ea38affeb10bc8d18d95
     <fullyQualifiedTypeName name="javax.swing.JScrollPane"/>
+    <fullyQualifiedTypeName name="ejemplos.EjemploMenuBar"/>
+    <fullyQualifiedTypeName name="javax.swing.JMenu"/>
+    <fullyQualifiedTypeName name="javax.swing.JMenuBar"/>
+    <fullyQualifiedTypeName name="javax.swing.JMenuItem"/>
+    <fullyQualifiedTypeName name="java.awt.GridLayout"/>
+    <fullyQualifiedTypeName name="javax.swing.JTextArea"/>
+    <fullyQualifiedTypeName name="ejemplosEventos.ActionEvent"/>
+    <fullyQualifiedTypeName name="java.awt.event.ActionEvent"/>
+    <fullyQualifiedTypeName name="javax.annotation.processing.SupportedSourceVersion"/>
+    <fullyQualifiedTypeName name="java.awt.BorderLayout"/>
+    <fullyQualifiedTypeName name="javax.swing.JPanel"/>
+    <fullyQualifiedTypeName name="javax.swing.JFrame"/>
+    <fullyQualifiedTypeName name="ejemplosEventos.ejemploItemListener"/>
+    <fullyQualifiedTypeName name="javax.swing.event.ChangeListener"/>
     <fullyQualifiedTypeName name="java.awt.Dimension"/>
+    <fullyQualifiedTypeName name="java.awt.event.KeyEvent"/>
+    <fullyQualifiedTypeName name="java.awt.event.MouseListener"/>
+    <fullyQualifiedTypeName name="java.awt.event.MouseEvent"/>
+    <fullyQualifiedTypeName name="javax.swing.JButton"/>
+    <fullyQualifiedTypeName name="javax.swing.JCheckBox"/>
+    <fullyQualifiedTypeName name="java.util.EventListener"/>
+    <fullyQualifiedTypeName name="java.awt.event.ItemListener"/>
+    <fullyQualifiedTypeName name="javax.swing.ImageIcon"/>
+    <fullyQualifiedTypeName name="java.awt.event.FocusListener"/>
+    <fullyQualifiedTypeName name="java.awt.event.KeyListener"/>
+    <fullyQualifiedTypeName name="java.awt.Color"/>
+    <fullyQualifiedTypeName name="javax.swing.JTextField"/>
+    <fullyQualifiedTypeName name="java.awt.FlowLayout"/>
+    <fullyQualifiedTypeName name="javax.swing.JLabel"/>
+    <fullyQualifiedTypeName name="java.awt.event.ActionListener"/>
+    <fullyQualifiedTypeName name="javax.swing.JComboBox"/>
+    <fullyQualifiedTypeName name="java.lang.ArithmeticException"/>
+    <fullyQualifiedTypeName name="java.lang.NumberFormatException"/>
 </qualifiedTypeNameHistroy>
