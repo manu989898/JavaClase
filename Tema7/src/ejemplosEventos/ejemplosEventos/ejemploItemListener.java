@@ -1,13 +1,5 @@
 package ejemplosEventos;
 
-import java.awt.FlowLayout;
-import java.awt.event.ItemEvent;
-import java.awt.event.ItemListener;
-
-import javax.swing.JComboBox;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-
 public class ejemploItemListener extends JFrame implements ItemListener {
 
 	private JComboBox<String> cmbAsignaturas;

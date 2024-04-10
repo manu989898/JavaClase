@@ -24,7 +24,7 @@ public class Ejemplo01JFrame extends JFrame implements ActionListener {
 		setSize(340, 680);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-		// Layout sirve para aplicarle un ordena los objetos del JFrame.
+		// Layout sirve para aplicarle un orden a los objetos del JFrame.
 		// Se podría poner FlowLayout.RIGHT para que alinee todo a la derecha.
 		BorderLayout dis = new BorderLayout();
 		setLayout(dis);
