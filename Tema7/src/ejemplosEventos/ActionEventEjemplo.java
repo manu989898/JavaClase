@@ -1,4 +1,4 @@
-package ejemplosEventos;
+
 
 import java.awt.Color;
 import java.awt.FlowLayout;
