@@ -1,15 +1,9 @@
-<<<<<<< HEAD
 =\=\=\=\=\=\=
 <<<<<<<=HEAD
->>>>>>>=d40280468eb99755c8edcc80f4eccc610094b437
+>>>>>>>=6d49ab67d04d465c3064ea38affeb10bc8d18d95
 IMPORT_FILES_AND_FOLDERS_RELATIVE=true
 IMPORT_FILES_AND_FOLDERS_TYPE=23,1\:7,1
 eclipse.preferences.version=1
-platformState=1696763158736
-quickStart=false
-=======
-eclipse.preferences.version=1
-platformState=1695821548497
+platformState=1695821548651
 quickStart=true
->>>>>>> 6d49ab67d04d465c3064ea38affeb10bc8d18d95
 tipsAndTricks=true
