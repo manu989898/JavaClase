@@ -1,0 +1,93 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+.contenedor{
+    font-family: Arial, Helvetica, sans-serif;
+    width: 960px;
+    margin: auto;
+    color: rgb(74, 74, 74);
+}
+.colizq{
+    width: 40%;
+    background-color: rgb(234, 229, 225);
+}
+.colder{
+    width: 60%;
+}
+.colder,.colizq{
+    float: left;
+    padding: 20px 25px;
+}
+.img{
+   width: 170px;
+   height: 220px; 
+   border: 5px solid rgb(255, 255, 255);
+   margin: auto;
+   background-color: rgb(234, 229, 225);
+}
+img{
+    width: 150px;
+    height: 200px;
+    margin: 5px 5px;
+    border: solid 2px rgb(172, 137, 112);
+}
+.izq,.der{
+    padding: 10px 30px;
+
+}
+h2.izq{
+    background-color: white;
+    margin: 30px 0px;
+}
+h2.der{
+    background-color: rgb(234, 229, 225);
+    margin: 20px 0px;
+}
+p.izquierda, a{
+    margin: 8px 15px;
+}
+li{
+    margin: 8px 30px;
+    list-style-type: disc;
+}
+a{
+    text-decoration: none;
+    color: rgb(74, 74, 74);
+}
+a:hover{
+    text-decoration: underline;
+    color: white;
+}
+h1{
+    text-align: center;
+    margin-top: 20px;
+    font-family: "Handlee", cursive;
+}
+.separador{
+    background-color: rgb(234, 229, 225);
+    padding: 3px;
+    margin: 10px 0px;
+    height: 1px;
+}
+.clean, .tecnico{
+    font-size: 1em;
+    padding: 0px 30px;
+    margin-top: 6px;
+}
+.tecnico{
+    letter-spacing: 3px;    
+}
+h2.clean{
+    margin-top: 15px;
+}
+i{
+    font-size: 1.2em;
+    color: rgb(74, 74, 74);
+    margin-right: 10px;
+    color: rgb(177, 109, 7);
+}
+.bold{
+    font-weight: bold;
+}
