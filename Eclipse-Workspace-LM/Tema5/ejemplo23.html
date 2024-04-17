@@ -10,16 +10,22 @@
             border: solid 3px black;
             display: flex;
             flex-direction: row;
-            height: 600px;
-            max-width: 1200px;
+            width: 400px;
         }
+
         .item-flex {
             border: solid 3px red;
-            padding: 10px;
-            margin: 10px;
-            width: 300px;
+            font-size: 5rem;
+            text-align: center;
+            padding: 20px;
+            flex-grow: 1;
+            flex-shrink: 1;
+            width: 150px;
         }
-        h2{
+        .item-flex:first-child{
+           flex-shrink: 0.5;
+        }
+        h2 {
             font-size: 1.1rem;
         }
     </style>
@@ -35,9 +41,10 @@
             2
         </div>
         <div class="item-flex">
-           3
+            3
         </div>
     </div>
+    400px------------------------------------------------------------------->
 </body>
 
 </html>
