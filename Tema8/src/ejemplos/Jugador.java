@@ -1,9 +1,15 @@
 package ejemplos;
 
+/*
+ * dudas en borrarArchivo() con if.
+ * dudas no escribe en el archivo.txt hasta que lo ejecutamos dos veces
+ */
+
 import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
 import java.io.BufferedReader;
@@ -63,51 +69,15 @@ public class Jugador extends JFrame {
 				borrarArchivo();
 			}
 		});
-		addWindowListener(new WindowListener() {
-			
-			@Override
-			public void windowOpened(WindowEvent e) {
-			CrearArchivo();
-			cargarJugadores();
-				
-			}
-			
-			@Override
-			public void windowIconified(WindowEvent e) {
-				// TODO Auto-generated method stub
-				
-			}
-			
-			@Override
-			public void windowDeiconified(WindowEvent e) {
-				// TODO Auto-generated method stub
-				
-			}
-			
-			@Override
-			public void windowDeactivated(WindowEvent e) {
-				// TODO Auto-generated method stub
-				
-			}
-			
-			@Override
-			public void windowClosing(WindowEvent e) {
-				// TODO Auto-generated method stub
-				
-			}
-			
-			@Override
-			public void windowClosed(WindowEvent e) {
-				// TODO Auto-generated method stub
-				
-			}
-			
-			@Override
-			public void windowActivated(WindowEvent e) {
-				// TODO Auto-generated method stub
-				
-			}
-		});
+		
+		addWindowListener((WindowListener) new WindowAdapter() {
+            @Override
+            public void windowOpened(WindowEvent e) {
+                crearArchivo();
+                cargarJugadores();
+            }
+        });
+		
 		add(lblTitulo);
 		add(scrPuntuaciones);
 		add(btnNuevo);
@@ -201,7 +171,8 @@ public class Jugador extends JFrame {
 	 */
 	public void cargarJugadores() {
 
-		try (BufferedReader br = new BufferedReader(new FileReader(RUTA))) {
+		try {
+			BufferedReader br = new BufferedReader(new FileReader(RUTA));
 			String linea;
 			while ((linea = br.readLine()) != null) {
 				// Separamos los elementos del CSV y los guardamos en un array.
@@ -215,6 +186,7 @@ public class Jugador extends JFrame {
 					model.addElement(partes[i] + "..." + partes[i + 1]);
 				}
 			}
+			br.close();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -232,9 +204,11 @@ public class Jugador extends JFrame {
 
 		if (avisoBorrado == 0) {
 			try {
-				Formatter formateo = new Formatter(RUTA);
+				BufferedWriter bw = new BufferedWriter(new FileWriter(RUTA));
+				bw.close();
+//				Formatter formateo = new Formatter(RUTA);
 				model.removeAllElements();
-			} catch (FileNotFoundException e) {
+			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
@@ -244,11 +218,11 @@ public class Jugador extends JFrame {
 		}
 	}
 
-	public void CrearArchivo() {
+	public void crearArchivo() {
 		File archivo = new File(RUTA);
 		BufferedWriter bw;
 		if (archivo.exists()) {
-			// El fichero ya existe
+			return;
 		} else {
 			// El fichero no existe y hay que crearlo
 			try {
