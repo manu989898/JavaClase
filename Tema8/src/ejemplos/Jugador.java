@@ -4,8 +4,11 @@ import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.WindowEvent;
+import java.awt.event.WindowListener;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
@@ -60,8 +63,51 @@ public class Jugador extends JFrame {
 				borrarArchivo();
 			}
 		});
-		cargarJugadores();
-
+		addWindowListener(new WindowListener() {
+			
+			@Override
+			public void windowOpened(WindowEvent e) {
+			CrearArchivo();
+			cargarJugadores();
+				
+			}
+			
+			@Override
+			public void windowIconified(WindowEvent e) {
+				// TODO Auto-generated method stub
+				
+			}
+			
+			@Override
+			public void windowDeiconified(WindowEvent e) {
+				// TODO Auto-generated method stub
+				
+			}
+			
+			@Override
+			public void windowDeactivated(WindowEvent e) {
+				// TODO Auto-generated method stub
+				
+			}
+			
+			@Override
+			public void windowClosing(WindowEvent e) {
+				// TODO Auto-generated method stub
+				
+			}
+			
+			@Override
+			public void windowClosed(WindowEvent e) {
+				// TODO Auto-generated method stub
+				
+			}
+			
+			@Override
+			public void windowActivated(WindowEvent e) {
+				// TODO Auto-generated method stub
+				
+			}
+		});
 		add(lblTitulo);
 		add(scrPuntuaciones);
 		add(btnNuevo);
@@ -198,8 +244,27 @@ public class Jugador extends JFrame {
 		}
 	}
 
-	public static void main(String[] args) {
+	public void CrearArchivo() {
+		File archivo = new File(RUTA);
+		BufferedWriter bw;
+		if (archivo.exists()) {
+			// El fichero ya existe
+		} else {
+			// El fichero no existe y hay que crearlo
+			try {
+				new JOptionPane().showMessageDialog(null,
+						"No se han encontrado datos guardados de jugadores. Se creará un archivo nuevo.", "Mensaje",
+						JOptionPane.INFORMATION_MESSAGE);
+				bw = new BufferedWriter(new FileWriter(archivo));
+				bw.close();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+	}
 
+	public static void main(String[] args) {
 		new Jugador();
 	}
 
