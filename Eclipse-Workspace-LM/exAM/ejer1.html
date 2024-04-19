@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body{
+        font-family: Arial, Helvetica, sans-serif;
+        color: gray;
+    }
+    .container{
+        width: 1024px;
+        margin: auto;
+    }
+    .col-izq{
+        width: 80%;
+       float: left;
+    }
+    .col-der{
+        width: 20%;
+        float: right;
+        border-left: 3px solid rgb(223, 106, 188);
+    }
+    .banner{
+        width: 1024px;
+        height: 170px;
+        margin-bottom: 20px;
+    }
+    .sudadera{    
+        /*No me deja centrarla con margin auto, se que hay que limpiar el float*/
+        width: 300px;
+        margin-left: 30%;
+        box-shadow: 5px 5px rgba(25, 25, 25, 0.187);
+        
+    }
+    li{
+        list-style: none;
+        margin-bottom: 15px;
+    }
+    ol{
+        
+        padding-left: 10px;
+    }
+    h2{
+        margin-bottom: 20px;
+        color: rgb(223, 106, 188);
+    }
+    p{
+        margin-bottom: 15px;
+    }
+    a{
+        color: rgb(223, 106, 188);
+        text-decoration: none;
+    }
+    a:hover{
+        color: rgb(151, 70, 127);
+        letter-spacing: 0.2rem;
+        font-size: 1.1rem;
+    }
+</style>
+</head>
+
+<body>
+    <div class="container">
+        <img class="banner" src="imgs/banner.png" alt="">
+        <div class="col-izq">
+            <h2>Nuestras ofertas</h2>
+            <p>Durante toda la semana disfrutarás de precios bajos. Estate atento a las súper ofertas de corta duración.</p>
+            <img class="sudadera" src="imgs/sudadera.jpg" alt="">
+        </div>
+      
+        <div class="col-der">
+            <ol>
+                <li><a href="">Home</a></li>
+                <li><a href="">Ofertas</a></li>
+                <li><a href="">Ofertas flash</a></li>
+                <li><a href="">Acerca de</a></li>
+            </ol>
+        </div>
+    </div>
+</body>
+
+</html>
