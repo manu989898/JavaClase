@@ -1,10 +1,5 @@
 package ejemplos;
 
-/*
- * dudas en borrarArchivo() con if.
- * dudas no escribe en el archivo.txt hasta que lo ejecutamos dos veces
- */
-
 import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
