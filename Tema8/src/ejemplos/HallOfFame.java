@@ -14,6 +14,7 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import javax.swing.DefaultListModel;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -103,13 +104,12 @@ public class HallOfFame extends JFrame{
 	 *         válidos.
 	 */
 	private Jugador leerDatosJugador() {
-		String nombreJugador = JOptionPane.showInputDialog(this, "ingresa nombre", "Nombre",
+		String nombreJugador = JOptionPane.showInputDialog(this, "Ingresa el nombre", "Nombre",
 				JOptionPane.QUESTION_MESSAGE);
-		String puntuacionJugador = JOptionPane.showInputDialog(this, "ingresa puntuación", "Puntuación",
+		String puntuacionJugador = JOptionPane.showInputDialog(this, "Ingresa la puntuación", "Puntuación",
 				JOptionPane.QUESTION_MESSAGE);
-
+		
 		try {
-
 			// Pruebo a parsear el resultado del segundo dialog para ver si es correcto el forato introducido.
 			// Si son simbolos o letras no se puede parsear y nos devolverá null.
 			// En el siguiente método si jugador es null ya no se guardaría.
@@ -154,7 +154,7 @@ public class HallOfFame extends JFrame{
 		try {
 			BufferedReader br = new BufferedReader(new FileReader(RUTA));
 			String linea;
-			while ((linea = br.readLine()) != null) {
+			while ((linea = br.readLine()) != null) { //Visto asi en StackOverflow https://es.stackoverflow.com/questions/92330/bufferedreader-readline-regresa-null-como-resultado
 				// Separamos los elementos del CSV y los guardamos en un array.
 				String[] partes = linea.split(",");
 
