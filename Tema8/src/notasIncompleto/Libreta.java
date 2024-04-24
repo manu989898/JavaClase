@@ -79,54 +79,47 @@ public class Libreta {
 		 * título y otra para la descripción. Puedes usar el método split() para separar
 		 * los datos de los comentarios del archivo.
 		 */
-		File archivo = new File(NOMBRE_ARCHIVO);
-		BufferedWriter bw;
+
 		// Este método lo que hace es comprobar si el objeto de tipo File exsiste
 		try {
-			if (archivo.exists()) {
 
-				BufferedReader br = new BufferedReader(new FileReader(NOMBRE_ARCHIVO));
-				String linea = br.readLine();
-				String titulo;
-				while (linea != null) {
-					
-					if (linea.length() >= 7) {
-						titulo = linea.substring(7);
-					} else {
-						titulo = linea;
-					}
+			BufferedReader br = new BufferedReader(new FileReader(NOMBRE_ARCHIVO));
+			String linea = br.readLine();
+			String titulo;
+			while (linea != null) {
 
-					linea = br.readLine();
-
-					String descripcion;
-					
-					if (linea != null && linea.length() >= 12) {
-						descripcion = linea.substring(12);
-					} else {
-						descripcion = linea;
-					}
-
-					Nota nota = new Nota(titulo, descripcion);
-					addNota(nota);
-					linea = br.readLine();
+				if (linea.length() >= 7) {
+					titulo = linea.substring(7);
+				}else {
+					return;
 				}
-				br.close();
-			} else {
-				JOptionPane.showMessageDialog(null, "No se ha encontrado el archivo " + NOMBRE_ARCHIVO,
-						"Archivo de tareas no encontrado", JOptionPane.WARNING_MESSAGE);
 
-				bw = new BufferedWriter(new FileWriter(NOMBRE_ARCHIVO));
-				bw.close();
+				linea = br.readLine();
+
+				String descripcion;
+
+				if (linea != null && linea.length() >= 12) {
+					descripcion = linea.substring(12);
+				} else {
+					return;
+				}
+
+				Nota nota = new Nota(titulo, descripcion);
+				addNota(nota);
+				linea = br.readLine();
 			}
+			br.close();
+
+
 		} catch (FileNotFoundException e) {
 			JOptionPane.showMessageDialog(null, "No se ha encontrado el archivo " + NOMBRE_ARCHIVO,
 					"Archivo de tareas no encontrado", JOptionPane.WARNING_MESSAGE);
+
 		} catch (IOException e) {
 			JOptionPane.showMessageDialog(null, "No se ha podido leer el archivo de tareas" + NOMBRE_ARCHIVO,
 					"Error de E/S", JOptionPane.ERROR_MESSAGE);
 		}
 	}
-
 	public void guardarNotas() {
 
 		/*
