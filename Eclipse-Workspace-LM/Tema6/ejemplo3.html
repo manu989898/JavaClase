@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo03</title>
+    <style>
+        .verde {
+            color: green;
+        }
+        .rojo {
+            color: red;
+        }
+        .azul {
+            color: blue;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>El DOM</h1>
+    <p class="verde">Esto és un párrafo</p>
+    <p class="rojo">Esto és un párrafo</p>
+    <p class="azul">Esto és un párrafo</p>
+
+    <script>
+        let parrafosVerde = document.getElementsByClassName("verde");
+            parrafosVerde[0].innerHTML = "Este párrafo ha sido modificado con JavaScript";
+        
+        let parrafosRojo = document.getElementsByClassName("rojo");
+            parrafosRojo[0].innerHTML = "Este párrafo ha sido modificado con JavaScript";
+
+        let parrafosAzul = document.querySelector("p.azul");
+            parrafosAzul.innerHTML = "Este párrafo ha sido modificado con JavaScript";
+
+        let parrafos = document.querySelectorAll("p");
+        
+        //USAR UN FOR O
+        for (let i = 0; i < parrafos.length; i++) {
+            parrafos[i].innerHTML = "Este párrafo ha sido modificado con JavaScript usando QuerySelectorAll";
+        }
+        
+        //USAR FOREACH
+        parrafos.forEach(parrafo => {
+            parrafo.innerHTML = "Este párrafo ha sido modificado con JavaScript usando QuerySelectorAll y forEach";
+        });
+    </script>
+
+</body>
+</html>

@@ -3,21 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ejer6</title>
+    <title>Ejer7</title>
     <!--<script src="archivo.js"></script>-->
 </head>
 <body>
-    <h1>Ejer 6</h1>
+    <h1>Ejer 7</h1>
 
     
     <script>
-let cadena = prompt("Introduce una cadena de texto");
-let cadenaInversa = cadena.split("").reverse().join("");
-console.log(cadenaInversa);
-
-
-
-
+let cont = prompt("¿Cuántos números quieres introducir?");
+for (let i = 0; i < cont; i++) {
+    let num = prompt("Introduce un número");
+    let numParImpar = parseInt(num) % 2;
+    if (numParImpar === 0) {
+        console.log(`El número ${num} es par`);
+    }
+    else {
+        console.log(`El número ${num} es impar`);
+    }
+}
 </script>
 </body>
 </html>
