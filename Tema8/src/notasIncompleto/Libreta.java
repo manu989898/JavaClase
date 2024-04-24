@@ -87,11 +87,26 @@ public class Libreta {
 
 				BufferedReader br = new BufferedReader(new FileReader(NOMBRE_ARCHIVO));
 				String linea = br.readLine();
+				String titulo;
 				while (linea != null) {
-					String titulo = linea;
-					String descripcion = br.readLine();
+					
+					if (linea.length() >= 7) {
+						titulo = linea.substring(7);
+					} else {
+						titulo = linea;
+					}
+
+					linea = br.readLine();
+
+					String descripcion;
+					
+					if (linea != null && linea.length() >= 12) {
+						descripcion = linea.substring(12);
+					} else {
+						descripcion = linea;
+					}
+
 					Nota nota = new Nota(titulo, descripcion);
-					//Añado indirectamente
 					addNota(nota);
 					linea = br.readLine();
 				}
@@ -115,17 +130,19 @@ public class Libreta {
 	public void guardarNotas() {
 
 		/*
-		 * TODO: Guardar las notas del array notas[] en el archivo "notas.txt". El
+		 * Guardar las notas del array notas[] en el archivo "notas.txt". El
 		 * formato en que se guardarán debe ser el que aparece en el enunciado de la
 		 * práctica. Si se produce una excepción, se mostrará el error que aparece en el
 		 * enunciado.
 		 */
 
-		try (BufferedWriter bw = new BufferedWriter(new FileWriter(NOMBRE_ARCHIVO))) {
+		try{ 
+			BufferedWriter bw = new BufferedWriter(new FileWriter(NOMBRE_ARCHIVO)) ;
 			for (int i = 0; i < numNotas; i++) {
-				bw.write(notas[i].getTitulo() + "\n" + notas[i].getDescripcion() + "\n");
+				bw.write("TITULO:" + notas[i].getTitulo() + "\n" + "DESCRIPCION:" + notas[i].getDescripcion());
 				bw.newLine();
 			}
+			bw.close();
 		} catch (IOException e) {
 			JOptionPane.showMessageDialog(null, "No se ha podido guardar el archivo de tareas" + NOMBRE_ARCHIVO,
 					"Error de E/S", JOptionPane.ERROR_MESSAGE);

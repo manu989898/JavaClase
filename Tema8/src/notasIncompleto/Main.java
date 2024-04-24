@@ -79,6 +79,7 @@ public class Main extends JFrame implements ListSelectionListener {
 		});
 
 		JMenu menuArchivo = new JMenu("Archivo");
+		
 		menuArchivo.add(itemNuevaNota);
 		menuArchivo.addSeparator();
 		menuArchivo.add(itemBorrarNota);
@@ -224,7 +225,24 @@ public class Main extends JFrame implements ListSelectionListener {
 		 * y pasarle el foco a la casilla de título.
 		 */
 
+		// Creamos la nueva nota.
+		Nota nuevaNota = new Nota(txtTitulo.getText(), txtDescripcion.getText());
+
+		// Añadimos la nota a la libreta.
+		libreta.addNota(nuevaNota);
+
+		// Añadimos el título de la nota al JList.
+		modeloLista.addElement(txtTitulo.getText());
+
+		// Seleccionamos la nueva nota en el JList.
+		lstTitulos.setSelectedIndex(modeloLista.getSize() - 1);
 		
+		// Borramos las casillas de título.
+		txtTitulo.setText("");
+		txtDescripcion.setText("");
+
+		// Pasamos el foco a la casilla de título.
+		txtTitulo.requestFocus();
 
 	}
 
