@@ -1,8 +1,13 @@
 package notasIncompleto;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+
+import javax.swing.JOptionPane;
 
 public class Libreta {
 
@@ -27,6 +32,12 @@ public class Libreta {
 		 * hacer nada.
 		 */
 
+		if (numNotas < MAX_NOTAS) {
+			notas[numNotas] = nota;
+			numNotas++;
+		}
+
+
 	}
 
 	public void setNota(int posicion, Nota nota) {
@@ -49,6 +60,13 @@ public class Libreta {
 		 * una posición, y actualiza la variable numNotas.
 		 */
 
+		for (int i = posicion; i < numNotas - 1; i++) {
+			notas[i] = notas[i + 1];
+		}
+		numNotas--;
+
+
+
 	}
 
 	public void leerNotas() {
@@ -63,14 +81,24 @@ public class Libreta {
 		 * título y otra para la descripción. Puedes usar el método split() para separar
 		 * los datos de los comentarios del archivo.
 		 */
-		
-		try {
-			BufferedReader br = new BufferedReader(new FileReader("notillas/notas.txt"));
+
+		try (BufferedReader br = new BufferedReader(new FileReader(NOMBRE_ARCHIVO))) {
 			
+			String linea;
+			while ((linea = br.readLine()) != null) {
+				String[] datos = linea.split(";");
+				String titulo = datos[0];
+				String descripcion = datos[1];
+				Nota nota = new Nota(titulo, descripcion);
+				addNota(nota);
+			}
+
 		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			JOptionPane.showMessageDialog(null, "No se ha encontrado el archivo " + NOMBRE_ARCHIVO, "Archivo de tareas no encontrado", JOptionPane.WARNING_MESSAGE);
+		} catch (Exception e) {
+			JOptionPane.showMessageDialog(null, "No se ha podido guardar el archivo de tareas" + NOMBRE_ARCHIVO, "Error de E/S", JOptionPane.ERROR_MESSAGE);
 		}
+
 
 	}
 
@@ -80,9 +108,17 @@ public class Libreta {
 		 * TODO: Guardar las notas del array notas[] en el archivo "notas.txt". El
 		 * formato en que se guardarán debe ser el que aparece en el enunciado de la
 		 * práctica. Si se produce una excepción, se mostrará el error que aparece en el
-		 * enunciado.
+		 * enunciado. 
 		 */
 
+		try (BufferedWriter bw = new BufferedWriter(new FileWriter(NOMBRE_ARCHIVO))) {
+			for (int i = 0; i < numNotas; i++) {
+				bw.write(notas[i].getTitulo() + "\n" + notas[i].getDescripcion() + "\n");
+				bw.newLine();
+			}
+		} catch (IOException e) {
+			JOptionPane.showMessageDialog(null, "No se ha podido guardar el archivo de tareas" + NOMBRE_ARCHIVO, "Error de E/S", JOptionPane.ERROR_MESSAGE);
+		}
 	}
 
 	public int getNumNotas() {

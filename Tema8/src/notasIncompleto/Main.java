@@ -224,6 +224,8 @@ public class Main extends JFrame implements ListSelectionListener {
 		 * y pasarle el foco a la casilla de título.
 		 */
 
+		
+
 	}
 
 	private void borrarNotaSeleccionada() {
