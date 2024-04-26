@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejemplo4</title>
+    <style>
+        img{
+            width: 400px;
+        }
+    
+    </style>
+</head>
+<body>
+    <h1>Cambiar atributo.</h1>
+    <img onclick="cambiar_borde()" src="imgs/arquitectura/castillo-san-olaf.jpg" onmouseover="random()" alt="">
+    <script>
+        document.getElementsByTagName("img")[0].setAttribute("src", "imgs/arquitectura/castillo-bellver.jpg");
+        document.getElementsByTagName("img")[0].style.border = "5px solid red";
+       // console.log(typeof document.getElementsByTagName("img"));
+        function saludar(){
+            alert("Hola");
+        }
+        function cambiar_borde(){
+            document.getElementsByTagName("img")[0].style.border = "5px solid blue";
+        }
+        function random(){
+            let x = Math.floor(Math.random() * 1000);
+            let y = Math.floor(Math.random() * 1000);
+            document.getElementsByTagName("img")[0].style.position = "absolute";
+            document.getElementsByTagName("img")[0].style.left = x + "px";
+            document.getElementsByTagName("img")[0].style.top = y + "px";
+
+        }
+    </script>
+
+</body>
+</html>

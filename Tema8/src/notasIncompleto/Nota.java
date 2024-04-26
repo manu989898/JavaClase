@@ -18,4 +18,12 @@ public class Nota {
 		return descripcion;
 	}
 
+	public void setTitulo(String titulo) {
+		this.titulo = titulo;
+	}
+
+	public void setDescripcion(String descripcion) {
+		this.descripcion = descripcion;
+	}
+
 }

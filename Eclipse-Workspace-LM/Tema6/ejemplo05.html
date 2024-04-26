@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo 05</title>
+    <style>
+        img{
+            width: 400px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="encabezado">Trabajando con el DOM</h1>
+    <p id="texto">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam adipisci saepe nisi molestias
+        doloremque, porro cupiditate rerum officia nemo temporibus. Velit cum exercitationem itaque illum iusto deserunt
+        repellendus debitis sit? </p>
+    <img id="imagen" src="imgs/arquitectura/andrea-leopardi-LjWC8V9_2f0-unsplash.jpg" alt="">
+    <script>
+        document.getElementById("encabezado").onclick = cambiarColor;
+        function cambiarColor() {
+            document.getElementById("encabezado").style.color = "red";
+        }
+    </script>
+</body>
+
+</html>

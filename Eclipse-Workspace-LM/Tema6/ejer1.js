@@ -106,6 +106,44 @@ let cadena = prompt("Introduce una cadena de texto");
 let cadenaInversa = cadena.split("").reverse().join("");
 console.log(cadenaInversa);
 
+/*
+9.Crea un programa que devuelva la cantidad de palabras en una
+cadena de texto.
+*/
+let cadena2 = prompt("Introduce una cadena de texto");
+let palabras = cadena2.split(" ");
+let cantidadPalabras = palabras.length;
+console.log(`La cadena de texto tiene ${cantidadPalabras} palabras`);
+
+/*
+10.Escribe un programa que solicite tres números e imprima en la consola
+el número más pequeño.
+*/
+let num6 = prompt("Introduce un número");
+let num7 = prompt("Introduce otro número");
+let num8 = prompt("Introduce otro número");
+if (num6 < num7 && num6 < num8) {
+    console.log(`El número más pequeño es ${num6}`);
+}
+else if (num7 < num6 && num7 < num8) {
+    console.log(`El número más pequeño es ${num7}`);
+}
+else {
+    console.log(`El número más pequeño es ${num8}`);
+}
+
+/*
+11.Escribe un programa que pida una cadena alfanumérica por pantalla y
+devuelva la misma cadena convertida a minúsculas y también convertida a
+mayúsculas (en la consola).
+*/
+
+let cadena3 = prompt("Introduce una cadena alfanumérica");
+let cadenaMinusculas = cadena3.toLowerCase();
+let cadenaMayusculas = cadena3.toUpperCase();
+console.log(`Cadena en minúsculas: ${cadenaMinusculas}`);
+console.log(`Cadena en mayúsculas: ${cadenaMayusculas}`);
+
 
 
 
