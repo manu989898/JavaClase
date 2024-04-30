@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo6</title>
+    <style>
+        label{
+            margin-bottom: 1px;
+            display: block;
+        }
+        input{
+            margin-bottom: 20px;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <h1>Eventos onfocus y onfocusout</h1>
+    <form action="" method="post">
+        <label for="usuario">Usuario</label>
+        <input type="text" id="usuario" name="usuario" placeholder="Usuario">
+
+        <label for="contrasenia">Contraseña</label>
+        <input type="password" id="contrasenia" name="contraseña" placeholder="Contraseña">
+    
+        <input type="submit" value="Enviar">
+    </form>
+    <script>
+        document.getElementById("usuario").onfocus = resaltar;
+        document.getElementById("usuario").onfocusout = quitarResaltar;
+
+        document.getElementById("contrasenia").onfocus = resaltar;
+        document.getElementById("contrasenia").onfocusout = quitarResaltar;
+
+        function resaltar(){
+            this.style.backgroundColor = "yellow";
+        }
+
+        function quitarResaltar(){
+            this.style.backgroundColor = "white";
+        }
+    </script>
+</body>
+</html>
