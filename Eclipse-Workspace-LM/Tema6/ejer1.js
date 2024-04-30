@@ -148,6 +148,3 @@ console.log(`Cadena en mayúsculas: ${cadenaMayusculas}`);
 
 
 
-
-
-
