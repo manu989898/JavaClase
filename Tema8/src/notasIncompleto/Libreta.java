@@ -141,6 +141,15 @@ public class Libreta {
 					"Error de E/S", JOptionPane.ERROR_MESSAGE);
 		}
 	}
+	
+	public boolean hayEspacio() {
+		
+		if(numNotas < MAX_NOTAS) {
+		return true;
+		} else {
+			return false;
+		}
+	}
 
 	public int getNumNotas() {
 		return numNotas;

@@ -79,7 +79,7 @@ public class Main extends JFrame implements ListSelectionListener {
 		});
 
 		JMenu menuArchivo = new JMenu("Archivo");
-		
+
 		menuArchivo.add(itemNuevaNota);
 		menuArchivo.addSeparator();
 		menuArchivo.add(itemBorrarNota);
@@ -224,22 +224,25 @@ public class Main extends JFrame implements ListSelectionListener {
 		 * y pasarle el foco a la casilla de título.
 		 */
 
-		// Creamos la nueva nota.
-		Nota nuevaNota = new Nota(txtTitulo.getText(), txtDescripcion.getText());
-		nuevaNota.setTitulo("Nueva nota");
-		// Añadimos la nota a la libreta.
-		modeloLista.removeAllElements();
-		libreta.addNota(nuevaNota);
-		cargarNotas();
 		
-		// Añadimos el título de la nota al JList.
-		modeloLista.addElement(txtTitulo.getText());
+		if (libreta.hayEspacio()) {
+			modeloLista.addElement("Nueva nota");
+		
 
-		// Seleccionamos la nueva nota en el JList.
-		lstTitulos.setSelectedIndex(modeloLista.getSize() - 1);
+			// Creamos la nueva nota.
+			Nota nota = new Nota("", "");
+			libreta.addNota(nota);
+			txtDescripcion.setText("");
+			// Pasamos el foco a la casilla de título.
+			txtTitulo.requestFocus();
+			lstTitulos.setSelectedIndex(modeloLista.getSize() - 1);
+			
+		}else {
+			return;
+		}
+		
 
-		// Pasamos el foco a la casilla de título.
-		txtTitulo.requestFocus();
+
 	}
 
 	private void borrarNotaSeleccionada() {
@@ -252,7 +255,7 @@ public class Main extends JFrame implements ListSelectionListener {
 
 		// Borramos la nota de la libreta
 		libreta.delNota(posNotaSeleccionada);
-		
+
 		// Borramos la nota del JList.
 		modeloLista.remove(posNotaSeleccionada);
 
@@ -272,5 +275,7 @@ public class Main extends JFrame implements ListSelectionListener {
 		}
 
 	}
+	
+	
 
 }
