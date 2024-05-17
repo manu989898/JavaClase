@@ -1,0 +1,46 @@
+{
+    "coord": {
+      "lon": 2.5,
+      "lat": 39.5
+    },
+    "weather": [
+      {
+        "id": 800,
+        "main": "Clear",
+        "description": "clear sky",
+        "icon": "01d"
+      }
+    ],
+    "base": "stations",
+    "main": {
+      "temp": 295,
+      "feels_like": 295.25,
+      "temp_min": 293.2,
+      "temp_max": 299.01,
+      "pressure": 1010,
+      "humidity": 77,
+      "sea_level": 1010,
+      "grnd_level": 1001
+    },
+    "visibility": 10000,
+    "wind": {
+      "speed": 4.36,
+      "deg": 187,
+      "gust": 3.76
+    },
+    "clouds": {
+      "all": 0
+    },
+    "dt": 1715957254,
+    "sys": {
+      "type": 2,
+      "id": 2004014,
+      "country": "ES",
+      "sunrise": 1715920448,
+      "sunset": 1715972334
+    },
+    "timezone": 7200,
+    "id": 6324533,
+    "name": "Santa Ponsa",
+    "cod": 200
+  }
