@@ -4,8 +4,9 @@ public class ejer12 {
 
 	public static void main(String[] args) {
 
-		char[] nombre = { 'a', 'l', 'o', 'n' };
-		System.out.println(esPalidromo(nombre, 0, 2));
+		char[] nombre = { 'a', 'l',  'a' };
+	
+		System.out.println(esPalidromo(nombre, 0, nombre.length-1));
 	}
 
 	public static boolean esPalidromo(char[] frase, int inicio, int fin) {
