@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo6</title>
+    <style>
+        label{
+            margin-bottom: 1px;
+            display: block;
+        }
+        input{
+            margin-bottom: 20px;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <h1>Change</h1>
+    <form action="" method="post">
+        <label for="usuario">Usuario</label>
+        <input type="text" id="usuario" name="usuario" placeholder="Usuario">
+
+        <label for="contrasenia">Contraseña</label>
+        <input type="password" id="contrasenia" name="contraseña" placeholder="Contraseña">
+    
+        <input type="submit" value="Enviar">
+    </form>
+
+   
+    <script>
+        let usuario = document.getElementById("usuario");
+
+        usuario.addEventListener("change", verificar);
+
+        function verificar(){
+            if(usuario.value.length < 5){
+                usuario.style.border = "2px solid red";
+            }else{
+                usuario.style.border = "2px solid green";
+            }
+        }
+
+        //Creamos un fiv
+        let nuevoDiv = document.createElement("div");
+        //Lo configuramos
+        nuevoDiv.style.width = "100px";
+        nuevoDiv.style.height = "100px";
+        nuevoDiv.style.backgroundColor = "red";
+        nuevoDiv.className = "contenedor";
+        //Lo añadimos al body
+        document.body.appendChild(nuevoDiv);
+        
+        let nuevoParrafo = document.createElement("p");
+        nuevoParrafo.textContent = "Hola";
+
+        nuevoDiv.appendChild(nuevoParrafo);
+
+
+    </script>
+</body>
+</html>
