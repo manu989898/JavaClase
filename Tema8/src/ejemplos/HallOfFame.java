@@ -190,7 +190,7 @@ public class HallOfFame extends JFrame{
 				// este metodo elimina los elementos ded la lista y los deja a 0.
 				model.removeAllElements();
 			} catch (IOException e) {
-				// TODO Auto-generated catch block
+				
 				e.printStackTrace();
 			}
 		} else {
@@ -214,7 +214,7 @@ public class HallOfFame extends JFrame{
 				bw = new BufferedWriter(new FileWriter(archivo));
 				bw.close();
 			} catch (IOException e) {
-				// TODO Auto-generated catch block
+				
 				e.printStackTrace();
 			}
 		}
