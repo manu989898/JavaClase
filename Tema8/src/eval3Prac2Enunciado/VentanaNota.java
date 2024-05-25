@@ -65,8 +65,9 @@ public class VentanaNota extends JFrame {
 		btnAceptar = new JButton("Aceptar");
 		btnAceptar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				
+				devolverNota();
 			}
+			
 		});
 		btnAceptar.setBounds(10, 114, 85, 21);
 		contentPane.add(btnAceptar);
@@ -75,9 +76,23 @@ public class VentanaNota extends JFrame {
 		this.getRootPane().setDefaultButton(btnAceptar);
 		setVisible(true);
 		txtNota.requestFocus();
-
+		
 	}
-
+	/*
+	 * Comprueba que la nota sea válida (número entero entre 0 y 10, ambos inclusive).
+◦ Actualiza la ventana principal mostrando la nota del alumno a su lado entre paréntesis.
+◦ Cierra la ventana
+	 */
+	public void devolverNota() {
+		int nota = Integer.parseInt(txtNota.getText());
+		if (nota < 0 || nota > 10) {
+			JOptionPane.showMessageDialog(this, "La nota debe ser un número entero entre 0 y 10.", "Error",
+					JOptionPane.ERROR_MESSAGE);
+			return;
+		}
+		callback.actualizarVentana(nota);
+		dispose();
+	}
 	public void setAlumno(Alumno alumno) {
 		txtAlumno.setText(alumno.getNombre().toUpperCase());
 	}

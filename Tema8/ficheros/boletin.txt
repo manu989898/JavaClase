@@ -1,0 +1,11 @@
+Boletín de notas de lenguajes
+Fecha= 2024-05-25
+
+Nombre=Fernández Rodríguez, David
+Nota=5
+Nombre=Pérez Martín, Laura
+Nota=9
+Nombre=Miralles López, Begoña
+Nota=4
+Nombre=Cuesta Rodríguez, Manuel
+Nota=3

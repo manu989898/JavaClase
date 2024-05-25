@@ -37,6 +37,7 @@ public class Principal extends JFrame {
 	private JPanel contentPane;
 	private JTextField txtAsignatura;
 	private String rutaArchivo = "ficheros/alumnos.txt";
+	private String rutaGuardado = "ficheros/boletin.txt";
 
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
@@ -94,7 +95,7 @@ public class Principal extends JFrame {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				if (e.getClickCount() == 2) {
-
+					abrirFichaAlumno(lstAlumnos);
 				}
 			}
 		});
@@ -105,7 +106,9 @@ public class Principal extends JFrame {
 		JButton btnGuardar = new JButton("Guardar");
 		btnGuardar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-
+				guardarBoletin(rutaGuardado);
+				JOptionPane.showMessageDialog(Principal.this, "Se han guardado las notas de "+ txtAsignatura.getText() + ".", "Boletín App",
+						JOptionPane.INFORMATION_MESSAGE);
 			}
 		});
 		btnGuardar.setBounds(142, 373, 115, 21);
@@ -139,10 +142,10 @@ public class Principal extends JFrame {
 					JOptionPane.INFORMATION_MESSAGE);
 			String linea;
 			br.readLine();
-			
+
 			while ((linea = br.readLine()) != null) {
 				String nombre = linea;
-				int nota= -1;
+				int nota = -1;
 				Alumno alumno = new Alumno(nombre, nota);
 				alumnos.add(alumno);
 			}
@@ -156,21 +159,49 @@ public class Principal extends JFrame {
 		}
 		return alumnos;
 	}
+	
+	public void abrirFichaAlumno(JList<Alumno> lstAlumnos) {
+		VentanaNota ventanaNota = new VentanaNota();
+		Alumno alumno = lstAlumnos.getSelectedValue();
+		ventanaNota.setAlumno(alumno);
+		ventanaNota.setCallback(new Callback() {
+			@Override
+			public void actualizarVentana(int nota) {
+				alumno.setNota(nota);
+			}
+		});
+	}
 
-	/*
-	 * recibe como parámetro el DefaultListModel del JList. Borra el contenido que
-	 * tuviera antes y guarda en él el contenido de alumnos.
-	 */
 	public void mostrarAlumnos(DefaultListModel<Alumno> modelo) {
 		modelo.clear();
 		for (Alumno alumno : alumnos) {
 			modelo.addElement(alumno);
+		}	
+	}
+	public void guardarBoletin(String rutaGuardado) {
+		
+		String mensaje;
+		if (txtAsignatura.getText().isEmpty()) {
+			mensaje = "No se ha introducido la asignatura.";
+		} else if (alumnos.isEmpty()) {
+			mensaje = "No hay alumnos para guardar.";
+		} else {
+			try (BufferedWriter bw = new BufferedWriter(new FileWriter(rutaGuardado))) {
+				bw.write("Boletín de notas de " + txtAsignatura.getText());
+				bw.newLine();
+				bw.write("Fecha= " + LocalDate.now());
+				bw.newLine();
+				bw.newLine();
+				for (Alumno alumno : alumnos) {
+					bw.write("Nombre=" + alumno.getNombre());
+					bw.newLine();
+					bw.write("Nota=" + alumno.getNota());
+					bw.newLine();
+				}
+				mensaje = "Boletín guardado correctamente.";
+			} catch (IOException e) {
+				mensaje = "Error al guardar el boletín.";
+			}
 		}
-
-		/* Abre la ventana auxiliar para poner nota al alumno sobre el que se ha hecho doble clic.
-Deberá mostrarse centrada en la ventana principal.
-◦ Actualiza el JList para que cuando se haya cerrado la ventana auxiliar se vea la nota
-actualizada.
- */
 	}
 }
