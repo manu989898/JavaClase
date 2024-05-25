@@ -113,54 +113,64 @@ public class Principal extends JFrame {
 
 		JButton btnImportarAlumnos = new JButton("Importar alumnos");
 		btnImportarAlumnos.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {	
-					
-						alumnos = importarAlumnos(rutaArchivo);
-						Principal.this.mostrarAlumnos(modelo);
-					}
-			
-			
+			public void actionPerformed(ActionEvent e) {
+
+				alumnos = importarAlumnos(rutaArchivo);
+				Principal.this.mostrarAlumnos(modelo);
+			}
+
 		});
 		btnImportarAlumnos.setBounds(10, 373, 115, 21);
 		contentPane.add(btnImportarAlumnos);
 
 	}
-	/*Abre el archivo indicado por rutaArchivo.
-◦ Lee el curso y la lista de alumnos.
-◦ Muestra un mensaje indicando que se van a cargar los alumnos del curso tal.
-◦ Almacena cada alumno como un objeto Alumno en un ArrayList.
-◦ Devuelve ese ArrayList.
- */
-  public ArrayList<Alumno> importarAlumnos(String rutaArchivo){
-	ArrayList<Alumno> alumnos = new ArrayList<>();
-	try (BufferedReader br = new BufferedReader(new FileReader(rutaArchivo))) {
-		String curso = br.readLine();
-		JOptionPane.showMessageDialog(this, "Cargando alumnos del curso " + curso, "Boletín App",
-				JOptionPane.INFORMATION_MESSAGE);
-		String linea;
-		while ((linea = br.readLine()) != null) {
-			/*primera linea es el nombre  yla segunda linea e sla nota */
-			String nombre = linea;
-			int nota = Integer.parseInt(br.readLine());
-			alumnos.add(new Alumno(nombre, nota));
 
+	/*
+	 * Abre el archivo indicado por rutaArchivo. ◦ Lee el curso y la lista de
+	 * alumnos. ◦ Muestra un mensaje indicando que se van a cargar los alumnos del
+	 * curso tal. ◦ Almacena cada alumno como un objeto Alumno en un ArrayList. ◦
+	 * Devuelve ese ArrayList.
+	 */
+	public ArrayList<Alumno> importarAlumnos(String rutaArchivo) {
+		ArrayList<Alumno> alumnos = new ArrayList<>();
+		try (BufferedReader br = new BufferedReader(new FileReader(rutaArchivo))) {
+			String curso = br.readLine();
+			JOptionPane.showMessageDialog(this, "Cargando alumnos del curso " + curso, "Boletín App",
+					JOptionPane.INFORMATION_MESSAGE);
+			String linea;
+			br.readLine();
+			
+			while ((linea = br.readLine()) != null) {
+				String nombre = linea;
+				int nota= -1;
+				Alumno alumno = new Alumno(nombre, nota);
+				alumnos.add(alumno);
+			}
+			br.close();
+		} catch (FileNotFoundException e) {
+			JOptionPane.showMessageDialog(this, "No se ha encontrado el archivo de alumnos.", "Boletín App",
+					JOptionPane.ERROR_MESSAGE);
+		} catch (IOException e) {
+			JOptionPane.showMessageDialog(this, "Error al leer el archivo de alumnos.", "Boletín App",
+					JOptionPane.ERROR_MESSAGE);
 		}
-	} catch (FileNotFoundException e) {
-		JOptionPane.showMessageDialog(this, "No se ha encontrado el archivo de alumnos.", "Boletín App",
-				JOptionPane.ERROR_MESSAGE);
-	} catch (IOException e) {
-		JOptionPane.showMessageDialog(this, "Error al leer el archivo de alumnos.", "Boletín App",
-				JOptionPane.ERROR_MESSAGE);
+		return alumnos;
 	}
-	return alumnos;
-}
-/*recibe como parámetro el
-DefaultListModel del JList. Borra el contenido que tuviera antes y guarda en él el contenido
-de alumnos.*/ 
-public void mostrarAlumnos(DefaultListModel<Alumno> modelo){
-	modelo.clear();
-	for (Alumno alumno : alumnos) {
-		modelo.addElement(alumno);
+
+	/*
+	 * recibe como parámetro el DefaultListModel del JList. Borra el contenido que
+	 * tuviera antes y guarda en él el contenido de alumnos.
+	 */
+	public void mostrarAlumnos(DefaultListModel<Alumno> modelo) {
+		modelo.clear();
+		for (Alumno alumno : alumnos) {
+			modelo.addElement(alumno);
+		}
+
+		/* Abre la ventana auxiliar para poner nota al alumno sobre el que se ha hecho doble clic.
+Deberá mostrarse centrada en la ventana principal.
+◦ Actualiza el JList para que cuando se haya cerrado la ventana auxiliar se vea la nota
+actualizada.
+ */
 	}
-}
 }
