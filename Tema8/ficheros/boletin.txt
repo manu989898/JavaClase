@@ -1,11 +1,11 @@
-Boletín de notas de lenguajes
+Boletín de notas de fffff
 Fecha= 2024-05-25
 
 Nombre=Fernández Rodríguez, David
-Nota=5
+Nota=-1
 Nombre=Pérez Martín, Laura
-Nota=9
+Nota=-1
 Nombre=Miralles López, Begoña
-Nota=4
+Nota=-1
 Nombre=Cuesta Rodríguez, Manuel
-Nota=3
+Nota=2

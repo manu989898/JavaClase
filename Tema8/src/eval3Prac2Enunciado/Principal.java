@@ -187,7 +187,7 @@ public class Principal extends JFrame {
 			mensaje = "No hay alumnos para guardar.";
 		} else {
 			try (BufferedWriter bw = new BufferedWriter(new FileWriter(rutaGuardado))) {
-				bw.write("Boletín de notas de " + txtAsignatura.getText());
+				bw.write("Asignatura= " + txtAsignatura.getText());
 				bw.newLine();
 				bw.write("Fecha= " + LocalDate.now());
 				bw.newLine();
@@ -198,9 +198,10 @@ public class Principal extends JFrame {
 					bw.write("Nota=" + alumno.getNota());
 					bw.newLine();
 				}
-				mensaje = "Boletín guardado correctamente.";
+				
 			} catch (IOException e) {
 				mensaje = "Error al guardar el boletín.";
+				JOptionPane.showMessageDialog(this, mensaje, "Boletín App", JOptionPane.ERROR_MESSAGE);
 			}
 		}
 	}
