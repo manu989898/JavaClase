@@ -1,0 +1,8 @@
+nombre=Fernández Rodríguez, David
+nota=8
+nombre=Pérez Martín, Laura
+nota=9
+nombre=Miralles López, Begoña
+nota=4
+nombre=Cuesta Rodríguez, Manuel
+nota=6
