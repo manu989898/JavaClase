@@ -1,11 +1,11 @@
-Boletín de notas de fffff
-Fecha= 2024-05-25
+Asignatura= Lenguaje de marcas
+Fecha= 2024-05-27
 
 Nombre=Fernández Rodríguez, David
 Nota=-1
 Nombre=Pérez Martín, Laura
 Nota=-1
 Nombre=Miralles López, Begoña
-Nota=-1
+Nota=3
 Nombre=Cuesta Rodríguez, Manuel
-Nota=2
+Nota=1
