@@ -1,0 +1,81 @@
+{
+    "page": 1,
+    "results": [
+        {
+            "adult": false,
+            "gender": 2,
+            "id": 488,
+            "known_for_department": "Directing",
+            "name": "Steven Spielberg",
+            "original_name": "Steven Spielberg",
+            "popularity": 43.005,
+            "profile_path": "/tZxcg19YQ3e8fJ0pOs7hjlnmmr6.jpg",
+            "known_for": [
+                {
+                    "backdrop_path": "/79bJL9ydAMYVltuNTt4VhxORqIz.jpg",
+                    "id": 329,
+                    "original_title": "Jurassic Park",
+                    "overview": "A wealthy entrepreneur secretly creates a theme park featuring living dinosaurs drawn from prehistoric DNA. Before opening day, he invites a team of experts and his two eager grandchildren to experience the park and help calm anxious investors. However, the park is anything but amusing as the security systems go off-line and the dinosaurs escape.",
+                    "poster_path": "/b1xCNnyrPebIc7EWNZIa6jhb1Ww.jpg",
+                    "media_type": "movie",
+                    "adult": false,
+                    "title": "Jurassic Park",
+                    "original_language": "en",
+                    "genre_ids": [
+                        12,
+                        878
+                    ],
+                    "popularity": 40.437,
+                    "release_date": "1993-06-11",
+                    "video": false,
+                    "vote_average": 7.946,
+                    "vote_count": 15826
+                },
+                {
+                    "backdrop_path": "/zb6fM1CX41D9rF9hdgclu0peUmy.jpg",
+                    "id": 424,
+                    "original_title": "Schindler's List",
+                    "overview": "The true story of how businessman Oskar Schindler saved over a thousand Jewish lives from the Nazis while they worked as slaves in his factory during World War II.",
+                    "poster_path": "/sF1U4EUQS8YHUYjNl3pMGNIQyr0.jpg",
+                    "media_type": "movie",
+                    "adult": false,
+                    "title": "Schindler's List",
+                    "original_language": "en",
+                    "genre_ids": [
+                        18,
+                        36,
+                        10752
+                    ],
+                    "popularity": 76.924,
+                    "release_date": "1993-12-15",
+                    "video": false,
+                    "vote_average": 8.567,
+                    "vote_count": 15403
+                },
+                {
+                    "backdrop_path": "/rW2xRFlJRbTnBJlQTSjQmjevIwb.jpg",
+                    "id": 857,
+                    "original_title": "Saving Private Ryan",
+                    "overview": "As U.S. troops storm the beaches of Normandy, three brothers lie dead on the battlefield, with a fourth trapped behind enemy lines. Ranger captain John Miller and seven men are tasked with penetrating German-held territory and bringing the boy home.",
+                    "poster_path": "/uqx37cS8cpHg8U35f9U5IBlrCV3.jpg",
+                    "media_type": "movie",
+                    "adult": false,
+                    "title": "Saving Private Ryan",
+                    "original_language": "en",
+                    "genre_ids": [
+                        18,
+                        36,
+                        10752
+                    ],
+                    "popularity": 79.744,
+                    "release_date": "1998-07-24",
+                    "video": false,
+                    "vote_average": 8.214,
+                    "vote_count": 15323
+                }
+            ]
+        }
+    ],
+    "total_pages": 1,
+    "total_results": 1
+}
