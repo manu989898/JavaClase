@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie db</title>
+</head>
+
+<body>
+    <h1>The Movie DB</h1>
+    <img id="foto" src="" alt="">
+    <script>
+        
+        const options = {
+            method: 'GET',
+            headers: {
+                accept: 'application/json',
+                Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJjODA3M2EwMDlkNWVjMDc1YmNlYTBjNThiZmU4NzQ4YyIsInN1YiI6IjY2NTYyMzlkNGQxYTNmOGFhYTUwODEyYSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.0l9aVXJB4dTkPlaFBpVjaXE8lZcWhIYORFAWZaMy4ZM'
+            }
+        };
+
+        fetch('https://api.themoviedb.org/3/search/person?query=tom%20hanks&include_adult=false&language=en-US&page=1', options)
+            .then(response => response.json())
+            .then(response => {
+                let url = 'https://image.tmdb.org/t/p/w500';
+                let name = response.results[0].name;
+                let id = response.results[0].id;
+                let peliculas = response.results[0].known_for;
+                let foto = response.results[0].profile_path;
+                console.log(name);
+                console.log(id);
+                console.log(peliculas);
+
+                for (let pelicula of peliculas) {
+                    console.log(pelicula.original_title);
+                }
+                let img = document.getElementById('foto');
+                img.src = url + foto;
+
+            })
+            .catch(err => console.error(err));
+    </script>
+</body>
+
+</html>
