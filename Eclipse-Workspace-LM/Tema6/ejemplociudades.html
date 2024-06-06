@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open Weather Map</title>
+    <style>
+        body{
+            background-color: rgba(203, 207, 207, 0.711);
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border-radius: 10px 10px 10px 10px;
+            position: relative;
+            width: 626px;
+            height: 447px;
+            background-image: url("imgs/weather.avif");
+            box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+
+        }
+
+        .miami {
+            width: 150px;
+            border-radius: 5%;
+            box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.25);
+            position: absolute;
+            top: 90px;
+            z-index: 1;
+            
+        }
+        .miami:hover {
+            
+            box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+            width: 200px;
+            top: 70px;
+        }
+        .temperatura {
+            top: 120px;
+            font-size: 70px;
+            color: rgb(255, 255, 255);
+            height: 20px;
+            position: absolute;
+
+        }
+        .temperatura:hover{
+            font-size: 100px;
+            top: 80px;
+            
+        }
+        h1 {
+            text-align: center;
+        }
+        h2 {
+            color: rgb(233, 223, 223);
+        }
+
+        p ,h2, h1{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        .leyenda {
+            width: 90%;
+            padding: 2px 10px;
+            display: flex;
+            border-radius: 5px;
+            background-color: rgba(0, 0, 0, 0.2);
+            justify-content: space-around;
+            margin-top: 240px;
+            box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.45);
+        }
+
+        #salidaSol, #puestaSol, #presion, #humedad {
+            display: block;
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 5px;
+        }
+
+        #ciudad {
+            font-size: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Open Weather Map</h1>
+
+    <!-- <h2>El tiempo en <span id="ciudad"></span></h2>
+    <p>Temperatura actual: <span id="temperatura"></span></p>
+    <p>Amanece a las <span id="salidaSol"></span></p>
+    <p>Anochece a las <span id="puestaSol"></span></p>
+    <p>Presión atmosférica: <span id="presion"></span></p>
+    <p>Humedad relativa: <span id="humedad"></span></p> -->
+
+    <script>
+        "use strict"
+
+        let ciudades = ["Palma", "Alicante", "Denia", "Ares", "Tokio", "Manila", "Porto", "Paris", "Buenos Aires"];
+
+        for(let ciudad of ciudades){
+            tiempo(ciudad);
+        }
+
+        // Consulta la API de OpenWeatherMap y crea los elementos HTML para mostrar la información del tiempo en esa ciudad.
+        function tiempo(localizacion) {
+            let url = "https://api.openweathermap.org/data/2.5/weather?q=" + localizacion + "&appid=7dcc6bb908fc23a49ee9184422cc7cfd&units=metric";
+
+            fetch(url)
+                .then(function (respuesta) {
+                    return respuesta.json();
+                })
+                .then(function (respuestaJSON) {
+
+                    let ciudad = respuestaJSON.name;
+                    let temperatura = respuestaJSON.main.temp;
+                    let salidaSol = respuestaJSON.sys.sunrise;
+                    let puestaSol = respuestaJSON.sys.sunset;
+                    let presion = respuestaJSON.main.pressure;
+                    let humedad = respuestaJSON.main.humidity;
+
+                  /* let ciudadElement = document.createElement('h2');
+                    ciudadElement.textContent = `El tiempo en ${ciudad}`;
+                    document.body.appendChild(ciudadElement);
+
+                    let temperaturaElement = document.createElement('p');
+                    temperaturaElement.textContent = `Temperatura: ${temperatura}ºC`;
+                    document.body.appendChild(temperaturaElement);
+
+                    let salidaSolElement = document.createElement('p');
+                    salidaSolElement.textContent = `Amanecer: ${epochAFecha(salidaSol)}`;
+                    document.body.appendChild(salidaSolElement);
+
+                    let puestaSolElement = document.createElement('p');
+                    puestaSolElement.textContent = `Anochecer: ${epochAFecha(puestaSol)}`;
+                    document.body.appendChild(puestaSolElement);
+
+                    let presionElement = document.createElement('p');
+                    presionElement.textContent = `Presión: ${presion} mbar`;
+                    document.body.appendChild(presionElement);
+
+                    let humedadElement = document.createElement('p');
+                    humedadElement.textContent = `Humedad: ${humedad} %`;
+                    document.body.appendChild(humedadElement);
+
+                    */
+
+                    let container = document.createElement('div');
+                    container.className = 'container';
+
+                    let h2 = document.createElement('h2');
+                    let span = document.createElement('span');
+                    span.id = ciudad;
+                    span.textContent = ciudad;
+                    h2.appendChild(span);
+                    container.appendChild(h2);
+
+                    let img = document.createElement('img');
+                    img.src = `imgs/${localizacion.toLowerCase()}.jpeg`;
+                    img.alt = '';
+                    console.log(img.src)
+                    container.appendChild(img);
+
+                    let temp = document.createElement('span');
+                    temp.id = 'temperatura';
+                    let pTemp = document.createElement('p');
+                    pTemp.textContent = `${temperatura}ºC`;
+                    temp.appendChild(pTemp);
+                    container.appendChild(temp);
+
+                    document.body.appendChild(container);
+                })
+                .catch(function (error) {
+                    console.log("Error en la petición de datos.");
+                    console.log(error);
+                });
+
+        }
+
+        function epochAFecha(epoch) {
+            let tiempo = new Date(epoch * 1000);
+            if (tiempo.getMinutes() < 10) {
+                return tiempo.getHours() + ":" + "0" + tiempo.getMinutes();
+            } else {
+                return tiempo.getHours() + ":" + tiempo.getMinutes();
+            }
+        }
+
+        function colorTemp(temperatura) {
+            if (temperatura < 18) {
+                return "blue";
+            } else {
+                return "red";
+            }
+        }
+
+    </script>
+</body>
+
+</html>
