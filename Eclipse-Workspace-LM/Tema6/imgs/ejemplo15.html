@@ -22,7 +22,6 @@
                 height: 447px;
                 background-image: url("imgs/weather.avif");
                 box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
-                margin-bottom: 20px;
 
             }
 
@@ -108,13 +107,6 @@
     <script>
         "use strict"
 
-        let ciudades = ["Palma", "Alicante", "Denia", "Ares", "Tokio", "Manila", "Porto", "Paris", "Buenos Aires"];
-
-        for(let ciudad of ciudades){
-            tiempo(ciudad);
-        }
-
-
         tiempo("miami");
 
         function tiempo(localizacion) {
@@ -140,12 +132,13 @@
 
                     let humedad = respuestaJSON.main.humidity;
 
-                    // Este bloque es el que cree solo antes de saber que se tenia que hacer sobre todas las ciudades.
+
                     console.log(`Ciudad: ${ciudad}`);
                     document.getElementById('ciudad').innerHTML = ciudad;
 
                     console.log(`Temperatura: ${temperatura}ºC`);
                     document.getElementById('temperatura').innerHTML = temperatura + "ºC";
+                    //document.getElementById('temperatura').style.color = colorTemp(temperatura);
 
                     console.log(`Amanecer: ${epochAFecha(salidaSol)}`);
                     document.getElementById("salidaSol").innerHTML = epochAFecha(salidaSol);
@@ -158,6 +151,7 @@
 
                     console.log("Humedad: " + humedad + "%");
                     document.getElementById("humedad").innerHTML = humedad + "%";
+
                 })
                 .catch(function () {
                     console.log("Error en la petición de datos.");
@@ -181,52 +175,6 @@
                 return "red";
             }
         }
-        // aqui uso var porque si uso let me rompe todo lo de arriba y deja de funcionar todo.
-        for (var i = 0; i < ciudades.length; i++) {
-
-            var container = document.createElement('div');
-            container.className = 'container';
-        
-            var h2 = document.createElement('h2');
-            var ciudad = document.createElement('span');
-            ciudad.id = 'ciudad';
-            ciudad.textContent = ciudades[i];
-            h2.appendChild(ciudad);
-            container.appendChild(h2);
-        
-            var img = document.createElement('img');
-            img.className = 'miami';
-            img.src = `imgs/${ciudades[i].toLowerCase()}.jpeg`;
-            img.alt = '';
-            container.appendChild(img);
-        
-            var temperatura = document.createElement('span');
-            temperatura.id = 'temperatura';
-            var pTemperatura = document.createElement('p');
-            pTemperatura.textContent = `Temperatura: `;
-            pTemperatura.className = 'temperatura';
-            pTemperatura.appendChild(temperatura);
-            container.appendChild(pTemperatura);
-        
-            var leyenda = document.createElement('div');
-            leyenda.className = 'leyenda';
-            container.appendChild(leyenda);
-        
-            var datos = ['salidaSol', 'puestaSol', 'presion', 'humedad'];
-            for (var j = 0; j < datos.length; j++) {
-                var p = document.createElement('p');
-                p.textContent = datos[j] + ' ';
-                var span = document.createElement('span');
-                span.id = datos[j];
-                p.appendChild(span);
-                leyenda.appendChild(p);
-            }
-        
-            document.body.appendChild(container);
-
-}
-
-    
 
     </script>
 </body>
