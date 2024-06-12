@@ -12,7 +12,7 @@ public class Inicio {
 		System.out.println("\nAñadiendo lavadoras...");
 		taller1.addLavadora(lava1);
 		taller1.addLavadora(lava2);
-		
+		syso
 		System.out.println("\nMostrando lavadoras");
 		taller1.listaLavadoras();
 		

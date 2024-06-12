@@ -9,6 +9,11 @@
         body{
             background-color: rgba(203, 207, 207, 0.711);
         }
+        .contenedorGeneral{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
         .container {
             display: flex;
             flex-direction: column;
@@ -19,7 +24,7 @@
             height: 447px;
             background-image: url("imgs/weather.avif");
             box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
-
+            margin-bottom: 20px;
         }
 
         .miami {
@@ -43,11 +48,13 @@
             color: rgb(255, 255, 255);
             height: 20px;
             position: absolute;
+            left: 200px;
 
         }
         .temperatura:hover{
             font-size: 100px;
             top: 80px;
+            left: 150px;
             
         }
         h1 {
@@ -89,13 +96,10 @@
 <body>
     <h1>Open Weather Map</h1>
 
-    <!-- <h2>El tiempo en <span id="ciudad"></span></h2>
-    <p>Temperatura actual: <span id="temperatura"></span></p>
-    <p>Amanece a las <span id="salidaSol"></span></p>
-    <p>Anochece a las <span id="puestaSol"></span></p>
-    <p>Presión atmosférica: <span id="presion"></span></p>
-    <p>Humedad relativa: <span id="humedad"></span></p> -->
-
+   
+        <div class="contenedorGeneral">
+            
+        </div>
     <script>
         "use strict"
 
@@ -115,42 +119,19 @@
                 })
                 .then(function (respuestaJSON) {
 
+                    //Asignamos a variables los datos del JSON que son la respuesta de la aip
                     let ciudad = respuestaJSON.name;
                     let temperatura = respuestaJSON.main.temp;
                     let salidaSol = respuestaJSON.sys.sunrise;
                     let puestaSol = respuestaJSON.sys.sunset;
                     let presion = respuestaJSON.main.pressure;
                     let humedad = respuestaJSON.main.humidity;
-
-                  /* let ciudadElement = document.createElement('h2');
-                    ciudadElement.textContent = `El tiempo en ${ciudad}`;
-                    document.body.appendChild(ciudadElement);
-
-                    let temperaturaElement = document.createElement('p');
-                    temperaturaElement.textContent = `Temperatura: ${temperatura}ºC`;
-                    document.body.appendChild(temperaturaElement);
-
-                    let salidaSolElement = document.createElement('p');
-                    salidaSolElement.textContent = `Amanecer: ${epochAFecha(salidaSol)}`;
-                    document.body.appendChild(salidaSolElement);
-
-                    let puestaSolElement = document.createElement('p');
-                    puestaSolElement.textContent = `Anochecer: ${epochAFecha(puestaSol)}`;
-                    document.body.appendChild(puestaSolElement);
-
-                    let presionElement = document.createElement('p');
-                    presionElement.textContent = `Presión: ${presion} mbar`;
-                    document.body.appendChild(presionElement);
-
-                    let humedadElement = document.createElement('p');
-                    humedadElement.textContent = `Humedad: ${humedad} %`;
-                    document.body.appendChild(humedadElement);
-
-                    */
-
+                    
+                    // Creamos contenedores individuales para cada ciudad
                     let container = document.createElement('div');
                     container.className = 'container';
 
+                    // CreaMos todo el bloque html que contendrá la información de la ciudad y la metemos en el contenedor
                     let h2 = document.createElement('h2');
                     let span = document.createElement('span');
                     span.id = ciudad;
@@ -159,6 +140,7 @@
                     container.appendChild(h2);
 
                     let img = document.createElement('img');
+                    img.className = 'miami';
                     img.src = `imgs/${localizacion.toLowerCase()}.jpeg`;
                     img.alt = '';
                     console.log(img.src)
@@ -167,18 +149,56 @@
                     let temp = document.createElement('span');
                     temp.id = 'temperatura';
                     let pTemp = document.createElement('p');
+                    pTemp.className = 'temperatura';
                     pTemp.textContent = `${temperatura}ºC`;
                     temp.appendChild(pTemp);
                     container.appendChild(temp);
 
+                    let leyenda = document.createElement('div');
+                    leyenda.className = 'leyenda';
+                    container.appendChild(leyenda);
+                    
+                    let pSalidaSol = document.createElement('p');
+                    let salidaSolElement = document.createElement('span');
+                    salidaSolElement.id = 'salidaSol';
+                    salidaSolElement.textContent = `Amanece a las ${epochAFecha(salidaSol)}`;
+                    pSalidaSol.appendChild(salidaSolElement);
+                    leyenda.appendChild(pSalidaSol);
+                    
+                    let pPuestaSol = document.createElement('p');
+                    let puestaSolElement = document.createElement('span');
+                    puestaSolElement.id = 'puestaSol';
+                    puestaSolElement.textContent = `Anochece a las ${epochAFecha(puestaSol)}`;
+                    pPuestaSol.appendChild(puestaSolElement);
+                    leyenda.appendChild(pPuestaSol);
+                    
+                    let pPresion = document.createElement('p');
+                    let presionElement = document.createElement('span');
+                    presionElement.id = 'presion';
+                    presionElement.textContent = `Presión: ${presion} mbar`;
+                    pPresion.appendChild(presionElement);
+                    leyenda.appendChild(pPresion);
+                    
+                    let pHum = document.createElement('p');
+                    let humedadElement = document.createElement('span');
+                    humedadElement.id = 'humedad';
+                    humedadElement.textContent = `Humedad: ${humedad} %`;
+                    pHum.appendChild(humedadElement);
+                    leyenda.appendChild(pHum);
+                    
                     document.body.appendChild(container);
+                    let contenedorGeneral = document.querySelector('.contenedorGeneral');
+
+                    //Añado todos los contenedores individuales de cada ciudad al contenedor general
+                    contenedorGeneral.appendChild(container);
                 })
+                
                 .catch(function (error) {
                     console.log("Error en la petición de datos.");
                     console.log(error);
                 });
-
-        }
+                
+            }
 
         function epochAFecha(epoch) {
             let tiempo = new Date(epoch * 1000);
