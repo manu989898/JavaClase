@@ -75,7 +75,7 @@ public class Tienda extends javax.swing.JFrame {
         btnAgregar1 = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
         btnEliminar = new javax.swing.JButton();
-        btnmesas = new javax.swing.JButton();
+        btnReservas = new javax.swing.JButton();
         jComboBoxMesa = new javax.swing.JComboBox<>();
         jLabelMesa = new javax.swing.JLabel();
 
@@ -195,10 +195,10 @@ public class Tienda extends javax.swing.JFrame {
             }
         });
 
-        btnmesas.setText("VER MESAS");
-        btnmesas.addActionListener(new java.awt.event.ActionListener() {
+        btnReservas.setText("RESERVAS");
+        btnReservas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnmesasActionPerformed(evt);
+                btnReservasActionPerformed(evt);
             }
         });
 
@@ -239,7 +239,7 @@ public class Tienda extends javax.swing.JFrame {
                             .addComponent(btnEliminar, javax.swing.GroupLayout.DEFAULT_SIZE, 173, Short.MAX_VALUE)
                             .addComponent(btnAgregar1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, 173, Short.MAX_VALUE)
-                            .addComponent(btnmesas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(btnReservas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(37, 37, 37))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel13)
@@ -270,7 +270,7 @@ public class Tienda extends javax.swing.JFrame {
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap(8, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel13)
                 .addGap(26, 26, 26)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -307,11 +307,11 @@ public class Tienda extends javax.swing.JFrame {
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 276, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel7)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(lblSubtotal)
-                        .addComponent(btnmesas, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addComponent(btnReservas, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel7)
+                        .addComponent(lblSubtotal)))
+                .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(lblIva)
                     .addComponent(jLabel9, javax.swing.GroupLayout.Alignment.TRAILING))
@@ -430,9 +430,9 @@ public class Tienda extends javax.swing.JFrame {
 
     }//GEN-LAST:event_btnEliminarActionPerformed
 
-    private void btnmesasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnmesasActionPerformed
+    private void btnReservasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReservasActionPerformed
         new Mesas().setVisible(true);
-    }//GEN-LAST:event_btnmesasActionPerformed
+    }//GEN-LAST:event_btnReservasActionPerformed
 
     private void jComboBoxMesaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxMesaActionPerformed
         // TODO add your handling code here:
@@ -488,7 +488,7 @@ public class Tienda extends javax.swing.JFrame {
     private javax.swing.JButton btnAgregar;
     private javax.swing.JButton btnAgregar1;
     private javax.swing.JButton btnEliminar;
-    private javax.swing.JButton btnmesas;
+    private javax.swing.JButton btnReservas;
     private javax.swing.JComboBox<String> cboProducto;
     private javax.swing.JButton jButton1;
     private javax.swing.JComboBox<String> jComboBoxMesa;
