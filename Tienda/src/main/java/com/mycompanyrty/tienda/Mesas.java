@@ -4,11 +4,14 @@
  */
 package com.mycompanyrty.tienda;
 
+import java.awt.GridLayout;
 import java.util.ArrayList;
 import java.util.List;
 
 import javax.swing.JButton;
 import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -455,9 +458,6 @@ public class Mesas extends javax.swing.JFrame {
 
     // Método para actualizar la tabla
     private void actualizarTabla() {
-        // Crea una nueva reserva
-
-
         // Limpia la tabla
         modelo.setRowCount(0);
 
@@ -465,8 +465,6 @@ public class Mesas extends javax.swing.JFrame {
         for (Reserva r : reservas) {
             modelo.addRow(new Object[] { r.mesa, r.nombre, r.hora, r.cantidad });
         }
-
-        // Actualiza la tabla
         tblReservas.setModel(modelo);
     }
 

@@ -6,6 +6,19 @@ public class Venta {
     int cantidad;
     double precio;
     double importe;
+    Products producto;
+
+    public Venta(Products producto) {
+        this.producto = producto;
+       
+    }
+
+    public Venta(String descripcion, int cantidad, double precio, double importe) {
+        this.descripcion = descripcion;
+        this.cantidad = cantidad;
+        this.precio = precio;
+        this.importe = importe;
+    }
 
     public Venta() {
     }
