@@ -372,6 +372,9 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="MODIFICAR RESERVA"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnModReservaActionPerformed"/>
+              </Events>
             </Component>
           </SubComponents>
         </Container>

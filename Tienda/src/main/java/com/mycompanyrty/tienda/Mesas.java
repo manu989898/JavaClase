@@ -220,6 +220,11 @@ public class Mesas extends javax.swing.JFrame {
         });
 
         btnModReserva.setText("MODIFICAR RESERVA");
+        btnModReserva.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnModReservaActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -357,6 +362,27 @@ public class Mesas extends javax.swing.JFrame {
         // Actualiza la tabla
         actualizarTabla();
     }//GEN-LAST:event_btnAddReservaActionPerformed
+
+    private void btnModReservaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModReservaActionPerformed
+        // Modifica la reserva seleccionada
+        int filaSeleccionada = tblReservas.getSelectedRow();
+
+        if (filaSeleccionada == -1) {
+            JOptionPane.showMessageDialog(this, "Selecciona una reserva para modificarla");
+        } else {
+            Reserva reserva = reservas.get(filaSeleccionada);
+
+            String nombre = JOptionPane.showInputDialog("Introduce tu nombre", reserva.nombre);
+            String hora = JOptionPane.showInputDialog("Introduce la hora", reserva.hora);
+            int cantidad = Integer.parseInt(JOptionPane.showInputDialog("Introduce la cantidad", reserva.cantidad));
+
+            reserva.nombre = nombre;
+            reserva.hora = hora;
+            reserva.cantidad = cantidad;
+
+            actualizarTabla();
+        }
+    }//GEN-LAST:event_btnModReservaActionPerformed
 
     private void btnMesa6ActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_btnMesa6ActionPerformed
         botonPulsado = btnMesa6;
