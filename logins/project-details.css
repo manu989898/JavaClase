@@ -69,10 +69,10 @@
 .project-features li::before {
     content: '•';
     color: var(--primary-color);
-    font-size: 1.5em;
+    font-size: 2em;
     position: absolute;
     left: -20px;
-    top: -5px;
+    top: -7px;
 }
 
 .project-gallery {
@@ -92,7 +92,7 @@
 }
 
 .gallery-grid img:hover {
-    transform: scale(1.05);
+    transform: scale(1.80);
 }
 
 .project-links {
@@ -147,6 +147,6 @@
     object-fit: contain;
 }
 .features{
-    font-size: 30px;
+    font-size: 20px;
     font-weight: bold;
 }
