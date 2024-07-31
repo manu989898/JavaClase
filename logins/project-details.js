@@ -8,7 +8,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Tooltip for language icons
     const languageIcons = document.querySelectorAll('.project-languages i');
+    
     languageIcons.forEach(icon => {
+        //
         icon.addEventListener('mouseover', (e) => {
             const tooltip = document.createElement('div');
             tooltip.className = 'tooltip';
