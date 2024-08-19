@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Proyecto: Caja Registradora - Manuel Cuesta Rodriguez</title>
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="proyecto.css">
+</head>
+<body>
+    <!-- MENU ENCABEZADO -->
+    <div class="contenedor-header">
+        <header>
+            <div class="logo">
+                <a href="index.html">Manuel</a>
+            </div>
+            <nav id="nav">
+                <ul>
+                    <li><a href="index.html#inicio" onclick="seleccionar()">INICIO</a></li>
+                    <li><a href="index.html#sobremi" onclick="seleccionar()">SOBRE MI</a></li>
+                    <li><a href="index.html#skills" onclick="seleccionar()">SKILLS</a></li>
+                    <li><a href="index.html#curriculum" onclick="seleccionar()">CURRICULUM</a></li>
+                    <li><a href="index.html#portfolio" onclick="seleccionar()">PORTFOLIO</a></li>
+                    <li><a href="index.html#contacto" onclick="seleccionar()">CONTACTO</a></li>
+                </ul>
+            </nav>
+            <div class="nav-responsive" onclick="mostrarOcultarMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </header>
+    </div>
+
+    <!-- SECCION PROYECTO -->
+    <section id="proyecto" class="proyecto">
+        <div class="contenido-seccion">
+            <h1>Caja Registradora</h1>
+            <div class="info-proyecto">
+                <img src="img/tiendafoto.JPG" alt="Caja Registradora">
+                <div class="descripcion">
+                    <h2>Descripción del Proyecto</h2>
+                    <p>La Caja Registradora es una aplicación diseñada para facilitar la gestión de ventas en pequeños negocios. Ofrece una interfaz intuitiva y funciones esenciales para el manejo eficiente de transacciones diarias.</p>
+                    <h2>Características principales:</h2>
+                    <ul>
+                        <li>Gestión de reservas</li>
+                        <li>Impresión de ticket</li>
+                        <li>Generación de informes de ventas</li>
+                        <li>Interfaz amigable y fácil de usar</li>
+                    </ul>
+                    <h2>Tecnologías utilizadas: <i class="fa-brands fa-java fa-m"></i></h2>  
+                </div>
+            </div>
+            <div class="galeria">
+                <h2>Galería</h2>
+                <div class="imagenes">
+                    <img src="img/comprasaaa.JPG" alt="Captura 1">
+                    <img src="img/reservas.JPG" alt="Captura 2">
+                    <img src="img/tiendafoto.JPG" alt="Captura 3">
+                </div>
+            </div>
+            <a href="https://github.com/manu989898/JavaClase/tree/master/Tienda" class="btn-volver">GitHub del proyecto</a>
+            <a href="index.html#portfolio" class="btn-volver">Volver al Portfolio</a>
+        </div>
+        
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <a href="#proyecto" class="arriba">
+            <i class="fa-solid fa-angles-up"></i>
+        </a>
+        <div class="redes">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-skype"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#"><i class="fa-solid fa-rss"></i></a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
