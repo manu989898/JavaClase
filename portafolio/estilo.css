@@ -24,6 +24,7 @@ html{
     z-index: 99;
 }
 .contenedor-header header{
+    
     max-width: 1300px;
     margin: auto;
     display: flex;
