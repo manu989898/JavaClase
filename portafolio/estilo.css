@@ -62,6 +62,19 @@ html{
     cursor: pointer;
     display: none;
 }
+/* IMAGEN PERSONAL ANIMACIÓN*/
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.contenedor-img img {
+    opacity: 0; 
+    animation: fadeIn 3s ease-in-out forwards;
+}
 /* SECCION I N I C I O */
 .contenido-banner{
     margin-top: 1px;
@@ -173,11 +186,6 @@ html{
 {
     width: 50%;
 }
-.sobremi .fila .col h3{
-    font-size: 28px;
-    font-family: 'Righteous';
-    margin-bottom: 25px;
-}
 .sobremi .fila .col ul{
     list-style: none;
 }
@@ -217,10 +225,11 @@ html{
     font-size: 30px;
     margin-bottom: 10px;
 }
+/* BOTÓN D E S C A R G A */
 .sobremi button{
     cursor: pointer;
-    background-color: transparent;
-    border: 2px solid #fff;
+    background-color: #252A2E;
+    border: 2px solid var(--primary-color);
     width: fit-content;
     display: block;
     margin: 20px auto;
@@ -229,6 +238,7 @@ html{
     color: #fff;
     position: relative;
     z-index: 10;
+    border-radius: 11px; 
 }
 .sobremi button .overlay{
     position: absolute;
@@ -239,6 +249,7 @@ html{
     background-color: var(--primary-color);
     z-index: -1;
     transition: 1s;
+    border-radius: 9px; 
 }
 .sobremi button:hover .overlay{
     width: 100%;
